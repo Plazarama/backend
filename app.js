@@ -16,7 +16,6 @@ var secret = require('./config/secret');
 var mongoose = require('mongoose');
 var configDb = require('./config/database')(mongoose);
 
-var hbs = require('hbs');
 
 var app = express();
 var port = process.env.PORT || 3000;
@@ -24,7 +23,7 @@ var port = process.env.PORT || 3000;
 
 // view engine setup & static folder
 
-app.set('view engine', 'hbs');
+app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
 
