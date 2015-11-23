@@ -64,4 +64,12 @@ if (env === 'development') {
   });
 }
 
+// route middleware to add config variables to our response locals
+app.use(function(req, res, next) {
+	res.locals.title = 'Some title';
+
+    // continue doing what we were doing and go to the route
+    next(); 
+});
+
 require('./routes/routes.js')(app);
