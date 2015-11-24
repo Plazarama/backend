@@ -7,6 +7,8 @@ var morgan = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var session = require('express-session');
+var passport = require('passport');
+var flash = require('connect-flash');
 
 
 var config = require('./config/config');
@@ -38,6 +40,11 @@ app.use(cookieParser());
 
 app.use(session({secret: secret.sessionSecret}));
 
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(flash());
+
+require('./config/passport')(passport);
 
 // Run the app in the specific port
 app.listen(port);
@@ -72,4 +79,4 @@ app.use(function(req, res, next) {
     next(); 
 });
 
-require('./routes/routes.js')(app);
+require('./routes/routes.js')(app, passport);
