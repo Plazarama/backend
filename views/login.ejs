@@ -8,6 +8,10 @@
 		
 	</header>
 	<div class="container">
+
+		<% if (message.length > 0) { %>
+			<div class="alert alert-danger"><%= message %></div>
+		<% } %>
 		<form action="/login" method="post">
 		<div class="form-group">
 			<label for="email">Email</label>
@@ -19,6 +23,11 @@
 		</div>
 		
 		<button type="submit" class="btn btn-success">Login</button>
+
+		<hr>
+
+		<p>Or login with Facebook</p>
+		<a href="/auth/facebook" class="btn btn-primary"><span class="fa fa-bacebook"></span> Facebook</a>
 	</form>
 	</div>
 	

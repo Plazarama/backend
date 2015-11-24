@@ -8,6 +8,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var session = require('express-session');
 var passport = require('passport');
+var flash = require('connect-flash');
 
 
 var config = require('./config/config');
@@ -41,6 +42,8 @@ app.use(session({secret: secret.sessionSecret}));
 
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(flash());
+
 require('./config/passport')(passport);
 
 // Run the app in the specific port

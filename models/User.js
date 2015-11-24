@@ -2,8 +2,16 @@ var mongoose = require('mongoose');
 var bcrypt = require('bcrypt-nodejs');
 
 var userSchema = new mongoose.Schema({
+	
 	email: String,
-	password: String
+	password: String,
+
+	facebook : {
+		id: String,
+		token: String,
+		email: String,
+		name: String
+	}
 });
 
 
