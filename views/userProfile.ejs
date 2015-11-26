@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+	<% include partials/head %>    
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+<body>
+
+<div class="container">
+    <div class="row profile">
+		<div class="col-md-3">
+			<div class="profile-sidebar">
+				<!-- SIDEBAR USERPIC -->
+				<div class="profile-userpic">
+					<img class="img-responsive"  src="images/placeholder.jpg" alt="">
+				</div>
+				<!-- END SIDEBAR USERPIC -->
+
+				<!-- SIDEBAR USER TITLE -->
+				<div class="profile-usertitle">
+					<div class="profile-usertitle-name"><%= user.facebook.name %></div>
+					<div class="profile-usertitle-job">Add a self description</div>
+				</div>
+				<!-- END SIDEBAR USER TITLE -->
+
+				<!-- SIDEBAR BUTTONS 
+				<div class="profile-userbuttons">
+					<button type="button" class="btn btn-success btn-sm">Follow</button>
+					<button type="button" class="btn btn-danger btn-sm">Message</button>
+				</div>
+				<!-- END SIDEBAR BUTTONS -->
+
+				<!-- SIDEBAR MENU -->
+				<div class="profile-usermenu">
+					<ul class="nav">
+						<li class="active">
+							<a href="#">
+							<i class="glyphicon glyphicon-home"></i>My Account</a> </li>
+						<li>
+							<a href="#">
+							<i class="glyphicon glyphicon-user"></i>Games Played</a></li>
+						<li>
+							<a href="#" target="_blank">
+							<i class="glyphicon glyphicon-ok"></i>Stats </a>
+						</li>
+						<li>
+							<a href="#">
+							<i class="glyphicon glyphicon-flag"></i>How To Play</a>	</li>
+					</ul>
+				</div>
+				<!-- END MENU -->
+
+			</div>
+		</div>
+
+		<div class="col-md-9">
+            <div class="profile-content">
+			   <p> CONTENT ABOUT THE USER GOES HERE</p>
+            </div>
+		</div>
+	</div>
+</div>
+<center>
+<strong>Head over <a href="http://plazarama.github.io/" target="_blank">Plazarama</a> to see more about us</strong>
+</center>
+<br>
+<br>
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

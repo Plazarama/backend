@@ -15,6 +15,7 @@ var userSchema = new mongoose.Schema({
 });
 
 
+
 //Generate a hash for the pwd
 userSchema.methods.generateHash = function(password){
   return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);

@@ -14,7 +14,13 @@ module.exports = function(app, passport){
 		});
 
 
-
+	app.route('/profile')
+		.get(isLoggedIn,function(req, res){
+			console.log(req.user);
+			res.render('userProfile', {
+				user: req.user
+			});
+		});
 
 
 	/* LOGIN STUFF */
@@ -25,7 +31,7 @@ module.exports = function(app, passport){
 		})
 
 		.post(passport.authenticate('local-login', {
-			successRedirect: '/login',
+			successRedirect: '/profile',
 			failureRedirect: '/login'
 		}));
 
@@ -35,7 +41,7 @@ module.exports = function(app, passport){
 		})
 
 		.post(passport.authenticate('local-signup', {
-			successRedirect: '/signup',
+			successRedirect: '/login',
 			failureRedirect: '/signup'
 		}));
 
@@ -44,7 +50,7 @@ module.exports = function(app, passport){
 
 	app.get('/auth/facebook/callback',
 	        passport.authenticate('facebook', {
-	        	successRedirect: '/login',
+	        	successRedirect: '/profile',
 	        	failureRedirect : '/'
 	        }));
 
