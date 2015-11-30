@@ -1,12 +1,12 @@
 var mongoose = require('mongoose');
 
 var questionSchema = new mongoose.Schema({
-	questionType: string,
-	question: string,
-	correctAnswer: string,
-	secondAnswer: string,
-	thirdAnswer: string,
-	fourthAnswer: string
+	questionType: String,
+	question: String,
+	correctAnswer: String,
+	secondAnswer: String,
+	thirdAnswer: String,
+	fourthAnswer: String
 });
 
 module.exports = mongoose.model('QuizQuestion', questionSchema);
