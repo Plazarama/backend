@@ -13,6 +13,7 @@ var flash = require('connect-flash');
 
 var config = require('./config/config');
 var secret = require('./config/secret');
+var seed = require('./config/seed');
 
 
 var mongoose = require('mongoose');
@@ -61,6 +62,9 @@ if (env === 'development') {
   
   app.use(morgan('dev'));
   app.locals.pretty = true;
+
+  seed.seedUser();
+  seed.seedQuestions();
 
   app.use(function(err, req, res, next) {
     res.status(err.status || 500);
