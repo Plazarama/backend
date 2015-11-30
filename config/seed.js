@@ -19,7 +19,7 @@ module.exports.seedUser = function() {
 		else if (!user) {
 			var newUser = new User();
 			newUser.email = testUser.email;
-			newUser.pass = newUser.generateHash(testUser.password);
+			newUser.password = newUser.generateHash(testUser.password);
 
 			newUser.save(function(err, user) {
 				if (err)

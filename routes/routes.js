@@ -16,7 +16,6 @@ module.exports = function(app, passport){
 
 	app.route('/profile')
 		.get(isLoggedIn,function(req, res){
-			console.log(req.user);
 			res.render('userProfile', {
 				user: req.user
 			});
