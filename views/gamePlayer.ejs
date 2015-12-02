@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<% include partials/head %>
+	</head>
+	<body class="container">
+
+		<div id="gameArea">
+
+		</div>
+
+		<script id="initScreen" type="text/template">
+			<h1>Init screen</h1>
+
+			<button id="btnJoinGame" class="btn">Join a game</button>
+
+		</script>
+
+	
+
+		<script id="joinScreen" type="text/template">
+			<input id="inputGameId" type="text">
+			<button id="btnStart" class="btn">Start</button>
+			<div id="playerWaiting"></div>
+
+		</script>
+
+		
+		<script id="playerScreen" type="text/template">
+			
+		</script>
+
+		
+				
+
+
+		<% include partials/scripts %>
+		<script src="/js/gamePlayer.js"></script>
+
+
+	</body>
+</html>

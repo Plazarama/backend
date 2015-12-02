@@ -1,10 +1,18 @@
 module.exports = function(app, passport){
 
 	app.route('/')
-	
-	
 		.get(function(req, res){
 			res.render('index', {title: 'Index'});
+		});
+
+	app.route('/host')
+		.get(function(req, res){
+			res.render('gameHost', {title: 'Host'});
+		});
+
+	app.route('/player')
+		.get(function(req, res){
+			res.render('gamePlayer', {title: 'Player'});
 		});
 
 

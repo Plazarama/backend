@@ -1,4 +1,9 @@
-module.exports = function(mongoose){
+/**
+ * This function is called by app.js to connect to the db.
+ *
+ * @param mongoose the mongoose object
+ */
+exports.connect = function(mongoose){
 	
 		var uristring = 
 		  process.env.MONGOLAB_URI || 

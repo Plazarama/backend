@@ -14,7 +14,8 @@ var config = require('./config/config');
 var secret = require('./config/secret');
 
 var mongoose = require('mongoose');
-var configDb = require('./config/database')(mongoose);
+var configDb = require('./config/database');
+configDb.connect(mongoose);
 
 
 // Run the server and socket.io
@@ -26,21 +27,21 @@ server.listen(port, function() {
     console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 });
 
-// view engine setup & static folder
 
+var game = require('./game/game');
+
+// Config Express
+
+// view engine setup & static folder
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
-
-
-// Config Express
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 app.use(session({secret: secret.sessionSecret}));
-
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
@@ -48,7 +49,6 @@ app.use(flash());
 
 // Authentication routes
 require('./config/passport')(passport);
-
 
 
 // development error handler
@@ -81,4 +81,13 @@ app.use(function(req, res, next) {
     next(); 
 });
 
+//Declare our routes
 require('./routes/routes.js')(app, passport);
+
+
+
+//Get a new connection and start the game logic
+
+io.sockets.on('connection', function (socket) {
+    game.initGame(io, socket);
+});
