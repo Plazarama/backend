@@ -15,67 +15,71 @@
 
 <body>
 
+    <% include partials/header %>    
+
+
 <div class="container">
+	
+
+
     <div class="row profile">
 		<div class="col-md-3">
 			<div class="profile-sidebar">
 				<!-- SIDEBAR USERPIC -->
 				<div class="profile-userpic">
-					<img class="img-responsive"  src="images/placeholder.jpg" alt="">
+					<img class="img-responsive"  src="/images/placeholder.jpg" alt="">
 				</div>
 				<!-- END SIDEBAR USERPIC -->
 
 				<!-- SIDEBAR USER TITLE -->
 				<div class="profile-usertitle">
 					<div class="profile-usertitle-name"><%= user.facebook.name %></div>
-					<div class="profile-usertitle-job">Add a self description</div>
+					<div class="profile-usertitle-job">Email Address:</div>
 				</div>
 				<!-- END SIDEBAR USER TITLE -->
 
-				<!-- SIDEBAR BUTTONS 
+				<!-- SIDEBAR BUTTONS -->
 				<div class="profile-userbuttons">
-					<button type="button" class="btn btn-success btn-sm">Follow</button>
-					<button type="button" class="btn btn-danger btn-sm">Message</button>
+					<button type="button" class="btn btn-default btn-sm">Follow</button>
+					<button type="button" class="btn btn-default btn-sm">Message</button>
 				</div>
 				<!-- END SIDEBAR BUTTONS -->
 
 				<!-- SIDEBAR MENU -->
 				<div class="profile-usermenu">
-					<ul class="nav">
-						<li class="active">
-							<a href="#">
-							<i class="glyphicon glyphicon-home"></i>My Account</a> </li>
-						<li>
-							<a href="#">
-							<i class="glyphicon glyphicon-user"></i>Games Played</a></li>
-						<li>
-							<a href="#" target="_blank">
-							<i class="glyphicon glyphicon-ok"></i>Stats </a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="glyphicon glyphicon-flag"></i>How To Play</a>	</li>
-					</ul>
+				<ul class="nav">
+            <li>
+            <a href="#">
+            <i class="glyphicon glyphicon-home"></i>My Account</a> </li>
+            <li>
+            <a href="#">
+            <i class="glyphicon glyphicon-user"></i>Games Played</a></li>
+            <li>
+            <a href="#"><i class="glyphicon glyphicon-ok"></i>Stats </a></li>
+            <li>
+            <a href="#"><i class="glyphicon glyphicon-flag"></i>How To Play</a>	</li>
+        </ul>
+				
 				</div>
 				<!-- END MENU -->
 
 			</div>
 		</div>
+		</br>
+
 
 		<div class="col-md-9">
             <div class="profile-content">
-			   <p> CONTENT ABOUT THE USER GOES HERE</p>
+			   <strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam accumsan gravida lorem, at pretium nisl pellentesque at. Phasellus urna turpis, venenatis in blandit nec, tincidunt ac nulla. Nulla dapibus libero eget mollis convallis. Curabitur non risus turpis. Etiam sit amet mauris hendrerit lectus convallis laoreet in at leo. Phasellus at ante eu libero luctus cursus in nec augue. Phasellus eget euismod ante. Morbi elementum posuere quam, eu blandit nunc blandit ut. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In sed ipsum eleifend felis fermentum blandit eu vel metus. Duis viverra feugiat nisl, ac fermentum eros aliquet at. In posuere urna ac diam eleifend dapibus. Praesent cursus, arcu ac vulputate imperdiet, leo elit rhoncus ligula, ut sodales justo ligula pulvinar est. Duis pretium felis at arcu varius, eu venenatis neque finibus.</strong>
             </div>
 		</div>
 	</div>
 </div>
 <center>
-<strong>Head over <a href="http://plazarama.github.io/" target="_blank">Plazarama</a> to see more about us</strong>
+<strong style="color:#42729b;">See <a href="http://plazarama.github.io/" target="_blank" style="color:#e76b6b;">Plazarama</a> For More About Us</strong>
 </center>
 <br>
 <br>
-<script type="text/javascript">
 
-</script>
 </body>
 </html>

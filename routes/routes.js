@@ -2,7 +2,10 @@ module.exports = function(app, passport){
 
 	app.route('/')
 		.get(function(req, res){
-			res.render('index', {title: 'Index'});
+			if(req.isAuthenticated())
+				res.render('index', {title: 'Index', user: req.user});
+			else
+				res.render('index', {title: 'Index'});
 		});
 
 	app.route('/host')
@@ -75,5 +78,5 @@ function isLoggedIn(req, res, next){
 	if(req.isAuthenticated())
 		return next();
 
-	res.redirect('/login');
+	res.redirect('/');
 }

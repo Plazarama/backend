@@ -2,45 +2,80 @@
 <html lang="en">
 	<head>
 		<% include partials/head %>
+		
+		<link rel="stylesheet" href="/style/gameStyle.css" type="text/css">
+
 	</head>
-	<body class="container">
+	<body >
 
 		<div id="gameArea">
 
 		</div>
 
-		<script id="initScreen" type="text/template">
-			<h1>Init screen</h1>
+		<script  id="initScreen" type="text/template">
+			<div class="container">
+				<h2>Host screen</h2>
 
-			<button id="btnHostGame" class="btn">Be the host</button>
-
+				<button id="btnHostGame" class="btn">Be the host</button>
+			</div>
+			
 		</script>
 
-		<script id="newGameScreen" type="text/template">
-			<div id="gameURL">--</div>
-            <div id="gameID">--</div>
-            <div id="playersWaiting"></div>
+		<script class="container" id="newGameScreen" type="text/template">
+			<div class="container">
+				<div id="gameURL">--</div>
+	            <div id="gameID">--</div>
+	            <div id="playersWaiting"></div>
+			</div>
 		</script>
 	
 		<script id="hostScreen" type="text/template">
-			<h1>Host</h1>
-			
-			<div id="questionArea">
-				<h2 id="question"></h2>
-				<h3 id="answer1"></h3>
-				<h3 id="answer2"></h3>
-				<h3 id="answer3"></h3>
-				<h3 id="answer4"></h3>
+
+			<div id="playersHub">
+				<div id="player1Score">
+					<h3>Player 1 score: 0</h3>
+				</div>
+
+				<div id="player2Score">
+					<h3>Player 2 score: 0</h3>
+				</div>
 			</div>
 			
-			
+			<div class="container" id="questionArea">
+				<img class="img-responsive center-block" src="/images/logo.PNG" width="70" height="70"alt="">
+
+				<h2 id="question">Quest</h2>
+				<ul style="list-style-type:none">
+	  				<li>
+	  					<button id="answer1">Answ1</button>
+	  				</li>
+	  				<li>
+	  					<button id="answer2">Answ2</button>
+	  				</li>
+	  				<li>
+	  					<button id="answer3">Answ3</button>
+	  				</li>
+	  				<li>
+	  					<button id="answer4">Answ4</button>
+	  				</li>
+
+				</ul>
+
+			</div>
+		</script>
+
+		<script id="gameFinished" type="text/template">
+			<div class="container" id="questionArea">
+				<h2>Game finished!</h2>
+			</div>
+
 		</script>
 		
 				
 
 
 		<% include partials/scripts %>
-		<script src="/js/gameHost.js"></script>
+		<script src="/game/gameHost.js"></script>
 
 
 	</body>

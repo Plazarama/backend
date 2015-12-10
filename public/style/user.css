@@ -1,4 +1,8 @@
-body {
+body 
+{
+  background: #f1efef;
+  font-family: Merriweather,'Helvetica Neue',Arial,sans-serif;
+
 }
 
 /* Profile container */
@@ -9,13 +13,14 @@ body {
 /* Profile sidebar */
 .profile-sidebar {
   padding: 20px 0 10px 0;
-  background: #fff;
+  background: #e76b6b;
 }
 
 .profile-userpic img {
   float: none;
   margin: 0 auto;
   width: 50%;
+  height: 50%;
   -webkit-border-radius: 50% !important;
   -moz-border-radius: 50% !important;
   border-radius: 50% !important;
@@ -27,7 +32,7 @@ body {
 }
 
 .profile-usertitle-name {
-  color: #5a7391;
+  color: #fff;
   font-size: 16px;
   font-weight: 600;
   margin-bottom: 7px;
@@ -35,7 +40,7 @@ body {
 
 .profile-usertitle-job {
   text-transform: uppercase;
-  color: #5b9bd1;
+  color: #fff;
   font-size: 12px;
   font-weight: 600;
   margin-bottom: 15px;
@@ -44,11 +49,12 @@ body {
 .profile-userbuttons {
   text-align: center;
   margin-top: 10px;
+
 }
 
 .profile-userbuttons .btn {
   text-transform: uppercase;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 600;
   padding: 6px 15px;
   margin-right: 5px;
@@ -62,37 +68,39 @@ body {
   margin-top: 30px;
 }
 
+/*space between links*/
 .profile-usermenu ul li {
-  border-bottom: 1px solid #f0f4f7;
+  border-bottom: 2px solid #fff;
 }
 
+/*no bit on the bottom of the nav*/
 .profile-usermenu ul li:last-child {
   border-bottom: none;
 }
 
+/*actual nav*/
 .profile-usermenu ul li a {
-  color: #93a3b5;
-  font-size: 14px;
+  color: #fff;
+  font-size: 15px;
   font-weight: 400;
 }
 
+/*space between glyphicon*/
 .profile-usermenu ul li a i {
   margin-right: 8px;
   font-size: 14px;
 }
 
+/*hover colour*/
 .profile-usermenu ul li a:hover {
-  background-color: #fafcfd;
-  color: #5b9bd1;
+  background-color: #fff;
+  color: #e76b6b;
 }
 
-.profile-usermenu ul li.active {
-  border-bottom: none;
-}
-
+/*tab that is active*/
 .profile-usermenu ul li.active a {
-  color: #5b9bd1;
-  background-color: #f6f9fb;
+  color: #fff;
+  background-color: #53c5bd;
   border-left: 2px solid #5b9bd1;
   margin-left: -2px;
 }
@@ -100,6 +108,7 @@ body {
 /* Profile Content */
 .profile-content {
   padding: 20px;
-  background: #fff;
+  background: #fefefe;
   min-height: 460px;
+  color: #249991;
 }

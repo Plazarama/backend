@@ -2,6 +2,8 @@
 <html lang="en">
 	<head>
 		<% include partials/head %>
+		<link rel="stylesheet" href="/style/gameStyle.css" type="text/css">
+
 	</head>
 	<body class="container">
 
@@ -10,7 +12,7 @@
 		</div>
 
 		<script id="initScreen" type="text/template">
-			<h1>Init screen</h1>
+			<h2>Player screen</h2>
 
 			<button id="btnJoinGame" class="btn">Join a game</button>
 
@@ -26,16 +28,38 @@
 		</script>
 
 		
-		<script id="playerScreen" type="text/template">
+		<script id="playerScreen" type="text/template">			
+			<div id="questionArea">
+				<ul id="answers" style="list-style-type:none">
+	  				<li >
+	  					<button id="answer1" class="answer">Answ1</button>
+	  				</li>
+	  				<li>
+	  					<button id="answer2" class="answer">Answ2</button>
+	  				</li>
+	  				<li >
+	  					<button id="answer3" class="answer">Answ3</button>
+	  				</li>
+	  				<li >
+	  					<button id="answer4" class="answer">Answ4</button>
+	  				</li>
+				</ul>
+			</div>
 			
 		</script>
+
+		<div id="finishedGame" type="text/template">
+			<div id="questionArea">
+				<h2 id="gameResult"></h2>
+			</div>
+		</div>
 
 		
 				
 
 
 		<% include partials/scripts %>
-		<script src="/js/gamePlayer.js"></script>
+		<script src="/game/gamePlayer.js"></script>
 
 
 	</body>

@@ -16,13 +16,18 @@ exports.initGame = function(sio, socket){
 	gameSocket = socket;
 	gameSocket.emit('connected', {message: 'User connected'});
 
+	// Host binds
 	gameSocket.on('hostCreateNewGame', hostCreateNewGame);
 	gameSocket.on('hostGameFull', hostPrepareGame);
 	gameSocket.on('hostCountdownFinished', hostStartGame);
+	gameSocket.on('getNewQuestion', hostGetNewQuestion);
+	gameSocket.on('gameFinished', gameFinished);
 
 
 
+	// Player binds
 	gameSocket.on('playerJoinGame', playerJoinGame);
+	gameSocket.on('playerAnswered', playerAnswered);
 
 };
 
@@ -38,7 +43,7 @@ function hostCreateNewGame() {
 
 
 	gameSocket.join(thisGameId.toString(), function(){
-		gameSocket.emit('newGameCreated', {gameId: thisGameId, mySocketId: gameSocket.id});
+		io.to(thisGameId).emit('newGameCreated', {gameId: thisGameId, mySocketId: gameSocket.id});
 	});
 }
 
@@ -56,6 +61,17 @@ function hostPrepareGame(gameId){
 function hostStartGame(gameId){
 	console.log('NEW GAME STARTED');
 	sendQuestion(gameId);
+}
+
+function hostGetNewQuestion(gameId){
+	sendQuestion(gameId);
+}
+
+function gameFinished(finishedData){
+	console.log(finishedData);
+
+	io.to(finishedData.winner.mySocketId).emit('gameFinished', true);
+	io.to(finishedData.loser.mySocketId).emit('gameFinished', false);
 }
 
 
@@ -83,6 +99,14 @@ function playerJoinGame(data){
 	} else{
 		io.to(data.gameId).emit('error', {message: 'The room does not exist.'});
 	}
+}
+
+/**
+ * One player answered a question, just passing the data to the host.
+ * @param data{{gameId: this game ID, playerId: socket of the player, answer: number of the answer}}
+ */
+function playerAnswered(data){
+	io.to(data.gameId).emit('responseAnswer', data);
 }
 
 
