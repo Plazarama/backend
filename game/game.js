@@ -106,6 +106,7 @@ function playerJoinGame(data){
  * @param data{{gameId: this game ID, playerId: socket of the player, answer: number of the answer}}
  */
 function playerAnswered(data){
+	console.log(data);
 	io.to(data.gameId).emit('responseAnswer', data);
 }
 
@@ -126,7 +127,7 @@ function sendQuestion(gameId){
 		if(questions){
 			var randQuest = random.integer(0, questions.length-1);
 			//console.log(questions[randQuest]);
-			
+
 			//Random questions.
 
 			var quest = questions[randQuest];
@@ -173,13 +174,13 @@ function shuffleReturningCorrect(array) {
     while (counter > 0) {
         // Pick a random index
         index = random.integer(0, counter-1);
-        
+
         // Decrease counter by 1
         counter--;
 
         if(index === 0 && firstTime){
         	correct = counter;
-        	firstTime = false; 
+        	firstTime = false;
         }
 
         // And swap the last element with it
