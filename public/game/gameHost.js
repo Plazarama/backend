@@ -12,7 +12,7 @@ jQuery(function($) {
 		 * After connection bind the events of socket.
 		 */
 		init: function() {
-			IO.socket = io.connect('http://172.16.80.185:3000');
+			IO.socket = io.connect('http://localhost:3000');
 			IO.bindEvents();
 
 		},
@@ -22,7 +22,7 @@ jQuery(function($) {
 		 */
 		bindEvents: function() {
 			IO.socket.on('connected', IO.onConnected);
-			
+
 			//Pre-game
 			IO.socket.on('newGameCreated', IO.onNewGameCreated);
 			IO.socket.on('beginNewGame', IO.beginNewGame);
@@ -47,7 +47,7 @@ jQuery(function($) {
 		},
 
 		/**
-		 * New game created in the server. 
+		 * New game created in the server.
 		 * Initialize new game in the host.
 		 * @param data{{gameId: *, mySocketId: *}}
 		 */
@@ -162,7 +162,7 @@ jQuery(function($) {
 			},
 
 			/**
-			 * New game created in the server. 
+			 * New game created in the server.
 			 * Initialize new game in the host.
 			 * @param data{{gameId: *, mySocketId: *}}
 			 */
@@ -237,7 +237,7 @@ jQuery(function($) {
 			},
 
 			/**
-			 * One player answered a question. 
+			 * One player answered a question.
 			 * We check if the answer is correct or not.
 			 * Here we also handle the round counts and determine if the game have finished yet.
 			 * @param data{{gameId: this game ID, playerId: socket of the player, answer: number of the answer}}
@@ -293,7 +293,7 @@ jQuery(function($) {
 						};
 					}
 					else if(Game.Host.players[0].score == Game.Host.players[1].score){
-						//Equals! 
+						//Equals!
 						gameFinishedData = {
 							eq1: Game.Host.players[1],
 							eq2: Game.Host.players[0],
