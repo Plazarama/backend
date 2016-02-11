@@ -12,7 +12,7 @@ jQuery(function($) {
 		 * After connection bind the events of socket.
 		 */
 		init: function() {
-			IO.socket = io.connect('http://172.16.80.185:3000');
+			IO.socket = io.connect('http://localhost:3000');
 			IO.bindEvents();
 
 		},
@@ -22,7 +22,7 @@ jQuery(function($) {
 		 */
 		bindEvents: function() {
 			IO.socket.on('connected', IO.onConnected);
-			
+
 			//Pre-game
 			IO.socket.on('beginNewGame', IO.beginNewGame);
 
@@ -104,7 +104,7 @@ jQuery(function($) {
 		},
 
 
-		
+
 
 		Player: {
 			hostSocketId: '',
@@ -158,8 +158,8 @@ jQuery(function($) {
 				/* We are getting the element clicked, so we need to extract
 				which is the answer clicked. For that first we get the ID where
 				we have the number of the answer in the form "answerX" so we need
-				to extract the answer text. We do this with the function SPLIT, 
-				this returns us an array of elements, we get the second element 
+				to extract the answer text. We do this with the function SPLIT,
+				this returns us an array of elements, we get the second element
 				(the number) and minus 1 for getting the correct answer. */
 				var answerN = targetElement.target.id.split('answer')[1]-1;
 				console.log(answerN);
@@ -179,7 +179,7 @@ jQuery(function($) {
 
 			gameFinished: function(winner){
 				Game.$gameArea.html(Game.$finishedGame);
-				
+
 				if(winner){
 					console.log('winner');
 					$('#gameResult').text('YOU WIN!! :D');
