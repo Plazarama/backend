@@ -70,7 +70,7 @@ module.exports = function(passport){
 				return done(null, false, req.flash('loginMessage', 'Wrong password! '));
 
 			return done(null, user, req.flash('loginMessage', 'You are now logged in. '));
-		
+
 		});
 
 	}));
@@ -93,7 +93,6 @@ module.exports = function(passport){
 
 				if(err)
 					return done(err);
-
 				//if user is found, log him in
 				if(user){
 					return done(null, user);
