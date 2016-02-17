@@ -128,8 +128,7 @@ jQuery(function($) {
 			},
 
 			updateWaitingScreen: function(data){
-				console.log(data);
-				if("/#" + IO.socket.id === data.mySocketId){
+				if(data.mySocketId.indexOf(IO.socket.id) > -1){
 					Game.gameId = data.gameId;
 
 					$('#playerWaiting')
