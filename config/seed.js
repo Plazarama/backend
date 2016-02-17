@@ -1,6 +1,7 @@
 //Seeding file for the db
 var User = require('../models/User');
 var Question = require('../models/QuizQuestion');
+var Locations = require('../models/Location');
 
 
 module.exports.seedUser = function() {
@@ -30,7 +31,58 @@ module.exports.seedUser = function() {
 
 };
 
+module.exports.seedLocations = function()	{
 
+	var LocationList = {
+		Location1: {
+			name: "Sligo IT",
+			type: "University",
+			owner: "Students",
+			categories: ["Math","General"],
+			gamesPlayed: 25,
+			totalPlayers: 100
+		},
+		Location2: {
+			name: "Brewery Bar",
+			type: "Pub",
+			owner: "Mr. Brewery",
+			categories: ["Math","General"],
+			gamesPlayed: 50,
+			totalPlayers: 200
+		},
+	};
+
+	Locations.find({}, function(err, locations){
+	if(locations.length<1){
+			var Location1 = new Locations();
+			Location1.name = LocationList.Location1.name;
+			Location1.type = LocationList.Location1.type;
+			Location1.owner = LocationList.Location1.owner;
+			Location1.categories = LocationList.Location1.categories;
+			Location1.totalPlayers = LocationList.Location1.totalPlayers;
+			
+			Location1.save(function(err){
+				if(err)
+					console.log(err);
+			});
+
+			var Location2 = new Locations();
+			Location2.name = LocationList.Location2.name;
+			Location2.type = LocationList.Location2.type;
+			Location2.owner = LocationList.Location2.owner;
+			Location2.categories = LocationList.Location2.categories;
+			Location2.totalPlayers = LocationList.Location2.totalPlayers;
+			
+			Location2.save(function(err){
+				if(err)
+					console.log(err);
+			});
+		}
+	});
+};
+
+
+	
 module.exports.seedQuestions = function() {
 
 	var setOfQuestions = {
@@ -41,7 +93,6 @@ module.exports.seedQuestions = function() {
 			secondAnswer: "Madrid",
 			thirdAnswer: "Dublin",
 			fourthAnswer: "Paris",
-			//fifthAnswer: '\public\images\logo.png'
 		},
 		question2: {
 			questionType: "Math",
@@ -50,7 +101,6 @@ module.exports.seedQuestions = function() {
 			secondAnswer: "34",
 			thirdAnswer: "122",
 			fourthAnswer: "45",
-			//fifthAnswer: '\public\images\logo.png'
 		},
 		question3: {
 			questionType: "General",
@@ -74,7 +124,6 @@ module.exports.seedQuestions = function() {
 			Question1.secondAnswer = setOfQuestions.question1.secondAnswer;
 			Question1.thirdAnswer = setOfQuestions.question1.thirdAnswer;
 			Question1.fourthAnswer = setOfQuestions.question1.fourthAnswer;
-			//Question1.fifthAnswer = setOfQuestions.question1.fifthAnswer;
 
 			Question1.save(function(err){
 				if(err)
@@ -88,7 +137,6 @@ module.exports.seedQuestions = function() {
 			Question2.secondAnswer = setOfQuestions.question2.secondAnswer;
 			Question2.thirdAnswer = setOfQuestions.question2.thirdAnswer;
 			Question2.fourthAnswer = setOfQuestions.question2.fourthAnswer;
-			//Question2.fifthAnswer = setOfQuestions.question2.fifthAnswer;
 
 			Question2.save(function(err){
 				if(err)
@@ -112,8 +160,4 @@ module.exports.seedQuestions = function() {
 		}
 	});
 	
-	
-
-
-
 };
