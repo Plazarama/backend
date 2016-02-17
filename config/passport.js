@@ -90,7 +90,7 @@ module.exports = function(passport){
 
 			//find a user in the db with the facebook.id
 			User.findOne({'facebook.id' : profile.id}, function(err, user){
-
+console.log(profile);
 				if(err)
 					return done(err);
 

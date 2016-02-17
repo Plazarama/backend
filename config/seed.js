@@ -40,7 +40,8 @@ module.exports.seedQuestions = function() {
 			correctAnswer: "Roma",
 			secondAnswer: "Madrid",
 			thirdAnswer: "Dublin",
-			fourthAnswer: "Paris"
+			fourthAnswer: "Paris",
+			//fifthAnswer: '\public\images\logo.png'
 		},
 		question2: {
 			questionType: "Math",
@@ -48,7 +49,8 @@ module.exports.seedQuestions = function() {
 			correctAnswer: "17",
 			secondAnswer: "34",
 			thirdAnswer: "122",
-			fourthAnswer: "45"
+			fourthAnswer: "45",
+			//fifthAnswer: '\public\images\logo.png'
 		},
 		question3: {
 			questionType: "General",
@@ -56,7 +58,8 @@ module.exports.seedQuestions = function() {
 			correctAnswer: "Elephant",
 			secondAnswer: "Lion",
 			thirdAnswer: "Cat",
-			fourthAnswer: "Rhino"
+			fourthAnswer: "Rhino",
+			//fifthAnswer: '\public\images\logo.png'
 		},
 	};
 	
@@ -71,6 +74,7 @@ module.exports.seedQuestions = function() {
 			Question1.secondAnswer = setOfQuestions.question1.secondAnswer;
 			Question1.thirdAnswer = setOfQuestions.question1.thirdAnswer;
 			Question1.fourthAnswer = setOfQuestions.question1.fourthAnswer;
+			//Question1.fifthAnswer = setOfQuestions.question1.fifthAnswer;
 
 			Question1.save(function(err){
 				if(err)
@@ -84,6 +88,7 @@ module.exports.seedQuestions = function() {
 			Question2.secondAnswer = setOfQuestions.question2.secondAnswer;
 			Question2.thirdAnswer = setOfQuestions.question2.thirdAnswer;
 			Question2.fourthAnswer = setOfQuestions.question2.fourthAnswer;
+			//Question2.fifthAnswer = setOfQuestions.question2.fifthAnswer;
 
 			Question2.save(function(err){
 				if(err)
@@ -98,6 +103,7 @@ module.exports.seedQuestions = function() {
 			Question3.secondAnswer = setOfQuestions.question3.secondAnswer;
 			Question3.thirdAnswer = setOfQuestions.question3.thirdAnswer;
 			Question3.fourthAnswer = setOfQuestions.question3.fourthAnswer;
+			//Question3.fifthAnswer = setOfQuestions.question3.fifthAnswer;
 
 			Question3.save(function(err){
 				if(err)

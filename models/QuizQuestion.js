@@ -7,6 +7,7 @@ var questionSchema = new mongoose.Schema({
 	secondAnswer: String,
 	thirdAnswer: String,
 	fourthAnswer: String
+	//fifthAnswer: Image
 });
 
 module.exports = mongoose.model('QuizQuestion', questionSchema);
