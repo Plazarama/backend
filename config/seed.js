@@ -22,6 +22,11 @@ module.exports.seedUser = function() {
 			newUser.email = testUser.email;
 			newUser.password = newUser.generateHash(testUser.password);
 			newUser.name = testUser.name;
+			newUser.played = 0;
+			newUser.won = 0;
+			newUser.lose = 0;
+			newUser.score = 0;
+			newUser.streak = 0;
 
 			newUser.save(function(err, user) {
 				if (err)
