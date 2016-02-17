@@ -6,6 +6,7 @@ var Question = require('../models/QuizQuestion');
 module.exports.seedUser = function() {
 
 	var testUser = {
+		name: 'Test',
 		email: 'test@test.com',
 		password: '1234'
 	};
@@ -20,6 +21,7 @@ module.exports.seedUser = function() {
 			var newUser = new User();
 			newUser.email = testUser.email;
 			newUser.password = newUser.generateHash(testUser.password);
+			newUser.name = testUser.name;
 
 			newUser.save(function(err, user) {
 				if (err)
@@ -62,7 +64,7 @@ module.exports.seedQuestions = function() {
 			//fifthAnswer: '\public\images\logo.png'
 		},
 	};
-	
+
 	//Add to db
 
 	Question.find({}, function(err, questions){
@@ -111,8 +113,8 @@ module.exports.seedQuestions = function() {
 			});
 		}
 	});
-	
-	
+
+
 
 
 
