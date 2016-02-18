@@ -70,8 +70,8 @@ function hostGetNewQuestion(gameId){
 function gameFinished(finishedData){
 	console.log(finishedData);
 
-	io.to(finishedData.winner.mySocketId).emit('gameFinished', true);
-	io.to(finishedData.loser.mySocketId).emit('gameFinished', false);
+	io.to(finishedData.result[0].player.mySocketId).emit('gameFinished', true);
+	io.to(finishedData.result[finishedData.result.length - 1].player.mySocketId).emit('gameFinished', false);
 }
 
 
