@@ -39,7 +39,7 @@ module.exports = function(passport){
 
 						newUser.email = email;
 						newUser.password = newUser.generateHash(password);
-						//newUser.name = req.body.name;
+						newUser.name = req.body.firstname;
 						newUser.played = 0;
 						newUser.won = 0;
 						newUser.lose = 0;
@@ -87,13 +87,11 @@ module.exports = function(passport){
 		clientSecret : configAuth.facebookAuth.clientSecret,
 		callbackURL : configAuth.facebookAuth.callbackURL,
 		profileFields: ['id', 'displayName', 'email']
-
 	},
 
 	function(token, refreshToken, profile, done){
 		//console.log(profile);
 		process.nextTick(function(){
-
 			//find a user in the db with the facebook.id
 			User.findOne({'facebook.id' : profile.id}, function(err, user){
 console.log(profile);

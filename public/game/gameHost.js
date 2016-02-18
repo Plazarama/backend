@@ -180,7 +180,7 @@ jQuery(function($) {
 			displayNewGameScreen: function(){
 				Game.$gameArea.html(Game.$newGame);
 
-				
+
 				$('#gameURL').text(window.location.href);
 				$('#gameID').text(Game.gameId);
 
@@ -249,21 +249,20 @@ jQuery(function($) {
 				if(data.answer == Game.Host.currentCorrectAnswer){
 					for(var x=0; x<Game.Host.players.length; x++){
 						if(Game.Host.players[x].mySocketId.indexOf(data.playerId) > -1){
-							Game.Host.players[x].score += 10;
-						}
-					}
-					//console.log(Game.Host.players);
-
-				}
-				else{
-					for(var j=0; j<Game.Host.players.length; j++){
-
-						if(Game.Host.players[j].mySocketId.indexOf(data.playerId) > -1){
-							Game.Host.players[j].score -= 10;
+							Game.Host.players[x].score += 2 // NOTE: (2 * bonus);
 						}
 					}
 					//console.log(Game.Host.players);
 				}
+				// else{
+				// 	for(var j=0; j<Game.Host.players.length; j++){
+				//
+				// 		if(Game.Host.players[j].mySocketId.indexOf(data.playerId) > -1){
+				// 			Game.Host.players[j].score -= 10;
+				// 		}
+				// 	}
+				// 	//console.log(Game.Host.players);
+				// }
 
 				//Update the players score label
 				for(var i=0; i<Game.Host.players.length; i++){
@@ -277,33 +276,43 @@ jQuery(function($) {
 
 					Game.$gameArea.html(Game.$gameFinished);
 
+					var resultArray = Array();
+					Game.Host.players.forEach(elem => {
+						resultArray.push({player: elem, score: elem.score});
+					});
+					resultArray.sort(function(a, b){return a.score < b.score ? 1 : (a.score > b.score ? -1 : 0);});
 
-					var gameFinishedData = {};
-					if(Game.Host.players[0].score > Game.Host.players[1].score){
-						//Player 1 Wins
-						gameFinishedData = {
-							winner: Game.Host.players[0],
-							loser: Game.Host.players[1],
-							gameData: Game.gameId
-						};
-					}
-					else if(Game.Host.players[0].score < Game.Host.players[1].score){
-						//Player 2 Wins
-						gameFinishedData = {
-							winner: Game.Host.players[1],
-							loser: Game.Host.players[0],
-							gameData: Game.gameId
-						};
-					}
-					// TODO: Deal with Draw Condition
-					else if(Game.Host.players[0].score == Game.Host.players[1].score){
-						//Equals!
-						gameFinishedData = {
-							eq1: Game.Host.players[1],
-							eq2: Game.Host.players[0],
-							gameData: Game.gameId
-						};
-					}
+					var gameFinishedData = {
+						result: resultArray,
+						gameData: Game.gameId
+					};
+
+					console.log(gameFinishedData);
+					// if(Game.Host.players[0].score > Game.Host.players[1].score){
+					// 	//Player 1 Wins
+					// 	gameFinishedData = {
+					// 		winner: Game.Host.players[0],
+					// 		loser: Game.Host.players[1],
+					// 		gameData: Game.gameId
+					// 	};
+					// }
+					// else if(Game.Host.players[0].score < Game.Host.players[1].score){
+					// 	//Player 2 Wins
+					// 	gameFinishedData = {
+					// 		winner: Game.Host.players[1],
+					// 		loser: Game.Host.players[0],
+					// 		gameData: Game.gameId
+					// 	};
+					// }
+					// // TODO: Deal with Draw Condition
+					// else if(Game.Host.players[0].score == Game.Host.players[1].score){
+					// 	//Equals!
+					// 	gameFinishedData = {
+					// 		eq1: Game.Host.players[1],
+					// 		eq2: Game.Host.players[0],
+					// 		gameData: Game.gameId
+					// 	};
+					// }
 
 					IO.socket.emit('gameFinished', gameFinishedData);
 				}
