@@ -125,6 +125,7 @@ jQuery(function($) {
 			Game.$initScreen = $('#initScreen').html();
 			Game.$newGame = $('#newGameScreen').html();
 
+
 			Game.$gameFinished = $('#gameFinished').html();
 
 		},
@@ -179,6 +180,7 @@ jQuery(function($) {
 			displayNewGameScreen: function(){
 				Game.$gameArea.html(Game.$newGame);
 
+				
 				$('#gameURL').text(window.location.href);
 				$('#gameID').text(Game.gameId);
 

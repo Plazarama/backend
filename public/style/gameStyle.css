@@ -14,37 +14,89 @@ button{
 	font-size: 30px;
 	margin-left: auto;
 	margin-right: auto;
-	border-style: solid;
-	border-color: #42729b;
+	
 	width: 100%;
 	height: 100%;
 }
+#btnJoinGame{
+	color:#ffffff;
+	font-size: 30px;
+
+}
+#btnHostGame{
+	color:#ffffff;
+	font-size: 30px;
+}
+#btnStart{
+	color:#ffffff;
+	font-size: 30px;
+
+}
+#btnProceed{
+	color:#ffffff;
+	font-size: 30px;
+
+}
+
 
 button:hover {
     background-color: #e76b6b;
+    color: #ffffff;
 }
 
 button:active{
 	background-color: #249991;
+	color: #ffffff;
 }
 
 button:focus{
 	background-color: #249991;
+	color: #ffffff;
 }
 
 ul{
 	margin: 0 auto;
 }
+#gameID{
+	font-family: Arial, Helvetica, sans-serif;
+	color: #249991;
+	text-align:center;
+
+}
 
 h2 {
     font-family: Arial, Helvetica, sans-serif;
-    margin-left: ;
-    font-size: 40px;
+    
+    font-size: 25px;
     color: #249991;
     text-align: center;
     float: center;
 }
-
+h3{
+	font-family: Arial, Helvetica, sans-serif;
+	font size:25px;
+	color: #249991;
+	text-align:center;
+    
+}
+h4{
+	font-family: Arial, Helvetica, sans-serif;
+    
+    font-size: 30 px;
+    color: #249991;
+}
+h5{
+	color:#e76b6b;
+	text-align: center;
+    float: center;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 80px;
+    position:relative;
+}
+#logo{
+	margin-left: 850px;
+}
 @media screen and (min-width:800px) {
     #questionArea {
         margin: 0 auto;
@@ -74,7 +126,32 @@ h2 {
     margin-left: 20px;
     margin-top: 20px;
 }
+#inputGameId{
+padding: 10px;
+  border: solid 1px #dcdcdc;
+  transition: box-shadow 0.3s, border 0.3s;
+  position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    height:50px;
+	font-size:30px;
+	text-align:center;
+	color: #249991;
+    left: 0%;
+    top: 50%;
+    width: 100%;
+	
+	}
 
+#newGameScreen{
+
+}	
+p{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 30px;
+	color:#249991;
+	text-align:center;
+
+	}
 
 
 /* Players Hub */
@@ -99,5 +176,6 @@ h2 {
 /* Game Area */
 
 #gameArea{
+	-
 
 }
