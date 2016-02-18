@@ -39,6 +39,12 @@ module.exports = function(passport){
 
 						newUser.email = email;
 						newUser.password = newUser.generateHash(password);
+						//newUser.name = req.body.name;
+						newUser.played = 0;
+						newUser.won = 0;
+						newUser.lose = 0;
+						newUser.score = 0;
+						newUser.streak = 0;
 
 						newUser.save(function(err, user){
 							if(err)
@@ -70,7 +76,7 @@ module.exports = function(passport){
 				return done(null, false, req.flash('loginMessage', 'Wrong password! '));
 
 			return done(null, user, req.flash('loginMessage', 'You are now logged in. '));
-		
+
 		});
 
 	}));
@@ -90,10 +96,9 @@ module.exports = function(passport){
 
 			//find a user in the db with the facebook.id
 			User.findOne({'facebook.id' : profile.id}, function(err, user){
-
+console.log(profile);
 				if(err)
 					return done(err);
-
 				//if user is found, log him in
 				if(user){
 					return done(null, user);
@@ -104,8 +109,13 @@ module.exports = function(passport){
 
 					newUser.facebook.id = profile.id;
 					newUser.facebook.token = token;
-					newUser.facebook.name = profile.displayName;
-					newUser.facebook.email = profile.emails[0].value;
+					newUser.name = profile.displayName;
+					newUser.email = profile.emails[0].value;
+					newUser.played = 0;
+					newUser.won = 0;
+					newUser.lose = 0;
+					newUser.score = 0;
+					newUser.streak = 0;
 
 					newUser.save(function(err){
 						if(err)

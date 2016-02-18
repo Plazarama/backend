@@ -50,7 +50,6 @@ app.use(flash());
 // Authentication routes
 require('./config/passport')(passport);
 
-
 // development error handler
 // Change for deploy
 var env = process.env.NODE_ENV || 'development';

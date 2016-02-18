@@ -12,9 +12,8 @@ jQuery(function($) {
 		 * After connection bind the events of socket.
 		 */
 		init: function() {
-			IO.socket = io.connect('http://localhost:3000');
+			IO.socket = io.connect('http://172.16.88.97:3000');
 			IO.bindEvents();
-
 		},
 
 		/**
@@ -55,6 +54,7 @@ jQuery(function($) {
 		},
 
 		onPlayerJoined: function(data) {
+			console.log(data);
 			Game.Player.updateWaitingScreen(data);
 		},
 		onGameFinished: function(data){
@@ -128,7 +128,7 @@ jQuery(function($) {
 			},
 
 			updateWaitingScreen: function(data){
-				if(IO.socket.id === data.mySocketId){
+				if(data.mySocketId.indexOf(IO.socket.id) > -1){
 					Game.gameId = data.gameId;
 
 					$('#playerWaiting')
@@ -172,6 +172,8 @@ jQuery(function($) {
 				    playerId: Game.mySocketId,
 				    answer: answerN,
 				};
+
+				console.log(data);
 
 				IO.socket.emit('playerAnswered', data);
 
