@@ -1,0 +1,90 @@
+html,body{
+
+    background-color: #fefefe;
+}
+
+
+h1{
+
+    font-family: Merriweather,'Helvetica Neue',Arial,sans-serif;
+    text-align: center;
+    color: #249991;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+img {
+   margin-top:8.5px;
+   margin-left:5px;
+   display:inline;
+}
+
+
+h2{
+
+    font-family: Merriweather,'Helvetica Neue',Arial,sans-serif;
+    text-align: center;
+    color: #e76b6b;
+}
+
+
+.btn {
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 17px;
+  background: #588c7f;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+
+}
+
+.btn:hover {
+  background: #6baa9a;
+  text-decoration: none;
+  color: #fff;
+}
+
+#question
+{
+    font-family: Merriweather,'Helvetica Neue',Arial,sans-serif;
+    color: #676f86;
+    text-transform: uppercase;
+
+}
+
+#correctAnswer
+{
+    font-family: Merriweather,'Helvetica Neue',Arial,sans-serif;
+    color: #676f86;
+    text-transform: uppercase;
+
+}
+
+#answer2
+{
+    font-family: Merriweather,'Helvetica Neue',Arial,sans-serif;
+    color: #676f86;
+    text-transform: uppercase;
+
+}
+
+#answer3
+{
+    font-family: Merriweather,'Helvetica Neue',Arial,sans-serif;
+    color: #676f86;
+    text-transform: uppercase;
+
+}
+
+#answer4
+{
+    font-family: Merriweather,'Helvetica Neue',Arial,sans-serif;
+    color: #676f86;
+    text-transform: uppercase;
+
+}
