@@ -2,6 +2,7 @@ var io;
 var gameSocket;
 
 var Questions = require('../models/QuizQuestion');
+var Users = require('../models/User');
 var random = require("random-js")();
 
 /**
@@ -87,7 +88,6 @@ function playerJoinGame(data){
 	var sock = this;
 	//Search the room
 	var room = io.sockets.adapter.rooms[data.gameId];
-
 	//If the room exists
 	if(room !== undefined){
 		data.mySocketId = sock.id;

@@ -21,7 +21,7 @@
 
 		</script>
 
-	
+
 
 		<script id="joinScreen" type="text/template">
 
@@ -32,8 +32,8 @@
 
 		</script>
 
-		
-		<script id="playerScreen" type="text/template">			
+
+		<script id="playerScreen" type="text/template">
 			<div id="questionArea">
 				<ul id="answers" style="list-style-type:none">
 	  				<li >
@@ -50,7 +50,7 @@
 	  				</li>
 				</ul>
 			</div>
-			
+
 		</script>
 
 		<div id="finishedGame" type="text/template">
@@ -59,13 +59,13 @@
 			</div>
 		</div>
 
-		
-				
+
+
 
 
 		<% include partials/scripts %>
 		<script src="/game/gamePlayer.js"></script>
-
+		<input type="hidden" id="uid" value="<%= userid %>" />
 
 	</body>
 </html>

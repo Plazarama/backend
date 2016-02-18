@@ -70,6 +70,7 @@ jQuery(function($) {
 	var Game = {
 		gameId: 0,
 		mySocketId: '',
+		userid: '',
 
 		init: function() {
 			Game.getElements();
@@ -118,7 +119,7 @@ jQuery(function($) {
 
 			onPlayerStartClick: function(){
 				var joiningGameId = $('#inputGameId').val();
-
+				Game.userid = $('#uid').val();
 				var data = {
 					gameId: joiningGameId
 				};

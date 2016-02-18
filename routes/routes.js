@@ -14,8 +14,8 @@ module.exports = function(app, passport){
 		});
 
 	app.route('/player')
-		.get(function(req, res){
-			res.render('gamePlayer', {title: 'Player'});
+		.get(isLoggedIn,function(req, res){
+			res.render('gamePlayer', {title: 'Player', userid: req.user._id});
 		});
 
 
