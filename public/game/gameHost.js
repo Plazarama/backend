@@ -248,7 +248,7 @@ jQuery(function($) {
 				console.log(data);
 				if(data.answer == Game.Host.currentCorrectAnswer){
 					for(var x=0; x<Game.Host.players.length; x++){
-						if(Game.Host.players[x].mySocketId == data.playerId){
+						if(Game.Host.players[x].mySocketId.indexOf(data.playerId) > -1){
 							Game.Host.players[x].score += 10;
 						}
 					}
@@ -257,7 +257,8 @@ jQuery(function($) {
 				}
 				else{
 					for(var j=0; j<Game.Host.players.length; j++){
-						if(Game.Host.players[j].mySocketId == data.playerId){
+
+						if(Game.Host.players[j].mySocketId.indexOf(data.playerId) > -1){
 							Game.Host.players[j].score -= 10;
 						}
 					}
@@ -294,6 +295,7 @@ jQuery(function($) {
 							gameData: Game.gameId
 						};
 					}
+					// TODO: Deal with Draw Condition
 					else if(Game.Host.players[0].score == Game.Host.players[1].score){
 						//Equals!
 						gameFinishedData = {

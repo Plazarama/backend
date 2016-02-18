@@ -5,7 +5,7 @@
 <body>
 		<header>
 		<% include partials/header %>
-		
+
 	</header>
 	<div class="page-header text-center">
 	        <h1><span class="fa fa-anchor"></span> Profile Page</h1>
@@ -20,15 +20,15 @@
 
 	                    <p>
 	                        <strong>id</strong>: <%= user.facebook.id %><br>
-	                        <strong>email</strong>: <%= user.facebook.email %><br>
-	                        <strong>name</strong>: <%= user.facebook.name %>
+	                        <strong>email</strong>: <%= user.email %><br>
+	                        <strong>name</strong>: <%= user.name %>
 	                    </p>
 
 	            </div>
 	        </div>
 
 	    </div>
-	
+
 	<% include partials/footer %>
 </body>
 </html>
