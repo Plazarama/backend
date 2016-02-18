@@ -1,7 +1,7 @@
 html, body{
-	height: 100%;
-	width: 100%;
-	margin: 0 0;
+  height: 100%;
+  width: 100%;
+  margin: 0 0;
 }
 
 button{
@@ -36,6 +36,7 @@ button{
 	color:#ffffff;
 	font-size: 30px;
 
+
 }
 
 
@@ -45,6 +46,7 @@ button:hover {
 }
 
 button:active{
+
 	background-color: #249991;
 	color: #ffffff;
 }
@@ -52,10 +54,17 @@ button:active{
 button:focus{
 	background-color: #249991;
 	color: #ffffff;
+
 }
 
 ul{
-	margin: 0 auto;
+  margin: 0 auto;
+}
+#gameID{
+  font-family: Arial, Helvetica, sans-serif;
+  color: #249991;
+  text-align:center;
+
 }
 #gameID{
 	font-family: Arial, Helvetica, sans-serif;
@@ -73,6 +82,7 @@ h2 {
     float: center;
 }
 h3{
+
 	font-family: Arial, Helvetica, sans-serif;
 	font size:25px;
 	color: #249991;
@@ -81,13 +91,16 @@ h3{
 }
 h4{
 	font-family: Arial, Helvetica, sans-serif;
+
     
     font-size: 30 px;
     color: #249991;
 }
 h5{
+
 	color:#e76b6b;
 	text-align: center;
+
     float: center;
     font-size: 40px;
     font-weight: bold;
@@ -95,7 +108,9 @@ h5{
     position:relative;
 }
 #logo{
+
 	margin-left: 850px;
+
 }
 @media screen and (min-width:800px) {
     #questionArea {
@@ -113,12 +128,12 @@ h5{
 
 
 .container {
-	margin: 0 auto;
-	width: 80%;
+  margin: 0 auto;
+  width: 80%;
 }
 
 #answers{
-	padding: 0;
+  padding: 0;
 }
 
 
@@ -133,6 +148,7 @@ padding: 10px;
   position: relative;
     font-family: Arial, Helvetica, sans-serif;
     height:50px;
+
 	font-size:30px;
 	text-align:center;
 	color: #249991;
@@ -154,28 +170,29 @@ p{
 	}
 
 
+
 /* Players Hub */
 
 #playersHub{
-	position: fixed;
-	width: 100%;
-	background: #249991;
-	top: 0;
-	color: white;
-	padding: 0 5%;
+  position: fixed;
+  width: 100%;
+  background: #249991;
+  top: 0;
+  color: white;
+  padding: 0 5%;
 }
 
 #player1Score{
-	float: left;
+  float: left;
 }
 
 #player2Score{
-	float: right;
+  float: right;
 }
 
 /* Game Area */
 
 #gameArea{
-	-
+
 
 }
