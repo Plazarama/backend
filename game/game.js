@@ -24,12 +24,9 @@ exports.initGame = function(sio, socket){
 	gameSocket.on('getNewQuestion', hostGetNewQuestion);
 	gameSocket.on('gameFinished', gameFinished);
 
-
-
 	// Player binds
 	gameSocket.on('playerJoinGame', playerJoinGame);
 	gameSocket.on('playerAnswered', playerAnswered);
-
 };
 
 
@@ -40,7 +37,7 @@ exports.initGame = function(sio, socket){
    ******************************* */
 
 function hostCreateNewGame() {
-	var thisGameId = 1;//(Math.random() * 10000) | 0;
+	var thisGameId = 1; // TODO: (Math.random() * 10000) | 0;
 
 
 	gameSocket.join(thisGameId.toString(), function(){
@@ -69,7 +66,20 @@ function hostGetNewQuestion(gameId){
 }
 
 function gameFinished(finishedData){
-	console.log(finishedData);
+	finishedData.result.forEach(elem => {
+		console.log("elem");
+		console.log(elem);
+		Users.findOne({_id: elem.player.dbId},function(err, user){
+			console.log("db");
+			console.log(user);
+			if(err)
+				console.log(err);
+			else {
+				user.score = user.score + elem.score;
+				user.save();
+			}
+		});
+	});
 
 	io.to(finishedData.result[0].player.mySocketId).emit('gameFinished', true);
 	io.to(finishedData.result[finishedData.result.length - 1].player.mySocketId).emit('gameFinished', false);

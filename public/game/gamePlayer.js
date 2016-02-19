@@ -12,7 +12,7 @@ jQuery(function($) {
 		 * After connection bind the events of socket.
 		 */
 		init: function() {
-			IO.socket = io.connect('http://172.16.88.97:3000');
+			IO.socket = io.connect('http://localhost:3000');
 			IO.bindEvents();
 		},
 
@@ -70,7 +70,7 @@ jQuery(function($) {
 	var Game = {
 		gameId: 0,
 		mySocketId: '',
-		userid: '',
+		dbId: '',
 
 		init: function() {
 			Game.getElements();
@@ -111,7 +111,6 @@ jQuery(function($) {
 			hostSocketId: '',
 			currentCorrectAnswer: '',
 
-
 			onJoinClick: function(){
 				Game.$gameArea.html(Game.$joinScreen);
 			},
@@ -119,9 +118,10 @@ jQuery(function($) {
 
 			onPlayerStartClick: function(){
 				var joiningGameId = $('#inputGameId').val();
-				Game.userid = $('#uid').val();
+				Game.dbId = $('#uid').val();
 				var data = {
-					gameId: joiningGameId
+					gameId: joiningGameId,
+					dbId: Game.dbId
 				};
 
 				IO.socket.emit('playerJoinGame', data);
@@ -172,6 +172,7 @@ jQuery(function($) {
 				    gameId: Game.gameId,
 				    playerId: Game.mySocketId,
 				    answer: answerN,
+						dbId: Game.dbId
 				};
 
 				console.log(data);

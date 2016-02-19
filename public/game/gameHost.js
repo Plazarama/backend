@@ -246,10 +246,11 @@ jQuery(function($) {
 			 */
 			playerAnswered: function(data){
 				console.log(data);
+
 				if(data.answer == Game.Host.currentCorrectAnswer){
 					for(var x=0; x<Game.Host.players.length; x++){
 						if(Game.Host.players[x].mySocketId.indexOf(data.playerId) > -1){
-							Game.Host.players[x].score += 2 // NOTE: (2 * bonus);
+							Game.Host.players[x].score += 2 // TODO: (2 * bonus);
 						}
 					}
 					//console.log(Game.Host.players);
