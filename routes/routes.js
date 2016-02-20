@@ -18,6 +18,11 @@ module.exports = function(app, passport){
 			res.render('gamePlayer', {title: 'Player', userid: req.user._id});
 		});
 
+		app.route('/results')
+			.get(function(req, res){
+				res.render('results', {title: 'Results'});
+			});
+
 
 	app.route('/about')
 		.get(function(req, res){
