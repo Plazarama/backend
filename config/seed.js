@@ -322,9 +322,274 @@ module.exports.seedQuestions = function() {
 			Question3.secondAnswer = setOfQuestions.question3.secondAnswer;
 			Question3.thirdAnswer = setOfQuestions.question3.thirdAnswer;
 			Question3.fourthAnswer = setOfQuestions.question3.fourthAnswer;
-			//Question3.fifthAnswer = setOfQuestions.question3.fifthAnswer;
 
 			Question3.save(function(err){
+				if(err)
+					console.log(err);
+			});
+
+			var Question4 = new Question();
+			Question4.questionType = setOfQuestions.question4.questionType;
+			Question4.question = setOfQuestions.question4.question;
+			Question4.correctAnswer = setOfQuestions.question4.correctAnswer;
+			Question4.secondAnswer = setOfQuestions.question4.secondAnswer;
+			Question4.thirdAnswer = setOfQuestions.question4.thirdAnswer;
+			Question4.fourthAnswer = setOfQuestions.question4.fourthAnswer;
+
+			Question4.save(function(err){
+				if(err)
+					console.log(err);
+			});
+
+			var Question5 = new Question();
+			Question5.questionType = setOfQuestions.question5.questionType;
+			Question5.question = setOfQuestions.question5.question;
+			Question5.correctAnswer = setOfQuestions.question5.correctAnswer;
+			Question5.secondAnswer = setOfQuestions.question5.secondAnswer;
+			Question5.thirdAnswer = setOfQuestions.question5.thirdAnswer;
+			Question5.fourthAnswer = setOfQuestions.question5.fourthAnswer;
+
+			Question5.save(function(err){
+				if(err)
+					console.log(err);
+			});
+
+
+			var Question6 = new Question();
+			Question6.questionType = setOfQuestions.question6.questionType;
+			Question6.question = setOfQuestions.question6.question;
+			Question6.correctAnswer = setOfQuestions.question6.correctAnswer;
+			Question6.secondAnswer = setOfQuestions.question6.secondAnswer;
+			Question6.thirdAnswer = setOfQuestions.question6.thirdAnswer;
+			Question6.fourthAnswer = setOfQuestions.question6.fourthAnswer;
+
+			Question6.save(function(err){
+				if(err)
+					console.log(err);
+			});
+
+			var Question7 = new Question();
+			Question7.questionType = setOfQuestions.question7.questionType;
+			Question7.question = setOfQuestions.question7.question;
+			Question7.correctAnswer = setOfQuestions.question7.correctAnswer;
+			Question7.secondAnswer = setOfQuestions.question7.secondAnswer;
+			Question7.thirdAnswer = setOfQuestions.question7.thirdAnswer;
+			Question7.fourthAnswer = setOfQuestions.question7.fourthAnswer;
+
+			Question7.save(function(err){
+				if(err)
+					console.log(err);
+			});
+
+			var Question8 = new Question();
+			Question8.questionType = setOfQuestions.question8.questionType;
+			Question8.question = setOfQuestions.question8.question;
+			Question8.correctAnswer = setOfQuestions.question8.correctAnswer;
+			Question8.secondAnswer = setOfQuestions.question8.secondAnswer;
+			Question8.thirdAnswer = setOfQuestions.question8.thirdAnswer;
+			Question8.fourthAnswer = setOfQuestions.question8.fourthAnswer;
+
+			Question8.save(function(err){
+				if(err)
+					console.log(err);
+			});
+
+
+			var Question9 = new Question();
+			Question9.questionType = setOfQuestions.question9.questionType;
+			Question9.question = setOfQuestions.question9.question;
+			Question9.correctAnswer = setOfQuestions.question9.correctAnswer;
+			Question9.secondAnswer = setOfQuestions.question9.secondAnswer;
+			Question9.thirdAnswer = setOfQuestions.question9.thirdAnswer;
+			Question9.fourthAnswer = setOfQuestions.question9.fourthAnswer;
+
+			Question9.save(function(err){
+				if(err)
+					console.log(err);
+			});
+
+			var Question10 = new Question();
+			Question10.questionType = setOfQuestions.question10.questionType;
+			Question10.question = setOfQuestions.question10.question;
+			Question10.correctAnswer = setOfQuestions.question10.correctAnswer;
+			Question10.secondAnswer = setOfQuestions.question10.secondAnswer;
+			Question10.thirdAnswer = setOfQuestions.question10.thirdAnswer;
+			Question10.fourthAnswer = setOfQuestions.question10.fourthAnswer;
+
+			Question10.save(function(err){
+				if(err)
+					console.log(err);
+			});
+
+			var Question11 = new Question();
+			Question11.questionType = setOfQuestions.question11.questionType;
+			Question11.question = setOfQuestions.question11.question;
+			Question11.correctAnswer = setOfQuestions.question11.correctAnswer;
+			Question11.secondAnswer = setOfQuestions.question11.secondAnswer;
+			Question11.thirdAnswer = setOfQuestions.question11.thirdAnswer;
+			Question11.fourthAnswer = setOfQuestions.question11.fourthAnswer;
+
+			Question11.save(function(err){
+				if(err)
+					console.log(err);
+			});
+
+
+			var Question12 = new Question();
+			Question12.questionType = setOfQuestions.question12.questionType;
+			Question12.question = setOfQuestions.question12.question;
+			Question12.correctAnswer = setOfQuestions.question12.correctAnswer;
+			Question12.secondAnswer = setOfQuestions.question12.secondAnswer;
+			Question12.thirdAnswer = setOfQuestions.question12.thirdAnswer;
+			Question12.fourthAnswer = setOfQuestions.question12.fourthAnswer;
+
+			Question12.save(function(err){
+				if(err)
+					console.log(err);
+			});
+
+			var Question13 = new Question();
+			Question13.questionType = setOfQuestions.question13.questionType;
+			Question13.question = setOfQuestions.question13.question;
+			Question13.correctAnswer = setOfQuestions.question13.correctAnswer;
+			Question13.secondAnswer = setOfQuestions.question13.secondAnswer;
+			Question13.thirdAnswer = setOfQuestions.question13.thirdAnswer;
+			Question13.fourthAnswer = setOfQuestions.question13.fourthAnswer;
+
+			Question13.save(function(err){
+				if(err)
+					console.log(err);
+			});
+
+			var Question14 = new Question();
+			Question14.questionType = setOfQuestions.question14.questionType;
+			Question14.question = setOfQuestions.question14.question;
+			Question14.correctAnswer = setOfQuestions.question14.correctAnswer;
+			Question14.secondAnswer = setOfQuestions.question14.secondAnswer;
+			Question14.thirdAnswer = setOfQuestions.question14.thirdAnswer;
+			Question14.fourthAnswer = setOfQuestions.question14.fourthAnswer;
+
+			Question14.save(function(err){
+				if(err)
+					console.log(err);
+			});
+
+
+			var Question15 = new Question();
+			Question15.questionType = setOfQuestions.question15.questionType;
+			Question15.question = setOfQuestions.question15.question;
+			Question15.correctAnswer = setOfQuestions.question15.correctAnswer;
+			Question15.secondAnswer = setOfQuestions.question15.secondAnswer;
+			Question15.thirdAnswer = setOfQuestions.question15.thirdAnswer;
+			Question15.fourthAnswer = setOfQuestions.question15.fourthAnswer;
+
+			Question15.save(function(err){
+				if(err)
+					console.log(err);
+			});
+
+			var Question16 = new Question();
+			Question16.questionType = setOfQuestions.question16.questionType;
+			Question16.question = setOfQuestions.question16.question;
+			Question16.correctAnswer = setOfQuestions.question16.correctAnswer;
+			Question16.secondAnswer = setOfQuestions.question16.secondAnswer;
+			Question16.thirdAnswer = setOfQuestions.question16.thirdAnswer;
+			Question16.fourthAnswer = setOfQuestions.question16.fourthAnswer;
+
+			Question16.save(function(err){
+				if(err)
+					console.log(err);
+			});
+
+			var Question17 = new Question();
+			Question17.questionType = setOfQuestions.question17.questionType;
+			Question17.question = setOfQuestions.question17.question;
+			Question17.correctAnswer = setOfQuestions.question17.correctAnswer;
+			Question17.secondAnswer = setOfQuestions.question17.secondAnswer;
+			Question17.thirdAnswer = setOfQuestions.question17.thirdAnswer;
+			Question17.fourthAnswer = setOfQuestions.question17.fourthAnswer;
+
+			Question17.save(function(err){
+				if(err)
+					console.log(err);
+			});
+
+
+			var Question18 = new Question();
+			Question18.questionType = setOfQuestions.question18.questionType;
+			Question18.question = setOfQuestions.question18.question;
+			Question18.correctAnswer = setOfQuestions.question18.correctAnswer;
+			Question18.secondAnswer = setOfQuestions.question18.secondAnswer;
+			Question18.thirdAnswer = setOfQuestions.question18.thirdAnswer;
+			Question18.fourthAnswer = setOfQuestions.question18.fourthAnswer;
+
+			Question18.save(function(err){
+				if(err)
+					console.log(err);
+			});
+
+			var Question19 = new Question();
+			Question19.questionType = setOfQuestions.question19.questionType;
+			Question19.question = setOfQuestions.question19.question;
+			Question19.correctAnswer = setOfQuestions.question19.correctAnswer;
+			Question19.secondAnswer = setOfQuestions.question19.secondAnswer;
+			Question19.thirdAnswer = setOfQuestions.question19.thirdAnswer;
+			Question19.fourthAnswer = setOfQuestions.question19.fourthAnswer;
+
+			Question19.save(function(err){
+				if(err)
+					console.log(err);
+			});
+
+			var Question20 = new Question();
+			Question20.questionType = setOfQuestions.question20.questionType;
+			Question20.question = setOfQuestions.question20.question;
+			Question20.correctAnswer = setOfQuestions.question20.correctAnswer;
+			Question20.secondAnswer = setOfQuestions.question20.secondAnswer;
+			Question20.thirdAnswer = setOfQuestions.question20.thirdAnswer;
+			Question20.fourthAnswer = setOfQuestions.question20.fourthAnswer;
+
+			Question20.save(function(err){
+				if(err)
+					console.log(err);
+			});
+
+
+			var Question21 = new Question();
+			Question21.questionType = setOfQuestions.question21.questionType;
+			Question21.question = setOfQuestions.question21.question;
+			Question21.correctAnswer = setOfQuestions.question21.correctAnswer;
+			Question21.secondAnswer = setOfQuestions.question21.secondAnswer;
+			Question21.thirdAnswer = setOfQuestions.question21.thirdAnswer;
+			Question21.fourthAnswer = setOfQuestions.question21.fourthAnswer;
+
+			Question21.save(function(err){
+				if(err)
+					console.log(err);
+			});
+
+			var Question22 = new Question();
+			Question22.questionType = setOfQuestions.question22.questionType;
+			Question22.question = setOfQuestions.question22.question;
+			Question22.correctAnswer = setOfQuestions.question22.correctAnswer;
+			Question22.secondAnswer = setOfQuestions.question22.secondAnswer;
+			Question22.thirdAnswer = setOfQuestions.question22.thirdAnswer;
+			Question22.fourthAnswer = setOfQuestions.question22.fourthAnswer;
+
+			Question22.save(function(err){
+				if(err)
+					console.log(err);
+			});
+
+			var Question23 = new Question();
+			Question23.questionType = setOfQuestions.question23.questionType;
+			Question23.question = setOfQuestions.question23.question;
+			Question23.correctAnswer = setOfQuestions.question23.correctAnswer;
+			Question23.secondAnswer = setOfQuestions.question23.secondAnswer;
+			Question23.thirdAnswer = setOfQuestions.question23.thirdAnswer;
+			Question23.fourthAnswer = setOfQuestions.question23.fourthAnswer;
+
+			Question23.save(function(err){
 				if(err)
 					console.log(err);
 			});

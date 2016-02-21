@@ -37,6 +37,20 @@ module.exports = function(app, passport){
 			});
 		});
 
+	app.route('/addQuestion')
+		.post('/newQ', function(req, res){
+			new QuizQuestion({
+			questionType: req.body.questionType,
+			question: req.body.question,
+			correctAnswer: req.body.correctAnswer,
+			secondAnswer: req.body.answer2,
+			thirdAnswer: req.body.answer3,
+			fourthAnswer: req.body.answer4}).save(function(err, doc){
+				if(err) res.json(err);
+				else res.send('Question added sucessfully!');
+			})
+		});
+
 
 	/* LOGIN STUFF */
 

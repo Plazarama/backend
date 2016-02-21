@@ -62,6 +62,7 @@ if (env === 'development') {
   var seed = require('./config/seed');
   seed.seedUser();
   seed.seedQuestions();
+  seed.seedLocations();
 
   app.use(function(err, req, res, next) {
     res.status(err.status || 500);
