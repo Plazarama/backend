@@ -1,5 +1,6 @@
 var io;
 var gameSocket;
+var questionNums;
 
 var Questions = require('../models/QuizQuestion');
 var Users = require('../models/User');
@@ -15,6 +16,7 @@ var random = require("random-js")();
 exports.initGame = function(sio, socket){
 	io = sio;
 	gameSocket = socket;
+	questionNums = new Array();
 	gameSocket.emit('connected', {message: 'User connected'});
 
 	// Host binds
@@ -136,6 +138,10 @@ function sendQuestion(gameId){
 			console.log(err);
 		if(questions){
 			var randQuest = random.integer(0, questions.length-1);
+			while(questionNums.indexOf(randQuest) >= 0) {
+				randQuest = random.integer(0, questions.length-1);
+			}
+			questionNums.push(randQuest);
 			//console.log(questions[randQuest]);
 
 			//Random questions.
