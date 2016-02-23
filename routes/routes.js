@@ -49,7 +49,7 @@ module.exports = function(app, passport){
 		.post(function(req, res){
 			console.log(req.body);
 			var newQuestion = new Question();
-			newQuestion.questionType = req.body.questionType.value;
+			newQuestion.questionType = req.body.questionType;
 			newQuestion.question = req.body.question;
 			newQuestion.correctAnswer = req.body.correctAnswer;
 			newQuestion.secondAnswer = req.body.answer2;
@@ -58,8 +58,7 @@ module.exports = function(app, passport){
 
 			newQuestion.save(function(err, doc){
 				if(err) res.json(err);
-				else res.send('Question added sucessfully!');
-				//res.send({redirect: '/addQuestion'});
+				else res.render('addQuestion');
 			});
 		});
 
