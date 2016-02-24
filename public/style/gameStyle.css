@@ -147,8 +147,10 @@ h5{
 
 
 .img-responsive {
-    margin-left: 20px;
-    margin-top: 20px;
+
+      position: relative;
+    top: 70px;
+    left: 160px;
 }
 #inputGameId{
 padding: 10px;
