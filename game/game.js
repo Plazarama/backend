@@ -69,15 +69,25 @@ function hostGetNewQuestion(gameId){
 
 function gameFinished(finishedData){
 	finishedData.result.forEach(elem => {
-		Users.findOne({_id: elem.player.dbId},function(err, user){
+		console.log(elem);
+		Users.findOneAndUpdate({_id: elem.player.dbId},{$inc: {score: elem.player.score, played: Number(10), won: elem.player.won, lose: 10 - elem.player.won}},function(err, user){
 			if(err)
 				console.log(err);
 			else {
-				console.log(finishedData.result.indexOf(elem));
+				console.log(user);
 				finishedData.result[finishedData.result.indexOf(elem)].player.name = user.name;
-				user.score = user.score + elem.score;
-				user.save();
-				console.log(finishedData.result[0]);
+				// user.score += elem.score;
+				// user.played += 10;
+				// user.won += elem.won;
+				// user.lose += (10 - elem.won);
+				// console.log('=================');
+				// console.log(elem);
+				// console.log(user);
+				// console.log('=================');
+				// user.findOneAndUpdate(function(err, user){
+				// 	if(err) console.log(err);
+				// 	else console.log(user);
+				// });
 				io.to(finishedData.result[0].player.mySocketId).emit('gameFinished', true);
 				io.to(finishedData.result[finishedData.result.length - 1].player.mySocketId).emit('gameFinished', false);
 			}

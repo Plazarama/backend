@@ -152,6 +152,7 @@ jQuery(function($) {
 			numPlayers: 0,
 			currentCorrectAnswer: '',
 			rounds: 0,
+			bonus: 0,
 
 
 			/**
@@ -201,6 +202,7 @@ jQuery(function($) {
 
 				data.score = 0;
 				data.name = "";
+				data.won = 0;
 				console.log(data);
 				Game.Host.players.push(data);
 				Game.Host.numPlayers++;
@@ -229,8 +231,26 @@ jQuery(function($) {
 			 * @param data{{question: *, correct: *, answers: []*}}
 			 */
 			newQuestion: function(data){
+				if(Game.Host.bonus == 0) {
+					if(Game.Host.rounds == 9) {
+						Game.Host.bonus = 1;
+					}
+					else if (Game.Host.rounds >= 5) {
+						if(Math.random() > 0.5)
+							Game.Host.bonus = 1;
+					}
+				}
+				else if (Game.Host.bonus == 1) {
+					Game.Host.bonus = 2;
+				}
 				console.log(data);
-				$('#question').text(data.question);
+				console.log("Bonus ?" + Game.Host.bonus);
+				if(Game.Host.bonus === 2) {
+					$('#question').text(data.question + ' -- BONUS !!!');
+				}
+				else {
+					$('#question').text(data.question);
+				}
 				Game.Host.currentCorrectAnswer = data.correct;
 				$('#answer1').text(data.answers[0]);
 				$('#answer2').text(data.answers[1]);
@@ -248,14 +268,17 @@ jQuery(function($) {
 			playerAnswered: function(data){
 				console.log(data);
 
-				if(data.answer == Game.Host.currentCorrectAnswer){
-					for(var x=0; x<Game.Host.players.length; x++){
-						if(Game.Host.players[x].mySocketId.indexOf(data.playerId) > -1){
-							Game.Host.players[x].score += 2 // TODO: (2 * bonus);
+				for(var x=0; x<Game.Host.players.length; x++){
+					if(Game.Host.players[x].mySocketId.indexOf(data.playerId) > -1){
+						if(data.answer == Game.Host.currentCorrectAnswer){
+							Game.Host.players[x].score += 2;
+							if(Game.Host.bonus == 1)
+								Game.Host.players[x].score += 2;
+							Game.Host.players[x].won += 1;
 						}
 					}
-					//console.log(Game.Host.players);
 				}
+					//console.log(Game.Host.players);
 				// else{
 				// 	for(var j=0; j<Game.Host.players.length; j++){
 				//
