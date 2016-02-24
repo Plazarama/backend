@@ -2,20 +2,20 @@
 <html lang="en">
 <head>
 
-
+  <!--Bootstrap-->
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 
-	<!-- Custom CSS  main-->
-    <link rel="stylesheet" href="/style/user.css" type="text/css">
+	<!-- Custom CSS-->
+  <link rel="stylesheet" href="/style/user.css" type="text/css">
 
-    <!--Favicon-->
-    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+  <!--Favicon-->
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
 
-    <!--Font Aswome-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <!--Font Aswome-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 <% include partials/head %>
 
@@ -25,55 +25,51 @@
 
   <% include partials/header %>
 
-<div class="container">
-      <div class="row">
-      <div class="col-md-5  toppad  pull-right col-md-offset-3 ">
-
-      </div>
+      <!--Container -->
+      <div class="container">
+      <!-- brings pages to the middle-->
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad" >
    
-   
-          <div class="panel panel-info">
-            <div class="panel-heading">
-              <h3 class="panel-title">Name: <%= user.name %> </h3>
-            </div>
-            <div class="panel-body">
-              <div class="row">
-                <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="http://shackmanlab.org/wp-content/uploads/2013/07/person-placeholder.jpg" class="img-circle img-responsive"> </div>
+       <!--Top panel for the username of player -->
+        <div class="panel panel-info">
+        <div class="panel-heading">
+        <h2 class="panel-title">Name: <%= user.name %> </h2>
+        </div>
+
+        <!-- User Picture-->
+        <div class="panel-body">
+          <div class="row">
+             <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="http://shackmanlab.org/wp-content/uploads/2013/07/person-placeholder.jpg" class="img-circle img-responsive"> </div>
                 
-                <div class=" col-md-9 col-lg-9 "> 
-                  <table class="table table-user-information">
-                    <tbody>
-                      <tr>
-                        <td>Name:</td>
-                        <td>insert username</td>
-                      </tr>
-                      <tr>
-                        <td>Email Address:</td>
-                        <td>insert email</td>
-                      </tr>
-                      <tr>
-                        <td>Games Played:</td>
-                        <td>insert games played</td>
-                      </tr>
-                   
-                         <tr>
-                             <tr>
-                        <td>How To Play</td>
-                        <td>Instrutions</td>
-                      </tr>
+        <!-- Information about the User -->
+        <div class=" col-md-9 col-lg-9 "> 
+        <table class="table table-user-information">
+        <tbody>
+        <tr>
+        <td>Name:</td>
+        <td>insert username</td>
+        </tr>
+
+         <tr>
+         <td>Email Address:</td>
+         <td>insert email</td>
+         </tr>
+
+         <tr>
+         <td>Games Played:</td>
+         <td>insert games played</td>
+         </tr>
                      
-                           
-                      </tr>
-                     
-                    </tbody>
-                  </table>
+         </tbody>
+         </table>
+
+         <!-- Buttons -->
                   
-                  <a href="#" class="btn btn-primary">Play Plazarama! </a>
-                  <a href="#" class="btn btn-primary">Logout</a>
-                </div>
-              </div>
-            </div>
+         <a href="#" class="btn btn-primary">Play Plazarama! </a>
+         <a href="#" class="btn btn-primary">Logout</a>
+         </div>
+         </div>
+         </div>
                  <div class="panel-footer">
                         <a data-original-title="Help" data-toggle="tooltip" type="button" class="btn btn-sm btn-primary"><i class="fa fa-question-circle"></i></a>
 
