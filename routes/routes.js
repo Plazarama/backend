@@ -41,7 +41,8 @@ module.exports = function(app, passport){
 	app.route('/addQuestion')
 		.get(isLoggedIn,function(req, res){
 			res.render('addQuestion', {
-				user: req.user
+				user: req.user,
+				script: ""
 			});
 		});
 
@@ -58,7 +59,7 @@ module.exports = function(app, passport){
 
 			newQuestion.save(function(err, doc){
 				if(err) res.json(err);
-				else res.render('addQuestion');
+				else res.render('addQuestion', {script: 'on'});
 			});
 		});
 
