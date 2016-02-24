@@ -9,6 +9,19 @@
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+  
+    function tempAlert(msg,duration)
+    {
+      var qa = document.createElement("div");
+      qa.setAttribute("style","position:absolute;top:40%;left:20%;background-color:white;");
+      qa.innerHTML = msg;
+      setTimeout(function(){
+      qa.parentNode.removeChild(qa);
+    },duration);
+    document.body.appendChild(qa);
+  }
+</script>
 
 <!--Link to external StyleSheet-->
 <link rel="stylesheet" href="addQuestion.css" type="text/css">
@@ -85,7 +98,12 @@
         <input type="textbox" name="answer4" class="form-control"  placeholder="Enter Wrong Answer" required>
       </div>
     </div>
-
+    <br >
+    <script>
+    if('<%= script %>' == 'on')
+      tempAlert("Question added sucessfully!",5000);
+  </script>
+    <br >
     <div class="form-group">
       <div class="col-sm-offset-2 col-sm-10">
         <button type="submit" class="btn btn-default"><i class="fa fa-puzzle-piece"></i></span> Add Question</button>
