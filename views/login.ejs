@@ -15,7 +15,6 @@
     <!--Font Aswome-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
-
 	<% include partials/head %>
 </head>
 <body>
@@ -32,7 +31,9 @@
 
 
 	<div class="omb_login">
-      <h3>Login or <a href="signup" style="color:#e76b6b !important;">Sign up</a></h3>
+      <h3>Login Now!</h3>
+
+      <p>with</p>
 
       <!--Login with facebook-->
         <div class="row omb_row-sm-offset-3 omb_socialButtons">
@@ -72,23 +73,29 @@
  		 <input class="form-control" type="password" name="password" placeholder="Password">
 		</div>
 
-		<br>
+		<br>   
 
-		<button class="btn btn-lg btn-primary btn-block btn-signin" type="submit" id="btn"><i class="fa fa-sign-in"></i> Sign in</button>
-
-		<div class="row omb_row-sm-offset-3">
-      <div class="col-sm-6">
+     <div class="row omb_row-sm-offset-3">
+      <div class="col-xs-6">
         <label class="checkbox">
           <input type="checkbox" value="remember-me">Remember Me
         </label>
       </div>
-      <div class="col-sm-6">
-        <p class="omb_forgotPwd">
-          <a href="#">Forgot password?</a>
-        </p>
+
+
+
+		<button class="btn btn-lg btn-primary btn-block btn-signin" type="submit" id="btn"><i class="fa fa-sign-in"></i> Sign in</button>
+
+    <br>
+    
+    <div class="row omb_row-sm-offset-3">
+      <div class="col-xs-6">
+        <label class="signup">
+         <p>Not a member? <a href="signup" style="color:#000 !important;">Sign up</a>
+        </label>
       </div>
-    </div>        
-  </div>
+
+
 
 		
 </div>
