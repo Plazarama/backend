@@ -69,22 +69,21 @@ function hostGetNewQuestion(gameId){
 
 function gameFinished(finishedData){
 	finishedData.result.forEach(elem => {
-		console.log("elem");
-		console.log(elem);
 		Users.findOne({_id: elem.player.dbId},function(err, user){
-			console.log("db");
-			console.log(user);
 			if(err)
 				console.log(err);
 			else {
+				console.log(finishedData.result.indexOf(elem));
+				finishedData.result[finishedData.result.indexOf(elem)].player.name = user.name;
 				user.score = user.score + elem.score;
 				user.save();
+				console.log(finishedData.result[0]);
+				io.to(finishedData.result[0].player.mySocketId).emit('gameFinished', true);
+				io.to(finishedData.result[finishedData.result.length - 1].player.mySocketId).emit('gameFinished', false);
 			}
 		});
 	});
-
-	io.to(finishedData.result[0].player.mySocketId).emit('gameFinished', true);
-	io.to(finishedData.result[finishedData.result.length - 1].player.mySocketId).emit('gameFinished', false);
+	// TODO: io.emit('gameFinished', finishedData);
 }
 
 

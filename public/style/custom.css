@@ -201,7 +201,8 @@ header .header-content .header-content-inner p {
     margin-bottom: 50px;
     font-size: 16px;
     font-weight: 300;
-    color: #676b6b;
+    color: #000;
+  
 }
 
 @media(min-width:768px) {

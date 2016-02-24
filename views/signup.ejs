@@ -1,5 +1,20 @@
 <html>
 <head>
+
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Custom CSS  main-->
+    <link rel="stylesheet" href="/style/signup.css" type="text/css">
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+
+    <!--Font Aswome-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
 	<% include partials/head %>
 </head>
 <body>
@@ -8,27 +23,49 @@
 
 	</header>
 	<div class="container">
+
+	<img class="img-responsive center-block" src="/images/logo.png" width="70" height="70" alt="">
+	<h1>Plazarama</h1>
+
+	<br>
+
+	<p>Create an account with Plazarama to start playing!</p>
+
+
 		<% if (message.length > 0) { %>
 			<div class="alert alert-danger"><%= message %></div>
 		<% } %>
+
+
+
 		<form action="/signup" method="post">
 		<div class="form-group">
-			<label for="firstname">Name</label>
-			<input class="form-control" type="text" name="firstname">
-		</div>
-		<div class="form-group">
-			<label for="email">Email</label>
-			<input class="form-control" type="email" name="email">
-		</div>
-		<div class="form-group">
-			<label for="password">Password</label>
-			<input class="form-control" type="password" name="password">
+			<input class="form-control" type="text" name="firstname" placeholder="Name">
 		</div>
 
-		<button type="submit" class="btn btn-success">Sign Up</button>
+		<div class="form-group">
+			<input class="form-control" type="email" name="email" placeholder="Email address">
+		</div>
+		<div class="form-group">
+			<input class="form-control" type="password" name="password" placeholder="Password">
+		</div>
+
+		<button class="btn btn-lg btn-primary btn-block btn-signin" type="submit" id="btn"><i class="fa fa-sign-in"></i> Sign Up</button>
+		<br>
+
+	<div class="row omb_row-sm-offset-3">
+      <div class="col-sm-12">
+        <label class="signup">
+         <a href="login" style="color:#000 !important; ">already have an account?</a>
+        </label>
+      </div>
+      <br>
+
+
+	
 	</form>
 	</div>
 
-	<% include partials/footer %>
+<% include partials/footer %>
 </body>
 </html>
