@@ -14,16 +14,7 @@ h5{
     margin-bottom: 80px;
     position:relative;
 }
-button{
-  background-color: #e76b6b;
-  color: #ffffff;
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 30px;
 
-}
 button:hover {
     background-color: #249991;
     color: #ffffff;
@@ -51,7 +42,57 @@ button:focus{
   background-color: #fcfcfc;
   
 }
-
+#btnPlayAgain{
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 24px;
+  background-color:#249991;
+  color: #ffffff;
+}
+#btnPlayAgain:hover{
+  background-color: #249991;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    background: #3abaad;
+  text-decoration: none;
+}
+#btnFbk{
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 24px;
+  background-color: #42729b;
+  color: #ffffff;
+}
+#btnFbk:hover{
+  background-color: #42729b;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    background: #3abaad;
+  text-decoration: none;
+}
+#btnExit{
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 24px;
+  background-color:#e76b6b;
+  color: #ffffff;
+}
+#btnExit:hover{
+  background-color: #e76b6b;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    background: #3abaad;
+  text-decoration: none;
+}
 @media (min-width: 1200px) {
     .container{
         max-width: 550px;

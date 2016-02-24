@@ -2,7 +2,16 @@ html,body{
 
     background-color: #fefefe;
 }
-
+.container {
+  border: 2px solid #e76b6b;
+  border-radius: 1px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  box-shadow: 5px 5px 5px #e76b6b;
+  height: 600px;
+  background-color: #fcfcfc;
+  
+}
 
 h1{
 
