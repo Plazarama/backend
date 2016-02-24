@@ -194,6 +194,11 @@ jQuery(function($) {
 
 				}
 			}
+
+			// TODO: With data
+			// gameFinished: function(data){
+			//
+			// }
 		}
 
 

@@ -200,6 +200,7 @@ jQuery(function($) {
 				$('#playersWaiting').append('<p/>').text('Player '+data);
 
 				data.score = 0;
+				data.name = "";
 				console.log(data);
 				Game.Host.players.push(data);
 				Game.Host.numPlayers++;
@@ -279,9 +280,9 @@ jQuery(function($) {
 
 					var resultArray = Array();
 					Game.Host.players.forEach(elem => {
-						resultArray.push({player: elem, score: elem.score});
+						resultArray.push({player: elem});
 					});
-					resultArray.sort(function(a, b){return a.score < b.score ? 1 : (a.score > b.score ? -1 : 0);});
+					resultArray.sort(function(a, b){return a.player.score < b.player.score ? 1 : (a.player.score > b.player.score ? -1 : 0);});
 
 					var gameFinishedData = {
 						result: resultArray,
