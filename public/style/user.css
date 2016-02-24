@@ -1,114 +1,33 @@
-body 
-{
-  background: #f1efef;
-  font-family: Merriweather,'Helvetica Neue',Arial,sans-serif;
-
+.user-row {
+    margin-bottom: 14px;
 }
 
-/* Profile container */
-.profile {
-  margin: 20px 0;
+.user-row:last-child {
+    margin-bottom: 0;
 }
 
-/* Profile sidebar */
-.profile-sidebar {
-  padding: 20px 0 10px 0;
-  background: #e76b6b;
+.dropdown-user {
+    margin: 13px 0;
+    padding: 5px;
+    height: 100%;
 }
 
-.profile-userpic img {
-  float: none;
-  margin: 0 auto;
-  width: 50%;
-  height: 50%;
-  -webkit-border-radius: 50% !important;
-  -moz-border-radius: 50% !important;
-  border-radius: 50% !important;
+.dropdown-user:hover {
+    cursor: pointer;
 }
 
-.profile-usertitle {
-  text-align: center;
-  margin-top: 20px;
+.table-user-information > tbody > tr {
+    border-top: 1px solid rgb(221, 221, 221);
 }
 
-.profile-usertitle-name {
-  color: #fff;
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 7px;
+.table-user-information > tbody > tr:first-child {
+    border-top: 0;
 }
 
-.profile-usertitle-job {
-  text-transform: uppercase;
-  color: #fff;
-  font-size: 12px;
-  font-weight: 600;
-  margin-bottom: 15px;
-}
 
-.profile-userbuttons {
-  text-align: center;
-  margin-top: 10px;
-
+.table-user-information > tbody > tr > td {
+    border-top: 0;
 }
-
-.profile-userbuttons .btn {
-  text-transform: uppercase;
-  font-size: 12px;
-  font-weight: 600;
-  padding: 6px 15px;
-  margin-right: 5px;
-}
-
-.profile-userbuttons .btn:last-child {
-  margin-right: 0px;
-}
-    
-.profile-usermenu {
-  margin-top: 30px;
-}
-
-/*space between links*/
-.profile-usermenu ul li {
-  border-bottom: 2px solid #fff;
-}
-
-/*no bit on the bottom of the nav*/
-.profile-usermenu ul li:last-child {
-  border-bottom: none;
-}
-
-/*actual nav*/
-.profile-usermenu ul li a {
-  color: #fff;
-  font-size: 15px;
-  font-weight: 400;
-}
-
-/*space between glyphicon*/
-.profile-usermenu ul li a i {
-  margin-right: 8px;
-  font-size: 14px;
-}
-
-/*hover colour*/
-.profile-usermenu ul li a:hover {
-  background-color: #fff;
-  color: #e76b6b;
-}
-
-/*tab that is active*/
-.profile-usermenu ul li.active a {
-  color: #fff;
-  background-color: #53c5bd;
-  border-left: 2px solid #5b9bd1;
-  margin-left: -2px;
-}
-
-/* Profile Content */
-.profile-content {
-  padding: 20px;
-  background: #fefefe;
-  min-height: 460px;
-  color: #249991;
+.toppad
+{margin-top:20px;
 }
