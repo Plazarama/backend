@@ -222,7 +222,6 @@ jQuery(function($) {
 		}
 
 
-	};
 
 
 	IO.init();
