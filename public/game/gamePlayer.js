@@ -181,24 +181,44 @@ jQuery(function($) {
 
 			},
 
-			gameFinished: function(winner){
-				Game.$gameArea.html(Game.$finishedGame);
-
-				if(winner){
-					console.log('winner');
-					$('#gameResult').text('YOU WIN!! :D');
-				}
-				else{
-					console.log('you lost!');
-					$('#gameResult').text('YOU LOST!! :(');
-
-				}
-			}
+			// gameFinished: function(winner){
+			// 	Game.$gameArea.html(Game.$finishedGame);
+			//
+			// 	if(winner){
+			// 		console.log('winner');
+			// 		$('#gameResult').text('YOU WIN!! :D');
+			// 	}
+			// 	else{
+			// 		console.log('you lost!');
+			// 		$('#gameResult').text('YOU LOST!! :(');
+			//
+			// 	}
+			// }
 
 			// TODO: With data
-			// gameFinished: function(data){
-			//
-			// }
+			gameFinished: function(data){
+				Game.$gameArea.html(Game.$finishedGame);
+				var html = $.parseHTML('<form id="hiddenForm" action="results" method="POST"></form>');
+				Game.$gameArea.html(html);
+				var $hiddenForm = Game.$gameArea.children('#hiddenForm');
+
+				$hiddenForm.append('<input type="hidden" name="first_name" value="' + data.result[0].player.name + '" />');
+				$hiddenForm.append('<input type="hidden" name="first_score" value="' + data.result[0].player.score + '" />');
+				$hiddenForm.append('<input type="hidden" name="second_name" value="' + data.result[1].player.name + '" />');
+				$hiddenForm.append('<input type="hidden" name="second_score" value="' + data.result[1].player.score + '" />');
+				if(data.result.length > 2) {
+					$hiddenForm.append('<input type="hidden" name="third_name" value="' + data.result[2].player.name + '" />');
+					$hiddenForm.append('<input type="hidden" name="third_score" value="' + data.result[2].player.score + '" />');
+				}
+				else {
+					$hiddenForm.append('<input type="hidden" name="third_name" value="N/A" />');
+					$hiddenForm.append('<input type="hidden" name="third_score" value="0" />');
+				}
+				$hiddenForm.append('<input type="hidden" name="loser_name" value="' + data.result[data.result.length - 1].player.name + '" />');
+				$hiddenForm.append('<input type="hidden" name="loser_score" value="' + data.result[data.result.length - 1].player.score + '" />');
+				console.log($hiddenForm);
+				$hiddenForm.submit();
+			}
 		}
 
 

@@ -74,8 +74,10 @@ function gameFinished(finishedData){
 			if(err)
 				console.log(err);
 			else {
-				console.log(user);
 				finishedData.result[finishedData.result.indexOf(elem)].player.name = user.name;
+				if(finishedData.result.indexOf(elem) == (finishedData.result.length - 1)) {
+					sendResult();
+				}
 				// user.score += elem.score;
 				// user.played += 10;
 				// user.won += elem.won;
@@ -88,12 +90,15 @@ function gameFinished(finishedData){
 				// 	if(err) console.log(err);
 				// 	else console.log(user);
 				// });
-				io.to(finishedData.result[0].player.mySocketId).emit('gameFinished', true);
-				io.to(finishedData.result[finishedData.result.length - 1].player.mySocketId).emit('gameFinished', false);
 			}
 		});
 	});
-	// TODO: io.emit('gameFinished', finishedData);
+	// io.to(finishedData.result[0].player.mySocketId).emit('gameFinished', true);
+	// io.to(finishedData.result[finishedData.result.length - 1].player.mySocketId).emit('gameFinished', false);
+	function sendResult() {
+		console.log(finishedData.result[0].player);
+		io.emit('gameFinished', finishedData);
+	}
 }
 
 
