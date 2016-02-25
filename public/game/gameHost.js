@@ -231,6 +231,7 @@ jQuery(function($) {
 			 * @param data{{question: *, correct: *, answers: []*}}
 			 */
 			newQuestion: function(data){
+
 				if(Game.Host.bonus == 0) {
 					if(Game.Host.rounds == 9) {
 						Game.Host.bonus = 1;
@@ -256,6 +257,23 @@ jQuery(function($) {
 				$('#answer2').text(data.answers[1]);
 				$('#answer3').text(data.answers[2]);
 				$('#answer4').text(data.answers[3]);
+
+				var timer = setInterval(countItDown, 1000);
+				var startTime = 10;
+
+			function countItDown(){
+				startTime -= 1;
+				
+				if(startTime <=0 ){
+
+					clearInterval(timer);
+					console.log('new question');
+					IO.socket.emit('getNewQuestion', Game.gameId);
+					return;
+				}
+			}
+			
+				console.log(startTime);
 
 			},
 
