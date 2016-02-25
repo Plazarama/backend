@@ -220,7 +220,7 @@ jQuery(function($) {
 				$hiddenForm.submit();
 			}
 		}
-
+}
 
 
 
