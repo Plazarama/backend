@@ -9,6 +9,17 @@
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  <!--Link to external StyleSheet-->
+  <link rel="stylesheet" href="style/addQuestion.css" type="text/css">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+
+  <!--Font Awesome Link-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
   <script type="text/javascript">
   
     function tempAlert(msg,duration)
@@ -23,25 +34,20 @@
   }
 </script>
 
-<!--Link to external StyleSheet-->
-<link rel="stylesheet" href="addQuestion.css" type="text/css">
-
-<!--Favicon-->
-<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
-
-<!--Font Awesome Link-->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<% include partials/head %>
 
 </head>
-<body>
-<br >
-<br >
-<img class="img-responsive center-block" src="logo.png" width="80" height="80" alt="">
+
+<header>
+    <% include partials/header %>
+
+  </header>
+<div class="container">
+
+<img class="img-responsive center-block" src="images/logo.png" width="80" height="80" alt="">
 <br >
 <br >
 <h1>Plazarama</h1>
-
-<div class="container">
   <h2>Add Your Own Question</h2>
 
   <form class="form-horizontal" role="form" action="newQ" method="POST">

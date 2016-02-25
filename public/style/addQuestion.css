@@ -3,32 +3,33 @@ html,body{
     background-color: #fefefe;
 }
 .container {
-  border: 2px solid #e76b6b;
+  border: 2px solid #000;
   border-radius: 1px;
   margin-top: 10px;
   margin-bottom: 15px;
-  box-shadow: 5px 5px 5px #e76b6b;
-  height: 600px;
+  box-shadow: 5px 5px 5px #000;
+  height: 550px;
   background-color: #fcfcfc;
   
 }
+h1
+{
+  color: #249991 !important;
+  font-weight: bold !important;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase; 
+  position: relative;
 
-h1{
-
-    font-family: Merriweather,'Helvetica Neue',Arial,sans-serif;
-    text-align: center;
-    color: #249991;
-    margin-top: 0;
-    margin-bottom: 0;
-    text-transform: uppercase;
-    font-weight: 700;
 }
 
 img {
-   margin-top:8.5px;
-   margin-left:5px;
-   display:inline;
+
+  position: relative;
+    top: 110px;
+    left: 160px;
 }
+
 
 
 h2{
@@ -97,3 +98,4 @@ h2{
     text-transform: uppercase;
 
 }
+

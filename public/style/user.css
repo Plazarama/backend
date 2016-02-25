@@ -31,3 +31,20 @@
 .toppad
 {margin-top:20px;
 }
+
+.btn {
+  -webkit-border-radius: 6;
+  -moz-border-radius: 6;
+  border-radius: 6px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #ffffff;
+  font-size: 15px;
+  background: #249991;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #2da89e;
+  text-decoration: none;
+}
