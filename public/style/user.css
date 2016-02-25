@@ -66,7 +66,14 @@ body {
   position: relative;
 
 }
+#playerWaiting{
+  color: #249991 !important;
+  font-size: 40px;
+  font-weight: bold !important;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
 
+}
 #logoImage {
 
   position: relative;
