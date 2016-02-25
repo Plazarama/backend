@@ -199,10 +199,9 @@ jQuery(function($) {
 			// gameFinished: function(data){
 			//
 			// }
-		}
+			}
+		};
 
-
-	};
 
 
 	IO.init();
