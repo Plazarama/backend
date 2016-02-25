@@ -3,17 +3,136 @@ html, body{
   width: 100%;
   margin: 0 0;
 }
-@media (min-width: 1200px) {
-    .container{
-        max-width: 550px;
-    }
+
 h1{
-	color:#e76b6b;
+	color:#249991;
 	text-align: center;
   font-family: Arial, Helvetica, sans-serif;
     float: center;
-    font-size: 50px;
+    font-size: 40px;
     font-weight: bold;
     margin-bottom: 80px;
     position:relative;
+}
+.container {
+  border: 2px solid #e76b6b;
+  border-radius: 1px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  margin-left:100px;
+  margin-right:100px;
+  box-shadow: 5px 5px 5px #e76b6b;
+  height: 550px;
+  background-color: #fcfcfc;
+  
+  
+}
+#name{
+	color:#249991;
+	text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+    float: center;
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 80px;
+    position:relative;
+	margin-left:50px;
+}
+#TotalPlayed{
+	color:#249991;
+	text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+    float: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 80px;
+    position:relative;
+	margin-left:50px;
+}
+#TotalCorrect{
+	color:#249991;
+	text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+    float: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 80px;
+    position:relative;
+	margin-left:50px;
+}
+#TotalScore{
+	color:#249991;
+	text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+    float: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 80px;
+    position:relative;
+	margin-left:50px;
+}
+#logo{
+	position:    absolute;
+    left:        50%;        /* Start with top left in the center */
+    top:         50%;
+    
+    margin-left: 300px;     /* Shift over half the width */
+    margin-top:  -200px;   
+}
+#btnFbk{
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin-left: auto;
+  
+  font-size: 24px;
+  background-color: #42729b;
+  color: #ffffff;
+  margin-left:50px;
+  
+}
+#btnFbk:hover{
+  background-color: #42729b;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    background: #3abaad;
+  text-decoration: none;
+}
+
+
+#btnExit{
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 24px;
+  background-color:#e76b6b;
+  color: #ffffff;
+  margin-left:50px;
+  
+}
+#btnExit:hover{
+  background-color: #e76b6b;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    background: #3abaad;
+  text-decoration: none;
+}
+button:hover {
+    background-color: #249991;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+
+button:active{
+  background-color: #249991;
+  color: #ffffff;
+  font-size: 30px;
+}
+button:focus{
+  background-color: #249991;
+  color: #ffffff;
+  font-size: 30px;
 }
