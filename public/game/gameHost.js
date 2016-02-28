@@ -251,6 +251,7 @@ jQuery(function($) {
 				}
 				else {
 					$('#question').text(data.question);
+					$('#questionImg') = data.imagePath;
 				}
 				Game.Host.currentCorrectAnswer = data.correct;
 				$('#answer1').text(data.answers[0]);
@@ -272,7 +273,7 @@ jQuery(function($) {
 					return;
 				}
 			}
-			
+
 				console.log(startTime);
 
 			},
