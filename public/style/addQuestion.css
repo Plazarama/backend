@@ -85,6 +85,13 @@ button:focus{
     text-transform: uppercase;
 
 }
+#image
+{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #249991 !important;
+    text-transform: uppercase;
+
+}
 
 #answer2
 {

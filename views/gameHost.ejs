@@ -2,13 +2,22 @@
 <html lang="en">
 	<head>
 		<% include partials/head %>
-		
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+ 
+
+	<style>
+	$(window).load(function() {
+		// Animate loader off screen
+		$(".se-pre-con").fadeOut("slow");;
+	});
+	</style>
+	
 		<link rel="stylesheet" href="/style/gameStyle.css" type="text/css">
 		<!--font awesome-->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 	</head>
-	<body >
+	<body class="container">
 
 		<div id="gameArea">
 
@@ -24,20 +33,38 @@
 			</div>
 			
 		</script>
+		
+		<script type="text/javascript">
+var count=10;
 
-		<script class="container" id="newGameScreen" type="text/template">
-			<div class="container">
-				<img src="/images/logo.png" id="logo" width"110" height="90">
-				<h3>YOUR GAME ID IS:</h3>
-	            <div id="gameID">--</div>
-	            <div id="playersWaiting"></div>
-	            <button id="btnProceed" class="btn">PROCEED</button>
-			</div>
-		</script>
+var counter=setInterval(timer, 1000); //1000 will  run it every 1 second
+
+function timer()
+{
+  count=count-1;
+  if (count <= 0)
+  {
+     clearInterval(counter);
+     //counter ended, do something here
+     return;
+  }
+
+  //Do code for showing the number of seconds here
+}
+
+function timer()
+{
+  count=count-1;
+  if (count <= 0)
+  {
+     clearInterval(counter);
+     return;
+  }
+
+ document.getElementById("timer").innerHTML=count + " seconds "; // watch for spelling
+}
 	
 		<script id="hostScreen" type="text/template">
-
-
 
 			<div id="playersHub">
 				<div id="player1Score">
@@ -54,7 +81,7 @@
 					<h3>Player 4 score: 0</h3>
 				</div>
 			</div>
-			
+			<span id="timer"></span>
 			<div class="container" id="questionArea">
 				<img class="img-responsive center-block" src="/images/logo.PNG" width="70" height="70"alt="">
 
