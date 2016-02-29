@@ -84,6 +84,9 @@ function gameFinished(finishedData){
 					io.emit('gameFinished', finishedData);
 				}
 			}
+		});
+	});
+}
 
 
 
