@@ -70,7 +70,7 @@ function hostGetNewQuestion(gameId){
 function gameFinished(finishedData){
 	finishedData.result.forEach(elem => {
 		console.log(elem);
-		Users.findOneAndUpdate({_id: elem.player.dbId},{$inc: {score: elem.player.score, played: Number(1), won: elem.player.won, lose: elem.player.lose}},function(err, user){
+		Users.findOneAndUpdate({_id: elem.player.dbId},{$inc: {score: elem.player.score, played: Number(1), won: elem.player.won, lose: elem.player.lose, correct: elem.player.correct}},function(err, user){
 			if(err)
 			console.log(err);
 			else {

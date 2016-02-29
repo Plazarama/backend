@@ -26,6 +26,7 @@ module.exports.seedUser = function() {
 			newUser.played = 0;
 			newUser.won = 0;
 			newUser.lose = 0;
+			newUser.correct = 0;
 			newUser.score = 0;
 			newUser.streak = 0;
 
@@ -67,7 +68,7 @@ module.exports.seedLocations = function()	{
 			Location1.owner = LocationList.Location1.owner;
 			Location1.categories = LocationList.Location1.categories;
 			Location1.totalPlayers = LocationList.Location1.totalPlayers;
-			
+
 			Location1.save(function(err){
 				if(err)
 					console.log(err);
@@ -79,7 +80,7 @@ module.exports.seedLocations = function()	{
 			Location2.owner = LocationList.Location2.owner;
 			Location2.categories = LocationList.Location2.categories;
 			Location2.totalPlayers = LocationList.Location2.totalPlayers;
-			
+
 			Location2.save(function(err){
 				if(err)
 					console.log(err);
@@ -89,7 +90,7 @@ module.exports.seedLocations = function()	{
 };
 
 
-	
+
 module.exports.seedQuestions = function() {
 
 	var setOfQuestions = {
@@ -125,7 +126,7 @@ module.exports.seedQuestions = function() {
 			thirdAnswer: "Six",
 			fourthAnswer: "Seven"
 		},
-		
+
 		question5: {
 			questionType: "Math",
 			question: "What is the next prime number after 7",
@@ -134,7 +135,7 @@ module.exports.seedQuestions = function() {
 			thirdAnswer: "ten",
 			fourthAnswer: "thirteen"
 		},
-		
+
 		question6: {
 			questionType: "General",
 			question: "Where in your body is your patella",
@@ -143,7 +144,7 @@ module.exports.seedQuestions = function() {
 			thirdAnswer: "Arm",
 			fourthAnswer: "Toe"
 		},
-		
+
 		question7: {
 			questionType: "Math",
 			question: "Which of the numbers is a factor of 30",
@@ -160,7 +161,7 @@ module.exports.seedQuestions = function() {
 			thirdAnswer: "Whiskey",
 			fourthAnswer: "Rum"
 		},
-		
+
 		question9: {
 			questionType: "Math",
 			question: "Find the odd one out 3,5,11,14,17,21",
@@ -326,9 +327,9 @@ module.exports.seedQuestions = function() {
 	//Add to db
 
 	Question.find({}, function(err, questions){
-		
+
 		if(questions.length<1){
-		
+
 			/*var Question1 = new Question();
 			Question1.questionType = setOfQuestions.question1.questionType;
 			Question1.question = setOfQuestions.question1.question;
@@ -634,7 +635,7 @@ module.exports.seedQuestions = function() {
 				if(err)
 					console.log(err);
 			});	*/
-			
+
 			var Question24 = new Question();
 			Question24.questionType = setOfQuestions.question24.questionType;
 			Question24.questionImage = setOfQuestions.question24.questionImage;
@@ -648,7 +649,7 @@ module.exports.seedQuestions = function() {
 				if(err)
 					console.log(err);
 			});
-				
+
 				var Question25 = new Question();
 			Question25.questionType = setOfQuestions.question25.questionType;
 			Question25.questionImage = setOfQuestions.question25.questionImage;
@@ -689,9 +690,9 @@ module.exports.seedQuestions = function() {
 			Question27.save(function(err){
 				if(err)
 					console.log(err);
-			});		
+			});
 
 		}
 	});
-	
+
 };
