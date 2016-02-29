@@ -70,36 +70,20 @@ function hostGetNewQuestion(gameId){
 function gameFinished(finishedData){
 	finishedData.result.forEach(elem => {
 		console.log(elem);
-		Users.findOneAndUpdate({_id: elem.player.dbId},{$inc: {score: elem.player.score, played: Number(10), won: elem.player.won, lose: 10 - elem.player.won}},function(err, user){
+		Users.findOneAndUpdate({_id: elem.player.dbId},{$inc: {score: elem.player.score, played: Number(1), won: elem.player.won, lose: elem.player.lose}},function(err, user){
 			if(err)
-				console.log(err);
+			console.log(err);
 			else {
 				finishedData.result[finishedData.result.indexOf(elem)].player.name = user.name;
 				if(finishedData.result.indexOf(elem) == (finishedData.result.length - 1)) {
 					sendResult();
 				}
-				// user.score += elem.score;
-				// user.played += 10;
-				// user.won += elem.won;
-				// user.lose += (10 - elem.won);
-				// console.log('=================');
-				// console.log(elem);
-				// console.log(user);
-				// console.log('=================');
-				// user.findOneAndUpdate(function(err, user){
-				// 	if(err) console.log(err);
-				// 	else console.log(user);
-				// });
+
+				function sendResult() {
+					console.log(finishedData.result[0].player);
+					io.emit('gameFinished', finishedData);
+				}
 			}
-		});
-	});
-	// io.to(finishedData.result[0].player.mySocketId).emit('gameFinished', true);
-	// io.to(finishedData.result[finishedData.result.length - 1].player.mySocketId).emit('gameFinished', false);
-	function sendResult() {
-		console.log(finishedData.result[0].player);
-		io.emit('gameFinished', finishedData);
-	}
-}
 
 
 
@@ -164,8 +148,6 @@ function sendQuestion(gameId){
 
 			var answers = [quest.correctAnswer, quest.secondAnswer, quest.thirdAnswer, quest.fourthAnswer];
 			var shuffledAnswers = shuffleReturningCorrect(answers);
-
-
 
 			var questionShuffled = {
 				question: quest.question,
