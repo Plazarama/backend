@@ -99,3 +99,13 @@ button:focus{
     .container{
         max-width: 550px;
     }
+.container {
+  border: 2px solid #249991;
+  border-radius: 1px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  box-shadow: 5px 5px 5px #249991;
+  height: 550px;
+  background-color: #fcfcfc;
+  
+}

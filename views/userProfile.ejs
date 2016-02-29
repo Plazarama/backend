@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
 
+<title>User Profile</title>
+
   <!--Bootstrap-->
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<meta charset="utf-8">
@@ -19,7 +21,6 @@
 
 <% include partials/head %>
 
-<title>User Profile</title>
 
 </head>
 
@@ -45,7 +46,7 @@
         <!-- User Picture-->
         <div class="panel-body">
           <div class="row">
-             <div class="col-md-3 col-lg-3 " align="center"> <img alt="userPlaceholder" src="http://www.sandelegal.com/wp-content/uploads/2015/05/person-placeholder.png" class="img-circle img-responsive"> </div>
+             <div class="col-md-3 col-lg-3 " align="center"> <img alt="userPlaceholder" src="images/personPlace.png" class="img-circle img-responsive"> </div>
                 
         <!-- Information about the User -->
         <div class=" col-md-9 col-lg-9 "> 
@@ -53,7 +54,7 @@
         <tbody>
         <tr>
         <td>Name:</td>
-        <td>insert username</td>
+        <td><%= user.name %></td>
         </tr>
 
          <tr>
@@ -63,7 +64,7 @@
 
          <tr>
          <td>Games Played:</td>
-         <td>insert games played</td>
+         <td>0</td>
          </tr>
          <tr></tr>
                      
@@ -72,9 +73,9 @@
 
          <!-- Buttons -->
                   
-         <a href="#" class="btn btn-primary">Play Plazarama</a>
+         <a href="host" data-toggle="tooltip" title="Host the game of Plazarama!" class="btn btn-primary">Host Plazarama</a>
   
-         <a href="#" class="btn btn-primary">View The Statistics</a>
+         <a href="stats" data-toggle="tooltip" title="View the stats page!" class="btn btn-primary">View The Statistics</a>
          </div>
          </div>
          </div>
@@ -82,12 +83,12 @@
          <!--Panel at the bottem-->
          <div class="panel-footer">
 
-           <a href="#instructions" data-toggle="tooltip" type="button" class="btn btn-sm btn-primary" id="btn1"><i class="fa fa-question-circle"></i></a>
+           <a href="index" data-toggle="tooltip" title="Instructions" type="button" class="btn btn-sm btn-primary" id="btn1"><i class="fa fa-question-circle"></i></a>
 
            <span class="pull-right">
-            <a href="play" data-original-title="Play" data-toggle="tooltip" type="button" class="btn btn-sm btn-warning"><i class="fa fa-puzzle-piece"></i></a>
+            <a href="host" data-original-title="Play" data-toggle="tooltip" title="Be the Player!" type="button" id="btn2" class="btn btn-sm btn-warning"><i class="fa fa-puzzle-piece"></i></a> 
 
-            <a href="logout" data-toggle="tooltip" type="button" class="btn btn-sm btn-danger"><i class="fa fa-times"></i></a>
+            <a href="logout" data-toggle="tooltip" title="Logout" type="button"id="btn3" id="btn1"class="btn btn-sm btn-danger"><i class="fa fa-times"></i></a>
 
              </span>
           </div>

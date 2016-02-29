@@ -145,6 +145,7 @@ function sendQuestion(gameId){
 			//Random questions.
 
 			var quest = questions[randQuest];
+			var questImg = [quest.questionImg];
 
 			var answers = [quest.correctAnswer, quest.secondAnswer, quest.thirdAnswer, quest.fourthAnswer];
 			var shuffledAnswers = shuffleReturningCorrect(answers);
