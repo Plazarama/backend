@@ -2,11 +2,11 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		
-		
+
+
 		<link rel="stylesheet" href="style/stats.css" type="text/css">
 		<link href="path-to-file/social-sharing.css" rel="stylesheet">
-		
+
 	</head>
 	<body>
 
@@ -18,23 +18,23 @@
 			<img id="logo" src="logo.png" id="logo" width"110" height="90">
 			<br>
 			<br>
-		<Label id="name">Name:</label> 
+		<Label id="name">Name:</label><%= user.name %>
 			<br><br>
 			<br>
-		<Label id="TotalPlayed">Your total games played is:</label>
+		<Label id="TotalPlayed">Your total games played is:</label><%= user.played %>
 			<br>
 			<br>
-		<Label id="TotalCorrect">Your total correct questions is:</label>
+		<Label id="TotalCorrect">Your total correct questions is:</label><%= user.correct %>
 			<br>
 			<br>
-		<Label id="TotalScore">Your total score is:</label>
+		<Label id="TotalScore">Your total score is:</label><%= user.score %>
 			<br>
 		<br>
 		<button id="btnFbk" class="btn">SHARE FACEBOOK</button>
-		
+
 		<button id="btnExit" class="btn">EXIT</button>
-			
-			
+
+
 
 	</div>
 

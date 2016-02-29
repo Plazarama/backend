@@ -43,6 +43,14 @@ module.exports = function(app, passport){
 			});
 		});
 
+
+	app.route('/stats')
+		.get(isLoggedIn,function(req, res){
+			res.render('stats', {
+				user: req.user
+			});
+		});
+
 	app.route('/addQuestion')
 		.get(isLoggedIn,function(req, res){
 			res.render('addQuestion', {
