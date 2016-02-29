@@ -43,6 +43,7 @@ module.exports = function(passport){
 						newUser.played = 0;
 						newUser.won = 0;
 						newUser.lose = 0;
+						newUser.correct = 0;
 						newUser.score = 0;
 						newUser.streak = 0;
 
@@ -112,6 +113,7 @@ console.log(profile);
 					newUser.played = 0;
 					newUser.won = 0;
 					newUser.lose = 0;
+					newUser.correct = 0;
 					newUser.score = 0;
 					newUser.streak = 0;
 

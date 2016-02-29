@@ -26,13 +26,18 @@ body {
   background: #249991;
   padding: 9px 10px 9px 10px;
   text-decoration: none;
+  border-color: #249991;
 }
 
 .btn:hover 
 {
   background: #2bada2;
   text-decoration: none;
+  
 }
+
+
+
 
 .panel-info>.panel-heading
  {
@@ -92,9 +97,44 @@ body {
   background: #e76b6b;
   padding: 9px 10px 9px 10px;
   text-decoration: none;
+  border-color: #e76b6b;
 }
 
-#btn1 {
-  background: #f27b7b;
+#btn1:hover {
+  background: #ff9b9b;
+  text-decoration: none;
+}
+
+#btn2 {
+  -webkit-border-radius: 9;
+  -moz-border-radius: 9;
+  border-radius: 9px;
+  font-family: Arial;
+  color: #ffffff;
+  background: #e76b6b;
+  padding: 9px 10px 9px 10px;
+  text-decoration: none;
+  border-color: #e76b6b;
+}
+
+#btn2:hover {
+  background: #ff9b9b;
+  text-decoration: none;
+}
+
+#btn3 {
+  -webkit-border-radius: 9;
+  -moz-border-radius: 9;
+  border-radius: 9px;
+  font-family: Arial;
+  color: #ffffff;
+  background: #e76b6b;
+  padding: 9px 10px 9px 10px;
+  text-decoration: none;
+  border-color: #e76b6b;
+}
+
+#btn3:hover {
+  background: #ff9b9b;
   text-decoration: none;
 }

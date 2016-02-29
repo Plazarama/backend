@@ -26,6 +26,7 @@ module.exports.seedUser = function() {
 			newUser.played = 0;
 			newUser.won = 0;
 			newUser.lose = 0;
+			newUser.correct = 0;
 			newUser.score = 0;
 			newUser.streak = 0;
 
@@ -67,7 +68,7 @@ module.exports.seedLocations = function()	{
 			Location1.owner = LocationList.Location1.owner;
 			Location1.categories = LocationList.Location1.categories;
 			Location1.totalPlayers = LocationList.Location1.totalPlayers;
-			
+
 			Location1.save(function(err){
 				if(err)
 					console.log(err);
@@ -79,7 +80,7 @@ module.exports.seedLocations = function()	{
 			Location2.owner = LocationList.Location2.owner;
 			Location2.categories = LocationList.Location2.categories;
 			Location2.totalPlayers = LocationList.Location2.totalPlayers;
-			
+
 			Location2.save(function(err){
 				if(err)
 					console.log(err);
@@ -89,11 +90,11 @@ module.exports.seedLocations = function()	{
 };
 
 
-	
+
 module.exports.seedQuestions = function() {
 
 	var setOfQuestions = {
-		question1: {
+		/*question1: {
 			questionType: "General",
 			question: "Which is the capital of Italia?",
 			correctAnswer: "Roma",
@@ -116,7 +117,6 @@ module.exports.seedQuestions = function() {
 			secondAnswer: "Lion",
 			thirdAnswer: "Cat",
 			fourthAnswer: "Rhino",
-			//fifthAnswer: '\public\images\logo.png'
 		},
 		question4: {
 			questionType: "General",
@@ -126,7 +126,7 @@ module.exports.seedQuestions = function() {
 			thirdAnswer: "Six",
 			fourthAnswer: "Seven"
 		},
-		
+
 		question5: {
 			questionType: "Math",
 			question: "What is the next prime number after 7",
@@ -135,7 +135,7 @@ module.exports.seedQuestions = function() {
 			thirdAnswer: "ten",
 			fourthAnswer: "thirteen"
 		},
-		
+
 		question6: {
 			questionType: "General",
 			question: "Where in your body is your patella",
@@ -144,7 +144,7 @@ module.exports.seedQuestions = function() {
 			thirdAnswer: "Arm",
 			fourthAnswer: "Toe"
 		},
-		
+
 		question7: {
 			questionType: "Math",
 			question: "Which of the numbers is a factor of 30",
@@ -161,7 +161,7 @@ module.exports.seedQuestions = function() {
 			thirdAnswer: "Whiskey",
 			fourthAnswer: "Rum"
 		},
-		
+
 		question9: {
 			questionType: "Math",
 			question: "Find the odd one out 3,5,11,14,17,21",
@@ -281,14 +281,56 @@ module.exports.seedQuestions = function() {
 			secondAnswer: "Rex",
 			thirdAnswer: "Rocky",
 			fourthAnswer: "Toby"
+		},*/
+
+		question24: {
+			questionType: "Image",
+			questionImage: "/QuestionImages/amazon.jpg",
+			question: "In which continent is the Amazon river located?",
+			correctAnswer: "South America",
+			secondAnswer: "Africa",
+			thirdAnswer: "Asia",
+			fourthAnswer: "Europe"
 		},
+
+		question25: {
+			questionType: "Image",
+			questionImage: "/QuestionImages/Angelina.jpg",
+			question: "What is the name of this celebrity?",
+			correctAnswer: "Angelina Jolie",
+			secondAnswer: "Jennifer Annistion",
+			thirdAnswer: "Kris Jenner",
+			fourthAnswer: "Courtney Cox"
+		},
+
+		question26: {
+			questionType: "Image",
+			questionImage: "/QuestionImages/ggBridge.jpg",
+			question: "What is the name of this bridge?",
+			correctAnswer: "Golden Gate Bridge",
+			secondAnswer: "Brooklyn Bridge",
+			thirdAnswer: "Sydney Harbour Bridge",
+			fourthAnswer: "London Bridge"
+		},
+
+		question27: {
+			questionType: "Image",
+			questionImage: "/QuestionImages/messi.jpg",
+			question: "What team this sportsperson play for?",
+			correctAnswer: "Barcelona FC",
+			secondAnswer: "Real Madrid",
+			thirdAnswer: "Bayern Munich",
+			fourthAnswer: "Chelsea FC"
+		}
 	};
 
 	//Add to db
 
 	Question.find({}, function(err, questions){
+
 		if(questions.length<1){
-			var Question1 = new Question();
+
+			/*var Question1 = new Question();
 			Question1.questionType = setOfQuestions.question1.questionType;
 			Question1.question = setOfQuestions.question1.question;
 			Question1.correctAnswer = setOfQuestions.question1.correctAnswer;
@@ -592,8 +634,65 @@ module.exports.seedQuestions = function() {
 			Question23.save(function(err){
 				if(err)
 					console.log(err);
+			});	*/
+
+			var Question24 = new Question();
+			Question24.questionType = setOfQuestions.question24.questionType;
+			Question24.questionImage = setOfQuestions.question24.questionImage;
+			Question24.question = setOfQuestions.question24.question;
+			Question24.correctAnswer = setOfQuestions.question24.correctAnswer;
+			Question24.secondAnswer = setOfQuestions.question24.secondAnswer;
+			Question24.thirdAnswer = setOfQuestions.question24.thirdAnswer;
+			Question24.fourthAnswer = setOfQuestions.question24.fourthAnswer;
+
+			Question24.save(function(err){
+				if(err)
+					console.log(err);
 			});
+
+				var Question25 = new Question();
+			Question25.questionType = setOfQuestions.question25.questionType;
+			Question25.questionImage = setOfQuestions.question25.questionImage;
+			Question25.question = setOfQuestions.question25.question;
+			Question25.correctAnswer = setOfQuestions.question25.correctAnswer;
+			Question25.secondAnswer = setOfQuestions.question25.secondAnswer;
+			Question25.thirdAnswer = setOfQuestions.question25.thirdAnswer;
+			Question25.fourthAnswer = setOfQuestions.question25.fourthAnswer;
+
+			Question25.save(function(err){
+				if(err)
+					console.log(err);
+			});
+
+				var Question26 = new Question();
+			Question26.questionType = setOfQuestions.question26.questionType;
+			Question26.questionImage = setOfQuestions.question26.questionImage;
+			Question26.question = setOfQuestions.question26.question;
+			Question26.correctAnswer = setOfQuestions.question26.correctAnswer;
+			Question26.secondAnswer = setOfQuestions.question26.secondAnswer;
+			Question26.thirdAnswer = setOfQuestions.question26.thirdAnswer;
+			Question26.fourthAnswer = setOfQuestions.question26.fourthAnswer;
+
+			Question26.save(function(err){
+				if(err)
+					console.log(err);
+			});
+
+				var Question27 = new Question();
+			Question27.questionType = setOfQuestions.question27.questionType;
+			Question27.questionImage = setOfQuestions.question27.questionImage;
+			Question27.question = setOfQuestions.question27.question;
+			Question27.correctAnswer = setOfQuestions.question27.correctAnswer;
+			Question27.secondAnswer = setOfQuestions.question27.secondAnswer;
+			Question27.thirdAnswer = setOfQuestions.question27.thirdAnswer;
+			Question27.fourthAnswer = setOfQuestions.question27.fourthAnswer;
+
+			Question27.save(function(err){
+				if(err)
+					console.log(err);
+			});
+
 		}
 	});
-	
+
 };

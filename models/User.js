@@ -15,6 +15,7 @@ var userSchema = new mongoose.Schema({
 	played: Number,
 	won: Number,
 	lose: Number,
+	correct: Number,
 	score: Number,
 	streak: Number,
 	location: String,
