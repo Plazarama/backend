@@ -25,7 +25,8 @@ module.exports = function(app, passport){
 					first_name: req.body.first_name, first_score: req.body.first_score,
 					second_name: req.body.second_name, second_score: req.body.second_score,
 					third_name: req.body.third_name, third_score: req.body.third_score,
-					loser_name: req.body.loser_name, loser_score: req.body.loser_score
+					loser_name: req.body.loser_name, loser_score: req.body.loser_score,
+					my_score: req.body.my_score
 				});
 			});
 
