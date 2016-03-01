@@ -3,7 +3,7 @@
 	<head>
 		<% include partials/head %>
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
- 
+
 
 	<style>
 	$(window).load(function() {
@@ -11,7 +11,7 @@
 		$(".se-pre-con").fadeOut("slow");;
 	});
 	</style>
-	
+
 		<link rel="stylesheet" href="/style/gameStyle.css" type="text/css">
 		<!--font awesome-->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -31,9 +31,9 @@
 
 				<button id="btnHostGame" class="btn">BE THE HOST</button>
 			</div>
-			
+
 		</script>
-		
+
 		<script type="text/javascript">
 var count=10;
 
@@ -63,7 +63,7 @@ function timer()
 
  document.getElementById("timer").innerHTML=count + " seconds "; // watch for spelling
 }
-	
+</script>
 		<script id="hostScreen" type="text/template">
 
 			<div id="playersHub">
@@ -86,7 +86,7 @@ function timer()
 				<img class="img-responsive center-block" src="/images/logo.PNG" width="70" height="70"alt="">
 
 				<h2 id="question">Display Question</h2>
-				<img src=<%= "#question" %></img>
+				<img id="questionImg" src=""></img>
 				<ul style="list-style-type:none">
 	  				<li>
 	  					<button id="answer1"> <span class="fa fa-a"></span> Answ1</button>
@@ -112,8 +112,8 @@ function timer()
 			</div>
 
 		</script>
-		
-				
+
+
 
 
 		<% include partials/scripts %>
