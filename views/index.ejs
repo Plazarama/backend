@@ -34,7 +34,7 @@
 
     <% include partials/header %>    
     
-
+    <!--header of the page including the logo -->
     <header>
         <div class="header-content">
             <div class="header-content-inner">
@@ -51,45 +51,39 @@
                 <% } else { %>
                     <a href="#" class="btn btn-primary btn-xl page-scroll" data-toggle="modal" data-target="#myModal">Sign Up/Login</a>
                 <% } %>
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h3 class="text-center" class="modal-title" id="myModalLabel" >Login Now</h3>
-      <h4 class="text-center" >You can sign in with facebook or login as a guest.</h4>
-    <h5>Not a member? <a href="signup">Sign up</a></h5>
 
-      </div>
-      <div class="modal-body">
-        
-        <a href="/auth/facebook" type="button" class="btn btn-primary">Sign in with FACEBOOK</a>
-        <br>
-        <br>
-        <br>
-        <a type="button" class="btn btn-primary" href="/login">Sign in as a GUEST</a>
-        <hr/>
+            <!-- Modal Window -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h3 class="text-center" class="modal-title" id="myModalLabel" >Login Now</h3>
+                  <h4 class="text-center" >You can sign in with facebook or login as a guest.</h4>
+                <h5>Not a member? <a href="signup">Sign up</a></h5>
 
-        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-
-        
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-
-
+              </div>
+              <div class="modal-body">
+                
+                <a href="/auth/facebook" type="button" class="btn btn-primary">Sign in with FACEBOOK</a>
+                <br>
+                <br>
+                <br>
+                <a type="button" class="btn btn-primary" href="/login">Sign in as a GUEST</a>
+                <hr/>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+             
+                  </div>
+                </div>
+              </div>
             </div>
+            <!-- end of modal window -->
+   </div>
         </div>
     </header>
 
 
 <!--About us-->
-
 
     <section class="bg-primary" id="about">
         <div class="container">
@@ -168,6 +162,9 @@
             </div>
         </div>
     </aside>
+    <!-- end of blog section -->
+
+    <!-- stay in touch -->
 
     <section id="stay" id="stay">
         <div class="container">
@@ -204,6 +201,8 @@
             </div>
         </div>
     </section>
+
+    <!-- end of stay in touch -->
 
 
 <% include partials/footer %>
