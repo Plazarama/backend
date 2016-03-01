@@ -25,6 +25,23 @@
 >
 	</head>
 	<body>
+		<script>
+		window.fbAsyncInit = function() {
+			FB.init({
+				appId      : '778914578901856',
+				xfbml      : true,
+				version    : 'v2.5'
+			});
+		};
+
+		(function(d, s, id){
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) {return;}
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/en_US/sdk.js";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+		</script>
 
 	<!--nav bar-->
 	<header>
@@ -52,7 +69,7 @@
              <div class="col-md-3 col-lg-3 " align="center"> <img alt="userPlaceholder" src="images/personPlace.png" class="img-circle img-responsive"> </div>
 
         <!-- Information about the User -->
-        <div class=" col-md-9 col-lg-9 "> 
+        <div class=" col-md-9 col-lg-9 ">
         <table class="table table-user-information">
         <tbody>
         <tr>
@@ -76,14 +93,33 @@
          </tr>
 
          <tr></tr>
-                     
+
          </tbody>
          </table>
 
 		<!--buttons for facebook & exit-->
 
-		<a href="share" data-toggle="tooltip" title="Share your results to Facebook!" id="btnFbk" class="btn btn-primary">SHARE TO FACEBOOK</a>
-  
+		<script type="text/javascript">
+			function share() {
+				FB.ui({
+					method: 'feed',
+					link: 'http://plazarama.github.io/',
+					redirect_uri: 'http://localhost:3000',
+					name: 'Plazarama',
+					caption: 'Plazarama, an online multiplayer and multiscreen game.',
+					description: 'I totally got <%= user.score %> in <%= user.played %> games in Plazarama.\nJoin us now.'
+				}, function(res) {
+					if(res && res.post_id) {
+						console.log(res.post_id);
+					}
+					else {
+						console.log("Error");
+					}
+				});
+			}
+		</script>
+		<a href="#" data-toggle="tooltip" title="Share your results to Facebook!" id="btnFbk" class="btn btn-primary" onclick="share()">SHARE TO FACEBOOK</a>
+
         <a href="logout" data-toggle="tooltip" title="Logout" id="btnExit" class="btn btn-primary">LOGOUT</a>
          </div>
          </div>
@@ -95,7 +131,7 @@
            <a href="profile" data-toggle="tooltip" title="Return to User Profile" type="button" class="btn btn-sm btn-primary" id="btn1"><i class="fa fa-user"></i></a>
 
            <span class="pull-right">
-            <a href="host" data-original-title="Play" data-toggle="tooltip" title="Be the Player!" type="button" id="btn2" class="btn btn-sm btn-warning"><i class="fa fa-puzzle-piece"></i></a> 
+            <a href="host" data-original-title="Play" data-toggle="tooltip" title="Be the Player!" type="button" id="btn2" class="btn btn-sm btn-warning"><i class="fa fa-puzzle-piece"></i></a>
 
             <a href="logout" data-toggle="tooltip" title="Logout" type="button"id="btn3" id="btn1"class="btn btn-sm btn-danger"><i class="fa fa-times"></i></a>
 

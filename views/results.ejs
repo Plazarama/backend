@@ -6,23 +6,23 @@
 		<link href="path-to-file/social-sharing.css" rel="stylesheet">
 	</head>
 	<body>
-			<script type="text/javascript">
-				window.fbAsyncInit = function() {
-					FB.init({
-						appId      : '778914578901856',
-						xfbml      : true,
-						version    : 'v2.5'
-					});
-				};
+		<script>
+		window.fbAsyncInit = function() {
+			FB.init({
+				appId      : '778914578901856',
+				xfbml      : true,
+				version    : 'v2.5'
+			});
+		};
 
-				(function(d, s, id){
-					var js, fjs = d.getElementsByTagName(s)[0];
-					if (d.getElementById(id)) {return;}
-					js = d.createElement(s); js.id = id;
-					js.src = "//connect.facebook.net/en_US/sdk.js";
-					fjs.parentNode.insertBefore(js, fjs);
-				}(document, 'script', 'facebook-jssdk'));
-			</script>
+		(function(d, s, id){
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) {return;}
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/en_US/sdk.js";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+		</script>
 
 	<div class="container">
 		<h5>RESULTS</h5>
@@ -41,10 +41,20 @@
 		<button id="btnPlayAgain" class="btn">PLAY AGAIN</button>
 		<script type="text/javascript">
 			function share() {
-				FB.ui({method: "feed", link: "http://localhost:3000", name: "Plazarama", caption: "I got <%= my_score %> in Plazarama.", description: "I got <%= my_score %> in Plazarama.\nJoin us now."}, function(response){
-					if (!response || !response.post_id) {
-			    	console.log("Error");
-			    }
+				FB.ui({
+					method: 'feed',
+					link: 'http://plazarama.github.io/',
+					redirect_uri: 'http://localhost:3000',
+					name: 'Plazarama',
+					caption: 'Plazarama, an online multiplayer and multiscreen game.',
+					description: 'I got <%= my_score %> in Plazarama.\nJoin us now.'
+				}, function(res) {
+					if(res && res.post_id) {
+						console.log(res.post_id);
+					}
+					else {
+						console.log("Error");
+					}
 				});
 			}
 		</script>
