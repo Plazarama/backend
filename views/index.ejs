@@ -43,13 +43,13 @@
         <br>
                 <h1>Plazarama</h1>
                  <hr>
-                <p>A multiplayer/multiscreen online game. Play against your classmates, colleagues or whomever you like in a series of quick fire games! Login on now to see the action.</p>
+                <p>A multiplayer/multiscreen online game. Play against your classmates,<br> colleagues or whomever you like in a series of quick fire games! Sign Up now to see the action.</p>
                 <% if(locals.user) { %>
                     <a class="btn btn-primary btn-xl page-scroll" href="/host">Be the Host</a>
                     <a class="btn btn-primary btn-xl page-scroll" href="/player">Be the Player</a>
 
                 <% } else { %>
-                    <a href="#" class="btn btn-primary btn-xl page-scroll" data-toggle="modal" data-target="#myModal">Login</a>
+                    <a href="#" class="btn btn-primary btn-xl page-scroll" data-toggle="modal" data-target="#myModal">Sign Up/Login</a>
                 <% } %>
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -57,8 +57,10 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h3 class="text-center" class="modal-title" id="myModalLabel" >Login Now.</h3>
+        <h3 class="text-center" class="modal-title" id="myModalLabel" >Login Now</h3>
       <h4 class="text-center" >You can sign in with facebook or login as a guest.</h4>
+    <h5>Not a member? <a href="signup">Sign up</a></h5>
+
       </div>
       <div class="modal-body">
         
@@ -70,6 +72,7 @@
         <hr/>
 
         <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+
         
       </div>
     </div>
@@ -96,7 +99,7 @@
                     <!-- line seprate-->
                     <hr class="light">
                     <p class="text-faded">Plazarama is an online multiplayer and multiscreen game. Imagine that you want to play to another player in the same mobile phone but the screen is too small for both parties, so, what would happen if you separate the question from the answers? So this is the basic idea, separating the actual game from the controller.</p>
-                    <a href="#" class="btn btn-default btn-xl wow bounceInLeft">LOGIN</a>
+                    <a href="#" class="btn btn-default btn-xl wow bounceInLeft">SIGN UP</a>
                 </div>
             </div>
         </div>
@@ -105,7 +108,7 @@
     <!--end of about us-->
 
 <!--HOW TO PLAY-->
-    <section id="instructions">
+    <section id="instructions" id="instructions1">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -117,28 +120,28 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
+                    <div class="instructions-box">
                         <i class="fa fa-4x fa-mobile wow bounceInUp text-primary"></i>
                         <h3>Step 1:</h3>
                         <p class="text-muted">Grab your phone and navigate to the plazarama site. Make sure you are logged into the same wifi network as us!</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
+                    <div class="instructions-box">
                         <i class="fa fa-4x fa-user-plus wow bounceInUp text-primary" data-wow-delay=".1s"></i>
                         <h3>Step 2:</h3>
                         <p class="text-muted">Wait for your buddy to join in on this fun game. Ready? Click play now to start the game!</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
+                    <div class="instructions-box">
                         <i class="fa fa-4x fa-spinner wow bounceInUp text-primary" data-wow-delay=".2s"></i>
                         <h3>Step 3:</h3>
                         <p class="text-muted">The will start when everyone has pressesd "Play Now". Once done, the game will shoot out quick fire questions, so be ready!</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
+                    <div class="instructions-box">
                         <i class="fa fa-4x fa-heart wow bounceInUp text-primary" data-wow-delay=".3s"></i>
                         <h3>Step 4:</h3>
                         <p class="text-muted">Enjoy the game until your hearts content. Play as many times as you want and built up your score.</p>
@@ -148,12 +151,13 @@
         </div>
     </section>
 
+
 <!--end of steps-->
 
 
     
 <!--BLOG SECTION-->
-    <aside class="bg-dark">
+    <aside class="bg-dark" id="blog">
         <div class="container text-center">
             <div class="call-to-action">
                 <h2>Blog</h2>
@@ -165,7 +169,7 @@
         </div>
     </aside>
 
-    <section id="blog">
+    <section id="stay" id="stay">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
