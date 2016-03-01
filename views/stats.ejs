@@ -1,43 +1,111 @@
-
 <!DOCTYPE html>
 <html lang="en">
-	<head>
+<head>
 
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
 
-		<link rel="stylesheet" href="style/stats.css" type="text/css">
-		<link href="path-to-file/social-sharing.css" rel="stylesheet">
+	<!-- Custom CSS-->
+    <link rel="stylesheet" href="style/stats.css" type="text/css">
 
+    <!--Favicon-->
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+
+    <!--Font Aswome-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <!--Link to facebook sharing-->
+	<link href="path-to-file/social-sharing.css" rel="stylesheet">
+
+	<title> Satistics </title>
+
+	<% include partials/head %>
+>
 	</head>
 	<body>
 
+	<!--nav bar-->
+	<header>
+	<% include partials/header %>
+	</header>
 
-	<div class="container">
-		<h1>STATS PAGE</h1>
-			<br>
-			<br>
-			<img id="logo" src="logo.png" id="logo" width"110" height="90">
-			<br>
-			<br>
-		<Label id="name">Name:</label><%= user.name %>
-			<br><br>
-			<br>
-		<Label id="TotalPlayed">Your total games played is:</label><%= user.played %>
-			<br>
-			<br>
-		<Label id="TotalCorrect">Your total correct questions is:</label><%= user.correct %>
-			<br>
-			<br>
-		<Label id="TotalScore">Your total score is:</label><%= user.score %>
-			<br>
-		<br>
-		<button id="btnFbk" class="btn">SHARE FACEBOOK</button>
 
-		<button id="btnExit" class="btn">EXIT</button>
+	<!--Container -->
+      <div class="container">
+      <!-- brings pages to the middle-->
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad" >
+
+        <img class="img-responsive center-block" id="logoImage" src="/images/logo.png" width="70" height="70" alt="">
+        <h1>Stats Page</h1>
+ 		<br>
+ 		<!--Top panel for the username of player -->
+        <div class="panel panel-info">
+        <div class="panel-heading">
+        <h2 class="panel-title">These are your statistics </h2>
+        </div>
+
+        <!-- User Picture-->
+        <div class="panel-body">
+          <div class="row">
+             <div class="col-md-3 col-lg-3 " align="center"> <img alt="userPlaceholder" src="images/personPlace.png" class="img-circle img-responsive"> </div>
+
+        <!-- Information about the User -->
+        <div class=" col-md-9 col-lg-9 "> 
+        <table class="table table-user-information">
+        <tbody>
+        <tr>
+        <td>Name:</td>
+        <td><%= user.name %></td>
+        </tr>
+
+         <tr>
+         <td>Your Total Games Played:</td>
+         <td><%= user.played %></td>
+         </tr>
+
+         <tr>
+         <td>Your Total Correct Answers:</td>
+         <td><%= user.correct %></td>
+         </tr>
+
+         <tr>
+         <td>Your Total Score</td>
+         <td><%= user.score %></td>
+         </tr>
+
+         <tr></tr>
+                     
+         </tbody>
+         </table>
+
+		<!--buttons for facebook & exit-->
+
+		<a href="share" data-toggle="tooltip" title="Share your results to Facebook!" id="btnFbk" class="btn btn-primary">SHARE TO FACEBOOK</a>
+  
+        <a href="logout" data-toggle="tooltip" title="Logout" id="btnExit" class="btn btn-primary">LOGOUT</a>
+         </div>
+         </div>
+         </div>
+
+		<!--Panel at the bottem-->
+         <div class="panel-footer">
+
+           <a href="userProfile" data-toggle="tooltip" title="Return to User Profile" type="button" class="btn btn-sm btn-primary" id="btn1"><i class="fa fa-question-user"></i></a>
+
+           <span class="pull-right">
+            <a href="host" data-original-title="Play" data-toggle="tooltip" title="Be the Player!" type="button" id="btn2" class="btn btn-sm btn-warning"><i class="fa fa-puzzle-piece"></i></a> 
+
+            <a href="logout" data-toggle="tooltip" title="Logout" type="button"id="btn3" id="btn1"class="btn btn-sm btn-danger"><i class="fa fa-times"></i></a>
+
+             </span>
+          </div>
 
 
 
 	</div>
-
-
-	</body>
+	<br>
+  <% include partials/footer %>
+</body>
 </html>
