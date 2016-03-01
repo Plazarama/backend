@@ -20,6 +20,15 @@ module.exports = function(app, passport){
 		});
 
 		app.route('/results')
+			.get(function(req, res){
+				res.render('results', {
+					first_name: "Test 1", first_score: 10,
+					second_name: "Test 2", second_score: 2,
+					third_name: "Test 3", third_score: 2,
+					loser_name: "Test Loser", loser_score: 0,
+					my_score: 10
+				});
+			})
 			.post(function(req, res){
 				res.render('results', {
 					first_name: req.body.first_name, first_score: req.body.first_score,
