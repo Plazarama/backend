@@ -94,7 +94,7 @@ module.exports.seedLocations = function()	{
 module.exports.seedQuestions = function() {
 
 	var setOfQuestions = {
-		/*question1: {
+		question1: {
 			questionType: "General",
 			question: "Which is the capital of Italia?",
 			correctAnswer: "Roma",
@@ -281,7 +281,7 @@ module.exports.seedQuestions = function() {
 			secondAnswer: "Rex",
 			thirdAnswer: "Rocky",
 			fourthAnswer: "Toby"
-		},*/
+		},
 
 		question24: {
 			questionType: "Image",
@@ -321,7 +321,217 @@ module.exports.seedQuestions = function() {
 			secondAnswer: "Real Madrid",
 			thirdAnswer: "Bayern Munich",
 			fourthAnswer: "Chelsea FC"
-		}
+		},
+
+		question28: {
+			questionType: "Image",
+			questionImage: "/QuestionImages/addidas.png",
+			question: "What brand is this?",
+			correctAnswer: "addidas",
+			secondAnswer: "nike",
+			thirdAnswer: "puma",
+			fourthAnswer: "lacoste",
+		},
+
+		question29: {
+			questionType: "Image",
+			questionImage: "/QuestionImages/android.jpg",
+			question: "What brand is this?",
+			correctAnswer: "android",
+			secondAnswer: "samsung",
+			thirdAnswer: "lg",
+			fourthAnswer: "apple",
+		},
+
+		question30: {
+			questionType: "Image",
+			questionImage: "/QuestionImages/bmw.jpg",
+			question: "What brand is this?",
+			correctAnswer: "bmw",
+			secondAnswer: "mercedes",
+			thirdAnswer: "lexus",
+			fourthAnswer: "fiat",
+		},
+
+		question31: {
+			questionType: "Image",
+			questionImage: "/QuestionImages/burberry.jpg",
+			question: "What brand is this?",
+			correctAnswer: "burberry",
+			secondAnswer: "lacoste",
+			thirdAnswer: "addidas",
+			fourthAnswer: "jack & jones",
+		},
+
+		question32: {
+			questionType: "Image",
+			questionImage: "/QuestionImages/burgerking.jpg",
+			question: "What brand is this?",
+			correctAnswer: "burger king",
+			secondAnswer: "mc donalds",
+			thirdAnswer: "kfc",
+			fourthAnswer: "dominoes",
+		},
+
+		question33: {
+			questionType: "Image",
+			questionImage: "/QuestionImages/chanel.jpg",
+			question: "What brand is this?",
+			correctAnswer: "chanel",
+			secondAnswer: "armani",
+			thirdAnswer: "dkny",
+			fourthAnswer: "axis",
+		},
+
+		question34: {
+			questionType: "Image",
+			questionImage: "/QuestionImages/citreon.jpg",
+			question: "What brand is this?",
+			correctAnswer: "citreon",
+			secondAnswer: "ford",
+			thirdAnswer: "fiat",
+			fourthAnswer: "peugout",
+		},
+
+		question35: {
+			questionType: "Image",
+			questionImage: "/QuestionImages/disney.jpg",
+			question: "What brand is this?",
+			correctAnswer: "disney",
+			secondAnswer: "pixar",
+			thirdAnswer: "dreamworks",
+			fourthAnswer: "",
+		},
+
+		question36: {
+			questionType: "Image",
+			questionImage: "/QuestionImages/emporioArmani.jpg",
+			question: "What brand is this?",
+			correctAnswer: "emporioArmani",
+			secondAnswer: "chanel",
+			thirdAnswer: "diesel",
+			fourthAnswer: "dkny",
+		},
+
+		question37: {
+			questionType: "Image",
+			questionImage: "/QuestionImages/givenchy.jpg",
+			question: "What brand is this?",
+			correctAnswer: "qivenchy",
+			secondAnswer: "gucci",
+			thirdAnswer: "chanel",
+			fourthAnswer: "armani",
+		},
+
+		question38: {
+			questionType: "Image",
+			questionImage: "/QuestionImages/gucci.jpg",
+			question: "What brand is this?",
+			correctAnswer: "gucci",
+			secondAnswer: "givenchy",
+			thirdAnswer: "chanel",
+			fourthAnswer: "dkny",
+		},
+
+		question39: {
+			questionType: "Image",
+			questionImage: "/QuestionImages/hardrockcafe.jpg",
+			question: "What brand is this?",
+			correctAnswer: "hard rock cafe",
+			secondAnswer: "starbucks",
+			thirdAnswer: "burger king",
+			fourthAnswer: "subway",
+		},
+
+		question40: {
+			questionType: "Image",
+			questionImage: "/QuestionImages/honda.jpg",
+			question: "What brand is this?",
+			correctAnswer: "honda",
+			secondAnswer: "renault",
+			thirdAnswer: "volkswagon",
+			fourthAnswer: "nissan",
+		},
+
+		question41: {
+			questionType: "Image",
+			questionImage: "/QuestionImages/mastercard.jpg",
+			question: "What brand is this?",
+			correctAnswer: "mastercard",
+			secondAnswer: "discover network",
+			thirdAnswer: "visa",
+			fourthAnswer: "american express",
+		},
+
+		question42: {
+			questionType: "Image",
+			questionImage: "/QuestionImages/renault.jpg",
+			question: "What brand is this?",
+			correctAnswer: "renault",
+			secondAnswer: "honda",
+			thirdAnswer: "ford",
+			fourthAnswer: "toyota",
+		},
+
+		question43: {
+			questionType: "Image",
+			questionImage: "/QuestionImages/rockstargames.jpg",
+			question: "What brand is this?",
+			correctAnswer: "rockstar games",
+			secondAnswer: "ea games",
+			thirdAnswer: "ubisoft",
+			fourthAnswer: "infinity ward",
+		},
+
+		question44: {
+			questionType: "Image",
+			questionImage: "/QuestionImages/shell.jpg",
+			question: "What brand is this?",
+			correctAnswer: "shell",
+			secondAnswer: "texaco",
+			thirdAnswer: "sc feuls",
+			fourthAnswer: "tesoro",
+		},
+
+		question45: {
+			questionType: "Image",
+			questionImage: "/QuestionImages/umbro.jpg",
+			question: "What brand is this?",
+			correctAnswer: "umbro",
+			secondAnswer: "puma",
+			thirdAnswer: "addidas",
+			fourthAnswer: "nike",
+		},
+
+		question46: {
+			questionType: "Image",
+			questionImage: "/QuestionImages/versachi.jpg",
+			question: "What brand is this?",
+			correctAnswer: "versachi",
+			secondAnswer: "gucci",
+			thirdAnswer: "ralph lauren",
+			fourthAnswer: "d&g",
+		},
+
+		question47: {
+			questionType: "Image",
+			questionImage: "/QuestionImages/WeightWatchers.png",
+			question: "What brand is this?",
+			correctAnswer: "weight watchers",
+			secondAnswer: "pepsi",
+			thirdAnswer: "coca cola",
+			fourthAnswer: "mars",
+		},
+
+		question48: {
+			questionType: "Image",
+			questionImage: "/QuestionImages/wwe.jpg",
+			question: "What brand is this?",
+			correctAnswer: "world wrestling entertainment",
+			secondAnswer: "ultimate fighting championship",
+			thirdAnswer: "world series of fighting",
+			fourthAnswer: "bellator mma",
+		},
 	};
 
 	//Add to db
@@ -330,7 +540,7 @@ module.exports.seedQuestions = function() {
 
 		if(questions.length<1){
 
-			/*var Question1 = new Question();
+			var Question1 = new Question();
 			Question1.questionType = setOfQuestions.question1.questionType;
 			Question1.question = setOfQuestions.question1.question;
 			Question1.correctAnswer = setOfQuestions.question1.correctAnswer;
@@ -634,7 +844,7 @@ module.exports.seedQuestions = function() {
 			Question23.save(function(err){
 				if(err)
 					console.log(err);
-			});	*/
+			});	
 
 			var Question24 = new Question();
 			Question24.questionType = setOfQuestions.question24.questionType;
@@ -688,6 +898,300 @@ module.exports.seedQuestions = function() {
 			Question27.fourthAnswer = setOfQuestions.question27.fourthAnswer;
 
 			Question27.save(function(err){
+				if(err)
+					console.log(err);
+			});
+
+				var Question28 = new Question();
+			Question28.questionType = setOfQuestions.question28.questionType;
+			Question28.questionImage = setOfQuestions.question28.questionImage;
+			Question28.question = setOfQuestions.question28.question;
+			Question28.correctAnswer = setOfQuestions.question28.correctAnswer;
+			Question28.secondAnswer = setOfQuestions.question28.secondAnswer;
+			Question28.thirdAnswer = setOfQuestions.question28.thirdAnswer;
+			Question28.fourthAnswer = setOfQuestions.question28.fourthAnswer;
+
+			Question28.save(function(err){
+				if(err)
+					console.log(err);
+			});	
+
+				var Question29 = new Question();
+			Question29.questionType = setOfQuestions.question29.questionType;
+			Question29.questionImage = setOfQuestions.question29.questionImage;
+			Question29.question = setOfQuestions.question29.question;
+			Question29.correctAnswer = setOfQuestions.question29.correctAnswer;
+			Question29.secondAnswer = setOfQuestions.question29.secondAnswer;
+			Question29.thirdAnswer = setOfQuestions.question29.thirdAnswer;
+			Question29.fourthAnswer = setOfQuestions.question29.fourthAnswer;
+
+			Question29.save(function(err){
+				if(err)
+					console.log(err);
+			});		
+
+				var Question30 = new Question();
+			Question30.questionType = setOfQuestions.question30.questionType;
+			Question30.questionImage = setOfQuestions.question30.questionImage;
+			Question30.question = setOfQuestions.question30.question;
+			Question30.correctAnswer = setOfQuestions.question30.correctAnswer;
+			Question30.secondAnswer = setOfQuestions.question30.secondAnswer;
+			Question30.thirdAnswer = setOfQuestions.question30.thirdAnswer;
+			Question30.fourthAnswer = setOfQuestions.question30.fourthAnswer;
+
+			Question30.save(function(err){
+				if(err)
+					console.log(err);
+			});
+
+				var Question31 = new Question();
+			Question31.questionType = setOfQuestions.question31.questionType;
+			Question31.questionImage = setOfQuestions.question31.questionImage;
+			Question31.question = setOfQuestions.question31.question;
+			Question31.correctAnswer = setOfQuestions.question31correctAnswer;
+			Question31.secondAnswer = setOfQuestions.question31.secondAnswer;
+			Question31.thirdAnswer = setOfQuestions.question31.thirdAnswer;
+			Question31.fourthAnswer = setOfQuestions.question31.fourthAnswer;
+
+			Question31.save(function(err){
+				if(err)
+					console.log(err);
+			});
+
+				var Question32 = new Question();
+			Question32.questionType = setOfQuestions.question32.questionType;
+			Question32.questionImage = setOfQuestions.question32.questionImage;
+			Question32.question = setOfQuestions.question32.question;
+			Question32.correctAnswer = setOfQuestions.question32.correctAnswer;
+			Question32.secondAnswer = setOfQuestions.question32.secondAnswer;
+			Question32.thirdAnswer = setOfQuestions.question32.thirdAnswer;
+			Question32.fourthAnswer = setOfQuestions.question32.fourthAnswer;
+
+			Question32.save(function(err){
+				if(err)
+					console.log(err);
+			});
+
+				var Question33 = new Question();
+			Question33.questionType = setOfQuestions.question33.questionType;
+			Question33.questionImage = setOfQuestions.question33.questionImage;
+			Question33.question = setOfQuestions.question33.question;
+			Question33.correctAnswer = setOfQuestions.question33.correctAnswer;
+			Question33.secondAnswer = setOfQuestions.question33.secondAnswer;
+			Question33.thirdAnswer = setOfQuestions.question33.thirdAnswer;
+			Question33.fourthAnswer = setOfQuestions.question33.fourthAnswer;
+
+			Question33.save(function(err){
+				if(err)
+					console.log(err);
+			});
+
+				var Question34 = new Question();
+			Question34.questionType = setOfQuestions.question34.questionType;
+			Question34.questionImage = setOfQuestions.question34.questionImage;
+			Question34.question = setOfQuestions.question34.question;
+			Question34.correctAnswer = setOfQuestions.question34.correctAnswer;
+			Question34.secondAnswer = setOfQuestions.question34.secondAnswer;
+			Question34.thirdAnswer = setOfQuestions.question34.thirdAnswer;
+			Question34.fourthAnswer = setOfQuestions.question34.fourthAnswer;
+
+			Question34.save(function(err){
+				if(err)
+					console.log(err);
+			});
+
+				var Question35 = new Question();
+			Question35.questionType = setOfQuestions.question35.questionType;
+			Question35.questionImage = setOfQuestions.question35.questionImage;
+			Question35.question = setOfQuestions.question35.question;
+			Question35.correctAnswer = setOfQuestions.question35.correctAnswer;
+			Question35.secondAnswer = setOfQuestions.question35.secondAnswer;
+			Question35.thirdAnswer = setOfQuestions.question35.thirdAnswer;
+			Question35.fourthAnswer = setOfQuestions.question35.fourthAnswer;
+
+			Question35.save(function(err){
+				if(err)
+					console.log(err);
+			});
+
+				var Question36 = new Question();
+			Question36.questionType = setOfQuestions.question36.questionType;
+			Question36.questionImage = setOfQuestions.question36.questionImage;
+			Question36.question = setOfQuestions.question36.question;
+			Question36.correctAnswer = setOfQuestions.question36.correctAnswer;
+			Question36.secondAnswer = setOfQuestions.question36.secondAnswer;
+			Question36.thirdAnswer = setOfQuestions.question36.thirdAnswer;
+			Question36.fourthAnswer = setOfQuestions.question36.fourthAnswer;
+
+			Question36.save(function(err){
+				if(err)
+					console.log(err);
+			});
+
+				var Question37 = new Question();
+			Question37.questionType = setOfQuestions.question37.questionType;
+			Question37.questionImage = setOfQuestions.question37.questionImage;
+			Question37.question = setOfQuestions.question37.question;
+			Question37.correctAnswer = setOfQuestions.question37.correctAnswer;
+			Question37.secondAnswer = setOfQuestions.question37.secondAnswer;
+			Question37.thirdAnswer = setOfQuestions.question37.thirdAnswer;
+			Question37.fourthAnswer = setOfQuestions.question37.fourthAnswer;
+
+			Question37.save(function(err){
+				if(err)
+					console.log(err);
+			});
+
+				var Question38 = new Question();
+			Question38.questionType = setOfQuestions.question38.questionType;
+			Question38.questionImage = setOfQuestions.question38.questionImage;
+			Question38.question = setOfQuestions.question38.question;
+			Question38.correctAnswer = setOfQuestions.question38.correctAnswer;
+			Question38.secondAnswer = setOfQuestions.question38.secondAnswer;
+			Question38.thirdAnswer = setOfQuestions.question38.thirdAnswer;
+			Question38.fourthAnswer = setOfQuestions.question38.fourthAnswer;
+
+			Question38.save(function(err){
+				if(err)
+					console.log(err);
+			});
+
+				var Question39 = new Question();
+			Question39.questionType = setOfQuestions.question39.questionType;
+			Question39.questionImage = setOfQuestions.question39.questionImage;
+			Question39.question = setOfQuestions.question39.question;
+			Question39.correctAnswer = setOfQuestions.question39.correctAnswer;
+			Question39.secondAnswer = setOfQuestions.question39.secondAnswer;
+			Question39.thirdAnswer = setOfQuestions.question39.thirdAnswer;
+			Question39.fourthAnswer = setOfQuestions.question39.fourthAnswer;
+
+			Question39.save(function(err){
+				if(err)
+					console.log(err);
+			});
+
+				var Question40 = new Question();
+			Question40.questionType = setOfQuestions.question40.questionType;
+			Question40.questionImage = setOfQuestions.question40.questionImage;
+			Question40.question = setOfQuestions.question40.question;
+			Question40.correctAnswer = setOfQuestions.question40.correctAnswer;
+			Question40.secondAnswer = setOfQuestions.question40.secondAnswer;
+			Question40.thirdAnswer = setOfQuestions.question40.thirdAnswer;
+			Question40.fourthAnswer = setOfQuestions.question40.fourthAnswer;
+
+			Question40.save(function(err){
+				if(err)
+					console.log(err);
+			});
+
+				var Question41 = new Question();
+			Question41.questionType = setOfQuestions.question41.questionType;
+			Question41.questionImage = setOfQuestions.question41.questionImage;
+			Question41.question = setOfQuestions.question41.question;
+			Question41.correctAnswer = setOfQuestions.question41.correctAnswer;
+			Question41.secondAnswer = setOfQuestions.question41.secondAnswer;
+			Question41.thirdAnswer = setOfQuestions.question41.thirdAnswer;
+			Question41.fourthAnswer = setOfQuestions.question41.fourthAnswer;
+
+			Question41.save(function(err){
+				if(err)
+					console.log(err);
+			});
+
+				var Question42 = new Question();
+			Question42.questionType = setOfQuestions.question42.questionType;
+			Question42.questionImage = setOfQuestions.question42.questionImage;
+			Question42.question = setOfQuestions.question42.question;
+			Question42.correctAnswer = setOfQuestions.question42.correctAnswer;
+			Question42.secondAnswer = setOfQuestions.question42.secondAnswer;
+			Question42.thirdAnswer = setOfQuestions.question42.thirdAnswer;
+			Question42.fourthAnswer = setOfQuestions.question42.fourthAnswer;
+
+			Question42.save(function(err){
+				if(err)
+					console.log(err);
+			});
+
+				var Question43 = new Question();
+			Question43.questionType = setOfQuestions.question43.questionType;
+			Question43.questionImage = setOfQuestions.question43.questionImage;
+			Question43.question = setOfQuestions.question43.question;
+			Question43.correctAnswer = setOfQuestions.question43.correctAnswer;
+			Question43.secondAnswer = setOfQuestions.question43.secondAnswer;
+			Question43.thirdAnswer = setOfQuestions.question43.thirdAnswer;
+			Question43.fourthAnswer = setOfQuestions.question43.fourthAnswer;
+
+			Question43.save(function(err){
+				if(err)
+					console.log(err);
+			});
+
+				var Question44 = new Question();
+			Question44.questionType = setOfQuestions.question44.questionType;
+			Question44.questionImage = setOfQuestions.question44.questionImage;
+			Question44.question = setOfQuestions.question44.question;
+			Question44.correctAnswer = setOfQuestions.question44.correctAnswer;
+			Question44.secondAnswer = setOfQuestions.question44.secondAnswer;
+			Question44.thirdAnswer = setOfQuestions.question44.thirdAnswer;
+			Question44.fourthAnswer = setOfQuestions.question44.fourthAnswer;
+
+			Question44.save(function(err){
+				if(err)
+					console.log(err);
+			});
+
+				var Question45 = new Question();
+			Question45.questionType = setOfQuestions.question45.questionType;
+			Question45.questionImage = setOfQuestions.question45.questionImage;
+			Question45.question = setOfQuestions.question45.question;
+			Question45.correctAnswer = setOfQuestions.question45.correctAnswer;
+			Question45.secondAnswer = setOfQuestions.question45.secondAnswer;
+			Question45.thirdAnswer = setOfQuestions.question45.thirdAnswer;
+			Question45.fourthAnswer = setOfQuestions.question45.fourthAnswer;
+
+			Question45.save(function(err){
+				if(err)
+					console.log(err);
+			});
+
+				var Question46 = new Question();
+			Question46.questionType = setOfQuestions.question46.questionType;
+			Question46.questionImage = setOfQuestions.question46.questionImage;
+			Question46.question = setOfQuestions.question46.question;
+			Question46.correctAnswer = setOfQuestions.question46.correctAnswer;
+			Question46.secondAnswer = setOfQuestions.question46.secondAnswer;
+			Question46.thirdAnswer = setOfQuestions.question46.thirdAnswer;
+			Question46.fourthAnswer = setOfQuestions.question46.fourthAnswer;
+
+			Question46.save(function(err){
+				if(err)
+					console.log(err);
+			});
+
+				var Question47 = new Question();
+			Question47.questionType = setOfQuestions.question47.questionType;
+			Question47.questionImage = setOfQuestions.question47.questionImage;
+			Question47.question = setOfQuestions.question47.question;
+			Question47.correctAnswer = setOfQuestions.question47.correctAnswer;
+			Question47.secondAnswer = setOfQuestions.question47.secondAnswer;
+			Question47.thirdAnswer = setOfQuestions.question47.thirdAnswer;
+			Question47.fourthAnswer = setOfQuestions.question47.fourthAnswer;
+
+			Question47.save(function(err){
+				if(err)
+					console.log(err);
+			});
+
+				var Question48 = new Question();
+			Question48.questionType = setOfQuestions.question48.questionType;
+			Question48.questionImage = setOfQuestions.question48.questionImage;
+			Question48.question = setOfQuestions.question48.question;
+			Question48.correctAnswer = setOfQuestions.question48.correctAnswer;
+			Question48.secondAnswer = setOfQuestions.question48.secondAnswer;
+			Question48.thirdAnswer = setOfQuestions.question48.thirdAnswer;
+			Question48.fourthAnswer = setOfQuestions.question48.fourthAnswer;
+
+			Question48.save(function(err){
 				if(err)
 					console.log(err);
 			});

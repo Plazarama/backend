@@ -85,8 +85,10 @@ function timer()
 			<div class="container" id="questionArea">
 				<img class="img-responsive center-block" src="/images/logo.PNG" width="70" height="70"alt="">
 
-				<h2 id="question">Display Question</h2>
-				<img id="questionImg" src=""></img>
+			<h2 id="question">Display Question</h2>
+		<img id="questionImg">//<%if (imagepath.src != '') { %> <img src="<%=imagepath%>"><% } %>
+		</img>
+
 				<ul style="list-style-type:none">
 	  				<li>
 	  					<button id="answer1"> <span class="fa fa-a"></span> Answ1</button>
