@@ -1,4 +1,7 @@
 module.exports = function(app, passport){
+	var multer = require('multer');
+	var upload = multer({ dest: './QuestionImages'});
+	var fs = require('filestream');
 
 	var Question = require('../models/QuizQuestion');
 	app.route('/')
@@ -70,11 +73,20 @@ module.exports = function(app, passport){
 			});
 		});
 
-	app.route('/newQ')
-		.post(function(req, res){
-			console.log(req.body);
+	app.post('/newQ', upload.single('questionImage'), function(req, res){
+			console.log(req.file);
+			fs.readFile(req.file.path, function (err, data) {
+  // ...
+
+			 fs.rename(file.path, req.body.questionImage, function(err) {
+			 	if (err)
+           		throw err;
+          		console.log('renamed complete');  });
+          		res.end(); });
+
 			var newQuestion = new Question();
 			newQuestion.questionType = req.body.questionType;
+			newQuestion.questionImage = req.body.questionImage;
 			newQuestion.question = req.body.question;
 			newQuestion.correctAnswer = req.body.correctAnswer;
 			newQuestion.secondAnswer = req.body.answer2;
