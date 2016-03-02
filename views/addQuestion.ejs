@@ -49,13 +49,20 @@
 
   <h2>Add Your Own Question</h2>
 
-  <form class="form-horizontal" role="form" action="newQ" method="POST">
+  <form class="form-horizontal" role="form" action="newQ" method="POST" enctype="multipart/form-data">
 
     <!--replace this with drop down list of question type categories?-->
     <div class="form-group">
       <label class="control-label col-sm-2" for="questionType" id="questionType">Question Type:</label>
       <div class="col-sm-10">
-        <input type="textbox" name="questionType" class="form-control" placeholder="What is the Question Type?" required>
+        <!--input type="textbox" name="questionType" class="form-control" placeholder="What is the Question Type?" required-->
+
+        <select name="questionType" text="What is the question type" required>
+        <option value="Image">Image</option>
+        <option value="Math">Math</option>
+        <option value="History">History</option>
+        <option value="Science">Science</option>
+    </select>
         
       </div>
     </div>
@@ -70,7 +77,7 @@
     <div class="form-group">
       <label class="control-label col-sm-2" for="question" id="image">ADD IMAGE:</label>
       <div class="col-sm-10">
-        <input type="file" name="pic" class="form-control" accept="image/*">
+        <input type="file" name="questionImage" class="form-control" accept="image/*">
       </div>
     </div>
 
