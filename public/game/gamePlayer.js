@@ -12,7 +12,7 @@ jQuery(function($) {
 		 * After connection bind the events of socket.
 		 */
 		init: function() {
-			IO.socket = io.connect('http://localhost:3000');
+			IO.socket = io.connect('http://172.16.88.97:3000');
 			IO.bindEvents();
 		},
 
@@ -216,6 +216,11 @@ jQuery(function($) {
 				}
 				$hiddenForm.append('<input type="hidden" name="loser_name" value="' + data.result[data.result.length - 1].player.name + '" />');
 				$hiddenForm.append('<input type="hidden" name="loser_score" value="' + data.result[data.result.length - 1].player.score + '" />');
+
+				data.result.forEach(elem => {
+					if(elem.player.mySocketId.indexOf(Game.mySocketId) > -1)
+					$hiddenForm.append('<input type="hidden" name="my_score" value="' + elem.player.score + '" />');
+				});
 				console.log($hiddenForm);
 				$hiddenForm.submit();
 			}

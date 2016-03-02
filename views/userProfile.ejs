@@ -36,7 +36,7 @@
         <img class="img-responsive center-block" id="logoImage" src="/images/logo.png" width="70" height="70" alt="">
         <h1>Plazarama</h1>
   <br>
-   
+
        <!--Top panel for the username of player -->
         <div class="panel panel-info">
         <div class="panel-heading">
@@ -47,9 +47,9 @@
         <div class="panel-body">
           <div class="row">
              <div class="col-md-3 col-lg-3 " align="center"> <img alt="userPlaceholder" src="images/personPlace.png" class="img-circle img-responsive"> </div>
-                
+
         <!-- Information about the User -->
-        <div class=" col-md-9 col-lg-9 "> 
+        <div class=" col-md-9 col-lg-9 ">
         <table class="table table-user-information">
         <tbody>
         <tr>
@@ -59,22 +59,22 @@
 
          <tr>
          <td>Email Address:</td>
-         <td>insert email</td>
+         <td><%= user.email %></td>
          </tr>
 
          <tr>
          <td>Games Played:</td>
-         <td>0</td>
+         <td><%= user.played %></td>
          </tr>
          <tr></tr>
-                     
+
          </tbody>
          </table>
 
          <!-- Buttons -->
-                  
+
          <a href="host" data-toggle="tooltip" title="Host the game of Plazarama!" class="btn btn-primary">Host Plazarama</a>
-  
+
          <a href="stats" data-toggle="tooltip" title="View the stats page!" class="btn btn-primary">View The Statistics</a>
          </div>
          </div>
@@ -86,7 +86,7 @@
            <a href="index" data-toggle="tooltip" title="Instructions" type="button" class="btn btn-sm btn-primary" id="btn1"><i class="fa fa-question-circle"></i></a>
 
            <span class="pull-right">
-            <a href="host" data-original-title="Play" data-toggle="tooltip" title="Be the Player!" type="button" id="btn2" class="btn btn-sm btn-warning"><i class="fa fa-puzzle-piece"></i></a> 
+            <a href="host" data-original-title="Play" data-toggle="tooltip" title="Be the Player!" type="button" id="btn2" class="btn btn-sm btn-warning"><i class="fa fa-puzzle-piece"></i></a>
 
             <a href="logout" data-toggle="tooltip" title="Logout" type="button"id="btn3" id="btn1"class="btn btn-sm btn-danger"><i class="fa fa-times"></i></a>
 
@@ -94,12 +94,12 @@
           </div>
 
 
-            
+
           </div>
         </div>
       </div>
     </div>
       <% include partials/footer %>
-</center>
+
 </body>
 </html>
