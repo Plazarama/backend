@@ -41,7 +41,7 @@ exports.initGame = function(sio, socket){
 function hostCreateNewGame() {
 	var thisGameId = 1; // TODO: (Math.random() * 10000) | 0;
 
-
+	console.log(thisGameId);
 	gameSocket.join(thisGameId.toString(), function(){
 		io.to(thisGameId).emit('newGameCreated', {gameId: thisGameId, mySocketId: gameSocket.id});
 	});
@@ -148,7 +148,7 @@ function sendQuestion(gameId){
 			//Random questions.
 
 			var quest = questions[randQuest];
-			var questImg = [quest.questionImg];
+			var questImg = quest.questionImg;
 
 			var answers = [quest.correctAnswer, quest.secondAnswer, quest.thirdAnswer, quest.fourthAnswer];
 			var shuffledAnswers = shuffleReturningCorrect(answers);

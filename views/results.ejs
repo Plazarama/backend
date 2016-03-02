@@ -6,7 +6,23 @@
 		<link href="path-to-file/social-sharing.css" rel="stylesheet">
 	</head>
 	<body>
+		<script>
+		window.fbAsyncInit = function() {
+			FB.init({
+				appId      : '778914578901856',
+				xfbml      : true,
+				version    : 'v2.5'
+			});
+		};
 
+		(function(d, s, id){
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) {return;}
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/en_US/sdk.js";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+		</script>
 
 	<div class="container">
 		<h5>RESULTS</h5>
@@ -22,8 +38,32 @@
 		<img src="/images/sadFace.png" id="sadFace" width"110" height="90">
 		<div><%= loser_name %> : <%= loser_score %></div>
 		<br>
+<<<<<<< HEAD
 		<button id="btnPlayAgain" class="btn">nvjdfkvIN</button>
 		<button id="btnFbk" class="btn">SHARE FACEBOOK</button>
+=======
+		<button id="btnPlayAgain" class="btn">PLAY AGAIN</button>
+		<script type="text/javascript">
+			function share() {
+				FB.ui({
+					method: 'feed',
+					link: 'http://plazarama.github.io/',
+					redirect_uri: 'http://localhost:3000',
+					name: 'Plazarama',
+					caption: 'Plazarama, an online multiplayer and multiscreen game.',
+					description: 'I got <%= my_score %> in Plazarama.\nJoin us now.'
+				}, function(res) {
+					if(res && res.post_id) {
+						console.log(res.post_id);
+					}
+					else {
+						console.log("Error");
+					}
+				});
+			}
+		</script>
+		<button id="btnFbk" onclick="share()" class="btn">SHARE FACEBOOK</button>
+>>>>>>> 90f66e2b523933ad620d40b7189868185d7fbb43
 		<button id="btnExit" class="btn">EXIT</button>
 
 

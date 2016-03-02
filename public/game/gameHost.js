@@ -52,7 +52,7 @@ jQuery(function($) {
 		* @param data{{gameId: *, mySocketId: *}}
 		*/
 		onNewGameCreated: function(data) {
-			//console.log(data);
+			console.log(data);
 			Game.Host.hostInit(data);
 		},
 
@@ -77,6 +77,7 @@ jQuery(function($) {
 		* @param data{{gameId: this game ID, mySocketId: socket of the host}}
 		*/
 		beginNewGame: function(data){
+			console.log("begin");
 			Game.Host.gameCountDown(data);
 		},
 
@@ -160,6 +161,7 @@ jQuery(function($) {
 			* a host.
 			*/
 			onCreate: function(){
+				console.log('Start');
 				IO.socket.emit('hostCreateNewGame');
 			},
 
@@ -180,7 +182,6 @@ jQuery(function($) {
 			*/
 			displayNewGameScreen: function(){
 				Game.$gameArea.html(Game.$newGame);
-
 
 				$('#gameURL').text(window.location.href);
 				$('#gameID').text(Game.gameId);

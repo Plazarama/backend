@@ -16,23 +16,25 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
 
-                	<% if(locals.user) { %>
-                    <li>
+                <li>
                             <a class="page-scroll" href="/signup">Register</a>
                         </li>
+
+                	<% if(locals.user) { %>
+                    
                         <li>
                             <a class="page-scroll" href="/addQuestion">Add a Question  </a>
                         </li>
 						<li>
-						    <a class="page-scroll" href="/host">Be the host</a>
+						    <a class="page-scroll" href="/profile">User Profile</a>
 						</li>
-						<li>
-						    <a class="page-scroll" href="/player">Play</a>
-						</li>
+                        
 						<li>
 							<a href="/logout">Logout</a>
 						</li>
                 	<% } %>
+
+
                     <li>
                         <a class="page-scroll" href="/#about">About</a>
                     </li>
