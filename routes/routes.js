@@ -30,6 +30,7 @@ module.exports = function(app, passport){
 				});
 			})
 			.post(function(req, res){
+				console.log(req.body);
 				res.render('results', {
 					first_name: req.body.first_name, first_score: req.body.first_score,
 					second_name: req.body.second_name, second_score: req.body.second_score,
