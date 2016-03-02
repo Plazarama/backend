@@ -37,6 +37,7 @@ button:focus{
   border-radius: 1px;
   margin-top: 10px;
   margin-bottom: 15px;
+  margin-left:250px;
   box-shadow: 5px 5px 5px #e76b6b;
   height: 600px;
   background-color: #fcfcfc;

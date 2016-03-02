@@ -35,35 +35,36 @@
 		</script>
 
 		<script type="text/javascript">
-var count=10;
+		var count=10;
 
-var counter=setInterval(timer, 1000); //1000 will  run it every 1 second
+		var counter=setInterval(timer, 1000); //1000 will  run it every 1 second
 
-function timer()
-{
-  count=count-1;
-  if (count <= 0)
-  {
-     clearInterval(counter);
-     //counter ended, do something here
-     return;
-  }
+		function timer()
+		{
+  			count=count-1;
+  			if (count <= 0)
+  		{
 
-  //Do code for showing the number of seconds here
-}
+     	clearInterval(counter);
+     	//counter ended, do something here
+     	return;
+  		}
 
-function timer()
-{
-  count=count-1;
-  if (count <= 0)
-  {
-     clearInterval(counter);
-     return;
-  }
+  		//Do code for showing the number of seconds here
+		}
 
- document.getElementById("timer").innerHTML=count + " seconds "; // watch for spelling
-}
-</script>
+		function timer()
+		{
+  		count=count-1;
+  		if (count <= 0)
+  		{
+     		clearInterval(counter);
+     		return;
+  		}
+
+ 		document.getElementById("timer").innerHTML=count + " seconds "; // watch for spelling
+		}
+		</script>
 		<script id="hostScreen" type="text/template">
 
 			<div id="playersHub">
