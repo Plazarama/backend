@@ -259,7 +259,10 @@ jQuery(function($) {
 				else {
 					$('#question').text(data.question);
 				}
-				$('#questionImg').attr("src", data.imagePath);
+				
+				if(data.question.questionType == Image){
+					$('#questionImg').attr("src", data.imagePath);
+				}
 				Game.Host.currentCorrectAnswer = data.correct;
 				$('#answer1').text(data.answers[0]);
 				$('#answer2').text(data.answers[1]);
