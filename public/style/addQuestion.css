@@ -7,11 +7,18 @@ html,body{
   border-radius: 1px;
   margin-top: 10px;
   margin-bottom: 15px;
-  box-shadow: 5px 5px 5px #249991;
-  height: 550px;
+  box-shadow: 5px 5px 5px #000;
+  height: 560px;
   background-color: #fcfcfc;
   
 }
+
+@media (min-width: 1200px) {
+    .container{
+        max-width: 600px;
+    }
+}
+
 h1
 {
   color: #249991 !important;
@@ -33,11 +40,14 @@ img {
 
 
 
-h2{
+p{
 
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    color: #249991 !important;
+    color: #e76b6b !important;
+    font-size: 15px;
+    font-weight: bold;
+
 }
 
 
@@ -55,25 +65,28 @@ h2{
 
 }
 
-.btn:hover {
-  background: #6baa9a;
+.btn:hover 
+{
+  background: #2ba89f !important;
   font-family: Arial, Helvetica, sans-serif;
-  color:#ffffff;
+  color:#FFF !important;
+  background-color: #2ba89f !important;
 }
 button:active{
 
-  background-color: #6baa9a;
-  color: #ffffff;
+  background-color: #33c7bd;
+  color: #fff;
 }
 
 button:focus{
-  background-color: #6baa9a;
-  color: #ffffff;
+  background-color: #33c7bd;
+  color: #fff;
 }
+
 #question
 {
     font-family: Arial, Helvetica, sans-serif;
-    color: #249991 !important;
+    color: #000 !important;
     text-transform: uppercase;
 
 }
@@ -81,14 +94,14 @@ button:focus{
 #correctAnswer
 {
     font-family: Arial, Helvetica, sans-serif;
-    color: #249991 !important;
+    color: #e76b6b !important;
     text-transform: uppercase;
 
 }
 #image
 {
     font-family: Arial, Helvetica, sans-serif;
-    color: #249991 !important;
+    color: #e76b6b !important;
     text-transform: uppercase;
 
 }
@@ -96,7 +109,7 @@ button:focus{
 #answer2
 {
     font-family: Arial, Helvetica, sans-serif;
-    color: #249991 !important;
+    color: #e76b6b !important;
     text-transform: uppercase;
 
 }
@@ -104,7 +117,7 @@ button:focus{
 #answer3
 {
     font-family: Arial, Helvetica, sans-serif;
-    color: #249991 !important;
+    color: #e76b6b !important;
     text-transform: uppercase;
 
 }
@@ -112,13 +125,13 @@ button:focus{
 #answer4
 {
     font-family: Arial, Helvetica, sans-serif;
-    color: #249991 !important;
+    color: #e76b6b !important;
     text-transform: uppercase;
 
 }
 #questionType{
   font-family: Arial, Helvetica, sans-serif;
-    color: #249991 !important;
+    color: #e76b6b !important;
     text-transform: uppercase;
 }
 
