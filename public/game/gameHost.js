@@ -259,9 +259,13 @@ jQuery(function($) {
 				else {
 					$('#question').text(data.question);
 				}
-				
-				if(data.question.questionType == Image){
-					$('#questionImg').attr("src", data.imagePath);
+
+				console.log(data);
+				$('#quesImg').html('');
+				if(data.type === "Image"){
+					$('<img src="'+ data.questionImg +'">').load(function() {
+					  $(this).appendTo('#quesImg');
+					});
 				}
 				Game.Host.currentCorrectAnswer = data.correct;
 				$('#answer1').text(data.answers[0]);

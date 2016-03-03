@@ -1,44 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<% include partials/results %>
+		
+
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<!-- Custom CSS-->
+
 		<link rel="stylesheet" href="/style/results.css" type="text/css">
 		<link href="path-to-file/social-sharing.css" rel="stylesheet">
+
+		<!--Favicon-->
+  		
+  		<link href="/images/favicon.ico" rel="icon" type="image/x-icon" />
+
+
+  		<!--Font Aswome-->
+  		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">	
+
+
+
+  		<% include partials/results %>	
+  		<% include partials/head %>
+
+</head>
+
+<header>
+    <% include partials/header %>
+
+  </header>
+
+  </header>
 	</head>
 	<body>
-		<script>
-		window.fbAsyncInit = function() {
-			FB.init({
-				appId      : '778914578901856',
-				xfbml      : true,
-				version    : 'v2.5'
-			});
-		};
 
-		(function(d, s, id){
-			var js, fjs = d.getElementsByTagName(s)[0];
-			if (d.getElementById(id)) {return;}
-			js = d.createElement(s); js.id = id;
-			js.src = "//connect.facebook.net/en_US/sdk.js";
-			fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));
-		</script>
-
+		
 	<div class="container">
-		<h5>RESULTS</h5>
-		<img src="/images/gold.png" id="gold" width"110" height="90">
-		<div><%= first_name %> : <%= first_score %></div>
+		<h1>RESULTS</h1>
+		<img class="img-responsive center-block" src="/images/logo.png" width="70" height="70" alt="">
+		
+		<img src="/images/gold.png" id="gold" width"110" height="90"
+		<div id="results"><%= first_name %> : <%= first_score %>
+		
 		<br>
-		<img src="/images/silver.png" id="silver" width"110" height="90">
-		<div><%= second_name %> : <%= second_score %></div>
+		<img src="/images/silver.png" id="silver" width"110" height="90" 
+		<div id="results"><%= second_name %> : <%= second_score %>
+		
 		<br>
-		<img src="/images/bronze.png" id="bronze" width"110" height="90">
-		<div><%= third_name %> : <%= third_score %></div>
+		<img src="/images/bronze.png" id="bronze" width"110" height="90"
+		<div id="results"><%= third_name %> : <%= third_score %>
+		
 		<br>
-		<img src="/images/sadFace.png" id="sadFace" width"110" height="90">
-		<div><%= loser_name %> : <%= loser_score %></div>
+		<img src="/images/sadFace.png" id="sadFace" width"110" height="90"
+		<div id="results"><%= loser_name %> : <%= loser_score %>
+		
 		<br>
-		<button id="btnPlayAgain" class="btn">PLAY AGAIN</button>
+
 		<script type="text/javascript">
 			function share() {
 				FB.ui({
@@ -58,9 +77,17 @@
 				});
 			}
 		</script>
-		<button id="btnFbk" onclick="share()" class="btn">SHARE FACEBOOK</button>
-		<button id="btnExit" class="btn">EXIT</button>
+		
 
+		<a href="player" type="button" id="btnPlayAgain" class="btn" title="Play Again!"class="fa fa-puzzle-piece"><i class="fa fa-puzzle-piece"></i></a></button>
+
+		<a href="" type="button" id="btnExit" class="btn" title="Return to Home!"><i class="fa fa-home"></i></a></button>
+
+		<a href="" type="button" onclick="share()" id="btnFbk" class="btn" title="Share to Facebook!"><i class="fa fa-facebook-official"></i></a></button>
+
+
+		
+		
 
 	</div>
 

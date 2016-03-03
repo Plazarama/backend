@@ -20,32 +20,12 @@ button{
 	height: 100%;
 }
 
-header{
-  color:#249991;
-  font-size: 48px;
-  text-align: center;
-}
 
-#btnJoinGame{
-	color:#ffffff;
-	font-size: 30px;
-
-}
 #btnHostGame{
 	color:#ffffff;
 	font-size: 30px;
 }
-#btnStart{
-	color:#ffffff;
-	font-size: 30px;
 
-}
-#btnProceed{
-	color:#ffffff;
-	font-size: 30px;
-
-
-}
 * Paste this css to your style sheet file or under head tag */
 /* This only works with JavaScript, 
 if it's not present, don't show loader */
@@ -80,21 +60,7 @@ button:focus{
 
 }
 
-ul{
-  margin: 0 auto;
-}
-#gameID{
-  font-family: Arial, Helvetica, sans-serif;
-  color: #249991;
-  text-align:center;
 
-}
-#gameID{
-	font-family: Arial, Helvetica, sans-serif;
-	color: #249991;
-	text-align:center;
-
-}
 
 h2 {
     font-family: Arial, Helvetica, sans-serif;
@@ -161,35 +127,6 @@ h5{
   left: 200px;
 
 }
-#inputGameId{
-padding: 10px;
-  border: solid 1px #dcdcdc;
-  transition: box-shadow 0.3s, border 0.3s;
-  position: relative;
-    font-family: Arial, Helvetica, sans-serif;
-    height:50px;
-
-	font-size:30px;
-	text-align:center;
-	color: #249991;
-    left: 0%;
-    top: 50%;
-    width: 100%;
-	
-	}
-
-#newGameScreen{
-
-}	
-p{
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 30px;
-	color:#249991;
-	text-align:center;
-
-	}
-
-
 
 /* Players Hub */
 

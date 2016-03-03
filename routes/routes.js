@@ -1,6 +1,10 @@
 module.exports = function(app, passport){
 	var multer = require('multer');
+<<<<<<< HEAD
 	var upload = multer({ dest: './QuestionImages'});
+=======
+	var upload = multer({ dest: './public/QuestionImages'});
+>>>>>>> 4d550a8ec6897464651c09d965a23d0c668c6d31
 	var fs = require('fs');
 
 	var Question = require('../models/QuizQuestion');
@@ -33,6 +37,7 @@ module.exports = function(app, passport){
 				});
 			})
 			.post(function(req, res){
+				console.log(req.body);
 				res.render('results', {
 					first_name: req.body.first_name, first_score: req.body.first_score,
 					second_name: req.body.second_name, second_score: req.body.second_score,
@@ -75,9 +80,7 @@ module.exports = function(app, passport){
 	app.post('/newQ', upload.single('questionImage'), function(req, res){
 			console.log(req.file);
 			fs.readFile(req.file.path, function (err, data) {
-  // ...
-
-			 fs.rename(file.path, req.body.questionImage, function(err) {
+			 fs.rename(req.file.path, req.file.destination + '/' + req.file.originalname, function(err) {
 			 	if (err)
            		throw err;
           		console.log('renamed complete');  });
@@ -86,7 +89,7 @@ module.exports = function(app, passport){
 
 			var newQuestion = new Question();
 			newQuestion.questionType = req.body.questionType;
-			newQuestion.questionImage = req.body.questionImage;
+			newQuestion.questionImage = '/QuestionImages/' + req.file.originalname;
 			newQuestion.question = req.body.question;
 			newQuestion.correctAnswer = req.body.correctAnswer;
 			newQuestion.secondAnswer = req.body.answer2;
