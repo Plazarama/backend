@@ -1,7 +1,7 @@
 module.exports = function(app, passport){
 	var multer = require('multer');
 	var upload = multer({ dest: './QuestionImages'});
-	var fs = require('filestream');
+	var fs = require('fs');
 
 	var Question = require('../models/QuizQuestion');
 	app.route('/')
@@ -82,6 +82,7 @@ module.exports = function(app, passport){
            		throw err;
           		console.log('renamed complete');  });
           		res.end(); });
+
 
 			var newQuestion = new Question();
 			newQuestion.questionType = req.body.questionType;

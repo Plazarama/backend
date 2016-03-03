@@ -356,7 +356,7 @@ jQuery(function($) {
 		* @param callback The function to call when the timer ends.
 		*/
 		countDown: function($el, startTime, callback){
-			$el.text("Game starting in: "+startTime);
+			$el.text("Game starting in: "+ startTime);
 
 			var timer = setInterval(countItDown, 1000);
 
