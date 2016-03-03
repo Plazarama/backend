@@ -261,6 +261,7 @@ jQuery(function($) {
 				}
 
 				console.log(data);
+				$('#quesImg').html('');
 				if(data.type === "Image"){
 					$('<img src="'+ data.questionImg +'">').load(function() {
 					  $(this).appendTo('#quesImg');
