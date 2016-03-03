@@ -30,9 +30,10 @@
 	<img class="img-responsive center-block" src="/images/logo.png" width="70" height="70" alt="">
 	<h1>Plazarama</h1>
 
-	<br>
 
 	<p>Create an account with Plazarama to start playing!</p>
+
+	
 
 
 		<% if (message.length > 0) { %>
@@ -58,8 +59,10 @@
 
 	<div class="row omb_row-sm-offset-3">
       <div class="col-sm-12">
-        <label class="signup">
-         <a href="login" style="color:#000 !important; ">already have an account?</a>
+        <label class="signup" id="signUp">
+
+	<a href="login" id="link1" style="text-align: center !important;">Already have an account?</a>
+         
         </label>
       </div>
       <br>
@@ -69,6 +72,6 @@
 	</form>
 	</div>
 
-<% include partials/footer %>
+
 </body>
 </html>
