@@ -148,15 +148,17 @@ function sendQuestion(gameId){
 			//Random questions.
 
 			var quest = questions[randQuest];
-			var questImg = quest.questionImg;
+			var questImg = quest.questionImage;
 
 			var answers = [quest.correctAnswer, quest.secondAnswer, quest.thirdAnswer, quest.fourthAnswer];
 			var shuffledAnswers = shuffleReturningCorrect(answers);
 
 			var questionShuffled = {
 				question: quest.question,
+				type: quest.questionType,
 				correct: shuffledAnswers.correct,
-				answers: shuffledAnswers.answers
+				answers: shuffledAnswers.answers,
+				questionImg: questImg
 			};
 
 			console.log(questionShuffled);
