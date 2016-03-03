@@ -12,7 +12,7 @@
 	});
 	</style>
 
-		<link rel="stylesheet" href="/style/gameStyle.css" type="text/css">
+		<link rel="stylesheet" href="/style/gameHost.css" type="text/css">
 		<!--font awesome-->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
@@ -35,6 +35,40 @@
 		</script>
 
 
+		<script type="text/javascript">
+		var count=10;
+
+		var counter=setInterval(timer, 1000); //1000 will  run it every 1 second
+
+		function timer()
+		{
+  			count=count-1;
+  			if (count <= 0)
+  		{
+
+     	clearInterval(counter);
+     	//counter ended, do something here
+     	return;
+  		}
+
+  		//Do code for showing the number of seconds here
+		}
+
+		function timer()
+		{
+  		count=count-1;
+  		if (count <= 0)
+  		{
+     		clearInterval(counter);
+     		return;
+  		}
+
+ 		document.getElementById("timer").innerHTML=count + " seconds "; // watch for spelling
+		}
+		</script>
+=======
+
+>>>>>>> 90f66e2b523933ad620d40b7189868185d7fbb43
 		<script id="hostScreen" type="text/template">
 
 			<div id="playersHub">
