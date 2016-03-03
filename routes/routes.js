@@ -1,10 +1,10 @@
 module.exports = function(app, passport){
 	var multer = require('multer');
-<<<<<<< HEAD
+//<<<<<<< HEAD
 	var upload = multer({ dest: './QuestionImages'});
-=======
+//=======
 	var upload = multer({ dest: './public/QuestionImages'});
->>>>>>> 4d550a8ec6897464651c09d965a23d0c668c6d31
+//>>>>>>> 4d550a8ec6897464651c09d965a23d0c668c6d31
 	var fs = require('fs');
 
 	var Question = require('../models/QuizQuestion');
