@@ -14,7 +14,7 @@
 
 		<!--Favicon-->
   		
-  		<link href="/favicon/favicon.ico" rel="icon" type="image/x-icon" />
+  		<link href="/images/favicon.ico" rel="icon" type="image/x-icon" />
 
 
   		<!--Font Aswome-->
@@ -57,11 +57,34 @@
 		<div id="results"><%= loser_name %> : <%= loser_score %>
 		
 		<br>
+
+		<script type="text/javascript">
+			function share() {
+				FB.ui({
+					method: 'feed',
+					link: 'http://plazarama.github.io/',
+					redirect_uri: 'http://localhost:3000',
+					name: 'Plazarama',
+					caption: 'Plazarama, an online multiplayer and multiscreen game.',
+					description: 'I got <%= my_score %> in Plazarama.\nJoin us now.'
+				}, function(res) {
+					if(res && res.post_id) {
+						console.log(res.post_id);
+					}
+					else {
+						console.log("Error");
+					}
+				});
+			}
+		</script>
+		
+
 		<a href="player" type="button" id="btnPlayAgain" class="btn" title="Play Again!"class="fa fa-puzzle-piece"><i class="fa fa-puzzle-piece"></i></a></button>
 
 		<a href="" type="button" id="btnExit" class="btn" title="Return to Home!"><i class="fa fa-home"></i></a></button>
 
-		<a href="" type="button" id="btnFbk" class="btn" title="Share to Facebook!"><i class="fa fa-facebook-official"></i></a></button>
+		<a href="" type="button" onclick="share()" id="btnFbk" class="btn" title="Share to Facebook!"><i class="fa fa-facebook-official"></i></a></button>
+
 
 		
 		

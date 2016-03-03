@@ -57,8 +57,7 @@ h3
 img {
 
 	position: relative;
-  	top: 70px;
-  	left: 160px;
+  top: 10px;
 }
 
 .container {
@@ -67,11 +66,7 @@ img {
 	margin-top: 10px;
 	margin-bottom: 15px;
 	box-shadow: 5px 5px 5px #888888;
-	height: 550px;
-<<<<<<< HEAD
-  
-=======
->>>>>>> 90f66e2b523933ad620d40b7189868185d7fbb43
+	height: 450px;
   background-color: #fcfcfc;
 	
 }
@@ -87,6 +82,12 @@ p{
   font-weight: bold !important;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+#link1
+{
+    color: #42729b !important;
+    text-align: center !important;
 }
 
 
