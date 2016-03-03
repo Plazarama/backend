@@ -13,9 +13,8 @@
 		<link href="path-to-file/social-sharing.css" rel="stylesheet">
 
 		<!--Favicon-->
-  		<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+  		
   		<link href="/favicon/favicon.ico" rel="icon" type="image/x-icon" />
-
 
 
   		<!--Font Aswome-->
@@ -24,16 +23,26 @@
 
 
   		<% include partials/results %>	
+  		<% include partials/head %>
+
+</head>
+
+<header>
+    <% include partials/header %>
+
+  </header>
+
+  </header>
 	</head>
 	<body>
 
-		<% include partials/header %>
+		
 	<div class="container">
+		<h1>RESULTS</h1>
 		<img class="img-responsive center-block" src="/images/logo.png" width="70" height="70" alt="">
-		<h5>RESULTS</h5>
-
+		
 		<img src="/images/gold.png" id="gold" width"110" height="90"
-		<div id="results"><%= first_name %> : <%= first_score %></h5>
+		<div id="results"><%= first_name %> : <%= first_score %>
 		
 		<br>
 		<img src="/images/silver.png" id="silver" width"110" height="90" 
@@ -48,9 +57,9 @@
 		<div id="results"><%= loser_name %> : <%= loser_score %>
 		
 		<br>
-		<a href="" type="button" id="btnPlayAgain"class="btn" title="Play Again!"class="fa fa-puzzle-piece"><i class="fa fa-puzzle-piece"></i></a></button>
+		<a href="player" type="button" id="btnPlayAgain" class="btn" title="Play Again!"class="fa fa-puzzle-piece"><i class="fa fa-puzzle-piece"></i></a></button>
 
-		<a href="" type="button" id="btnExit" class="btn" title="Return to Home!"></a></button>
+		<a href="" type="button" id="btnExit" class="btn" title="Return to Home!"><i class="fa fa-home"></i></a></button>
 
 		<a href="" type="button" id="btnFbk" class="btn" title="Share to Facebook!"><i class="fa fa-facebook-official"></i></a></button>
 
