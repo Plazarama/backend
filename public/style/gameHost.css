@@ -3,7 +3,11 @@ html, body{
   width: 100%;
   margin: 0 0;
 }
-
+@media (min-width: 768px) {
+    .omb_row-sm-offset-3 div:first-child[class*="col-"] {
+        margin-left: 25%;
+    }
+}
 
 button{
 	background-color: #249991;
@@ -96,9 +100,11 @@ h5{
     margin-bottom: 80px;
     position:relative;
 }
-#logo{
 
-	margin-left: 850px;
+.img-responsive {
+
+  position: relative;
+  
 
 }
 @media screen and (min-width:800px) {
@@ -120,13 +126,7 @@ h5{
 }
 
 
-.img-responsive {
 
-      position: relative;
-  top: 110px;
-  left: 200px;
-
-}
 
 /* Players Hub */
 

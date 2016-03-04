@@ -26,13 +26,12 @@ body
   color: white;
   opacity:1;      
 }
-.omb_login .omb_socialButtons .omb_btn-facebook
+.btn-block .omb_socialButtons.omb_btn-facebook
  {
 	background: #42729b;
-	text-align: center;
+  text-align: center;
+  
 }
-
-
 
 .omb_login .omb_loginOr {
   position: relative;
@@ -49,6 +48,7 @@ body
   margin-top: 0px !important;
   margin-bottom: 0px !important;
 }
+
 .omb_login .omb_loginOr .omb_spanOr {
   display: block;
   position: absolute;
@@ -74,6 +74,8 @@ body
   background: #249991!important;
   padding: 10px 20px 10px 20px !important;
   text-decoration: none !important;
+  display:inline-block !important;
+
 }
 
 .btn:hover

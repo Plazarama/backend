@@ -44,7 +44,7 @@ button:focus{
   margin-top: 10px;
   margin-bottom: 15px;
   box-shadow: 5px 5px 5px #249991;
-  height: 680px;
+  height: 720px;
   background-color: #fcfcfc;
   
 }
@@ -54,15 +54,11 @@ button:focus{
   font-size: 24px;
   background-color:#249991;
   color: #ffffff;
-  width:135px;
    display:inline-block;
    width:100%;
-
-  
+   margin: 10px;
 }
-
 #btnPlayAgain:hover{
-  
     color: #ffffff;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 24px;
@@ -77,9 +73,9 @@ button:focus{
     font-size: 24px;
     background-color:#42729b;
     color: #ffffff;
-    width:135px;
     display:inline-block;
     width:100%;
+   margin: 10px;
 }
 #btnFbk:hover{
   
@@ -98,9 +94,9 @@ button:focus{
     font-size: 24px;
     background-color:#e76b6b;
     color: #ffffff;
-    width:135px;
     display:inline-block;
     width:100%;
+    margin: 10px;
 }
 #btnExit:hover{
   
@@ -114,18 +110,9 @@ button:focus{
 }
 @media (min-width: 1200px) {
     .container{
-        max-width: 550px;
+        max-width: 600px;
     }
-.container {
-  border: 2px solid #249991;
-  border-radius: 1px;
-  margin-top: 10px;
-  margin-bottom: 15px;
-  box-shadow: 5px 5px 5px #249991;
-  height: 700px;
-  background-color: #fcfcfc;
-  
-}
+
 
 #bronze{
   font-family: Arial, Helvetica, sans-serif;

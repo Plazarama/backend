@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<% include partials/head %>
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
 
@@ -25,9 +29,8 @@
 
 		<script  id="initScreen" type="text/template">
 			<div class="container">
-			<img src="/images/logo.png" id="logo" width"110" height="90">
+			<img class="img-responsive center-block" src="/images/logo.png" id="logo" width"110" height="90">
 				<h5>PLAZARAMA</h5>
-				<h2></h2>
 
 				<button id="btnHostGame" class="btn">BE THE HOST</button>
 			</div>
@@ -107,7 +110,7 @@
 				<img class="img-responsive center-block" src="/images/logo.PNG" width="70" height="70"alt="">
 
 			<h2 id="question">Display Question</h2>
-			<div id="quesImg"></div>
+		<img id="questionImg"></img>
 
 				<ul style="list-style-type:none">
 	  				<li>
@@ -134,10 +137,6 @@
 			</div>
 
 		</script>
-
-
-
-
 		<% include partials/scripts %>
 		<script src="/game/gameHost.js"></script>
 
