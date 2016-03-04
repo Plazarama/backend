@@ -82,6 +82,7 @@ module.exports = function(app, passport){
           		console.log('renamed complete');  });
           		res.end(); });
 
+
 			var newQuestion = new Question();
 			newQuestion.questionType = req.body.questionType;
 			newQuestion.questionImage = '/QuestionImages/' + req.file.originalname;
