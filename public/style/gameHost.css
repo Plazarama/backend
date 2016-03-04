@@ -2,6 +2,7 @@ html, body{
   height: 100%;
   width: 100%;
   margin: 0 0;
+  background-color: #fefefe !important;
 }
 @media (min-width: 768px) {
     .omb_row-sm-offset-3 div:first-child[class*="col-"] {
@@ -30,7 +31,7 @@ button{
 	font-size: 30px;
 }
 
-* Paste this css to your style sheet file or under head tag */
+
 /* This only works with JavaScript, 
 if it's not present, don't show loader */
 .no-js #loader { display: none;  }
@@ -47,19 +48,19 @@ if it's not present, don't show loader */
 
 
 button:hover {
-    background-color: #e76b6b;
+    background-color: #2eb6ad;
     color: #ffffff;
     
 }
 
 button:active{
 
-	background-color: #249991;
+	background-color: #e76b6b;
 	color: #ffffff;
 }
 
 button:focus{
-	background-color: #249991;
+	background-color: #e76b6b;
 	color: #ffffff;
 
 }
@@ -77,17 +78,16 @@ h2 {
 h3{
 
 	font-family: Arial, Helvetica, sans-serif;
-	font size:25px;
-	color: #249991;
+	font size:20px;
+	color: #e76b6b;
 	text-align:center;
     
 }
 h4{
 	font-family: Arial, Helvetica, sans-serif;
-
-    
     font-size: 30 px;
-    color: #249991;
+    color: #42729b;
+    text-align: center;
 }
 h5{
 
@@ -101,12 +101,15 @@ h5{
     position:relative;
 }
 
-.img-responsive {
+#logoImage {
 
   position: relative;
-  
-
+  top: 70px;
+  left: 160px;
+  height: 70px;
+  width: 70px; 
 }
+
 @media screen and (min-width:800px) {
     #questionArea {
         margin: 0 auto;
@@ -124,8 +127,6 @@ h5{
 #answers{
   padding: 0;
 }
-
-
 
 
 /* Players Hub */

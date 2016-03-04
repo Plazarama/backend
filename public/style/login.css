@@ -3,68 +3,38 @@ body
 	background-color: #fefefe !important;
 }
 
-
-
+/*set everything into the middle of the containers*/
 @media (min-width: 768px) {
     .omb_row-sm-offset-3 div:first-child[class*="col-"] {
         margin-left: 25%;
     }
 }
 
-.omb_login .omb_authTitle {
-  text-align: center;
-  line-height: 300%;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #249991;
-}
-  
-.omb_login .omb_socialButtons a {
-  color: white;
-  opacity:0.9;
-}
-.omb_login .omb_socialButtons a:hover {
-  color: white;
-  opacity:1;      
-}
-.btn-block .omb_socialButtons.omb_btn-facebook
- {
-	background: #42729b;
-  text-align: center;
-  
+
+/*fb button*/
+#btnFB  {
+  -webkit-border-radius: 6 !important;
+  -moz-border-radius: 6 !important;
+  border-radius: 6px !important;
+  font-family: Arial !important;
+  color: #ffffff !important;
+  font-size: 20px !important;
+  background: #42729b!important;
+  padding: 10px 20px 10px 20px !important;
+  text-decoration: none !important;
+  display:inline-block !important;
+
 }
 
-.omb_login .omb_loginOr {
-  position: relative;
-  font-size: 1.5em;
-  color: #aaa;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
-}
-.omb_login .omb_loginOr .omb_hrOr {
-  background-color: #cdcdcd;
-  height: 1px;
-  margin-top: 0px !important;
-  margin-bottom: 0px !important;
+#btnFB:hover
+{
+  background: #5188b8 !important;
+  text-decoration: none;
 }
 
-.omb_login .omb_loginOr .omb_spanOr {
-  display: block;
-  position: absolute;
-  left: 50%;
-  top: -0.6em;
-  margin-left: -1.5em;
-  background-color: white;
-  width: 3em;
-  text-align: center;
-}     
 
-.omb_login .omb_loginForm .input-group.i {
-  width: 2em;
-}
-
-.btn  {
+/*sign in button*/
+#btnSN  {
   -webkit-border-radius: 6 !important;
   -moz-border-radius: 6 !important;
   border-radius: 6px !important;
@@ -78,17 +48,19 @@ body
 
 }
 
-.btn:hover
+#btnSN:hover
 {
-  background: #3abaad;
+  background: #27a59c !important;
   text-decoration: none;
 }
 
+/*font awsome*/
 .fa 
 {
 	color: #249991;
 }
 
+/*h1 & h3*/
 h1
 {
 	color: #249991 !important;
@@ -108,12 +80,15 @@ h3
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/*imag*/
 img {
 
 	position: relative;
   	top: 10px;
 }
 
+
+/*containers*/
 .container {
 	border: 2px solid #42729b;
 	border-radius: 1px;
@@ -125,20 +100,20 @@ img {
 	
 }
 
+/*width of container */
 @media (min-width: 1200px) {
     .container{
-        max-width: 550px;
+        max-width: 540px;
     }
 }
+
+/*paragraph*/
 
 p{
 
   font-weight: bold !important;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
+  color: #249991;
 }
 
-
-
-
-}

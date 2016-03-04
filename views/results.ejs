@@ -13,9 +13,7 @@
 		<link href="path-to-file/social-sharing.css" rel="stylesheet">
 
 		<!--Favicon-->
-  		
   		<link href="/images/favicon.ico" rel="icon" type="image/x-icon" />
-
 
   		<!--Font Aswome-->
   		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">	
@@ -31,8 +29,10 @@
 
 	<body>
 	<div class="container">
-		<h1>RESULTS</h1>
-		<img class="img-responsive center-block" src="/images/logo.png" width="70" height="70" alt="">
+	<br>	
+	<img class="img-responsive center-block" src="/images/logo.png" id="logoImage" width="70" height="70" alt="">
+		<h1>Results</h1>
+		
 		
 		<img src="/images/gold.png" id="gold" width"110" height="90"
 		<div id="results"><%= first_name %> : <%= first_score %>
@@ -78,10 +78,7 @@
 
 		<a href="" type="button" onclick="share()" id="btnFbk" class="btn" title="Share to Facebook!"><i class="fa fa-facebook-official"></i></a></button>
 
-
-		
-		
-
+		<% include partials/footer %>
 	</div>
 
 

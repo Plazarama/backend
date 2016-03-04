@@ -5,7 +5,18 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<% include partials/head %>
-		<link rel="stylesheet" href="/style/gameStyle.css" type="text/css">
+		<!-- Bootstrap Core CSS -->
+  <link rel="stylesheet" href="/style/bootstrap.min.css" type="text/css">
+
+  <!--Link to external StyleSheet-->
+  <link rel="stylesheet" href="/style/gameStyle.css" type="text/css">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+
+  <!--Font Awesome Link-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
 
 	</head>
 	<body class="container">
@@ -15,9 +26,11 @@
 		</div>
 
 		<script id="initScreen" type="text/template">
-		<img class="img-responsive center-block" id="logo" src="/images/logo.png" id="logo" width"110" height="90">
-			<h5>PLAZARAMA</h5>
-			<h2>PLAYER SCREEN</h2>
+		<img class="img-responsive center-block" src="/images/logo.png" id="logoImage" width"70" height="70">
+
+			<h1>PLAZARAMA</h1>
+			<h3>You will play the game in this screen</h4>
+			<h5>Click the button and enter the host ID that is on the big screen</h5>
 
 			<button id="btnJoinGame" class="btn">JOIN A GAME</button>
 
@@ -26,8 +39,10 @@
 
 		<script id="joinScreen" type="text/template">
 
-			<img src="/images/logo.png" id="logo" width"110" height="90">
+			<img class="img-responsive center-block" src="/images/logo.png" id="logoImage" width"70" height="70">
+			<h1>PLAZARAMA</h1>
 			<h3>ENTER YOUR HOST ID:</h3><input id="inputGameId" type="text">
+			<h5>The host ID is on the main screen</h5>
 			<button id="btnStart" class="btn">START</button>
 			<div id="playerWaiting"></div>
 				
@@ -38,16 +53,16 @@
 			<div id="questionArea">
 				<ul id="answers" style="list-style-type:none">
 	  				<li >
-	  					<button id="answer1" class="answer">Answ1</button>
+	  					<button id="answer1" class="answer">Answer1</button>
 	  				</li>
 	  				<li>
-	  					<button id="answer2" class="answer">Answ2</button>
+	  					<button id="answer2" class="answer">Answer2</button>
 	  				</li>
 	  				<li >
-	  					<button id="answer3" class="answer">Answ3</button>
+	  					<button id="answer3" class="answer">Answer3</button>
 	  				</li>
 	  				<li >
-	  					<button id="answer4" class="answer">Answ4</button>
+	  					<button id="answer4" class="answer">Answer4</button>
 	  				</li>
 				</ul>
 			</div>
