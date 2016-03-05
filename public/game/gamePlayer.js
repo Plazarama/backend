@@ -12,7 +12,7 @@ jQuery(function($) {
 		 * After connection bind the events of socket.
 		 */
 		init: function() {
-			IO.socket = io.connect('http://172.16.88.97:3000');
+			IO.socket = io.connect('http://localhost:3000');
 			IO.bindEvents();
 		},
 
