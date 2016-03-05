@@ -30,6 +30,55 @@
 				
 		</script>
 
+<style>
+		#timer{
+ color:#249991;
+ float: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size:60px;
+  position: relative;
+  
+  
+  
+}
+@media (min-width: 1200px) {
+    .container{
+        max-width: 550px;
+    }
+</style>
+
+<script id="countDown" type="text/javascript">
+var count=10;
+
+var counter=setInterval(timer, 1000); //1000 will  run it every 1 second
+
+function timer()
+  {
+    count=count-1;
+    if (count <= 0)
+  {
+     clearInterval(counter);
+     //counter ended, do something here
+     return;
+  }
+
+  
+}
+
+function timer()
+{
+  count=count-1;
+  if (count <= 0)
+  {
+     clearInterval(counter);
+     return;
+  }
+
+ document.getElementById("timer").innerHTML=count + " seconds ";
+}
+</script>
+
+
 
 		<script id="playerScreen" type="text/template">
 			<div id="questionArea">
@@ -50,6 +99,8 @@
 			</div>
 
 		</script>
+
+		<span id="timer"></span>
 
 		<div id="finishedGame" type="text/template">
 			<div id="questionArea">
