@@ -1,8 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<% include partials/head %>
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+
+
 
 
 	<style>
@@ -12,12 +18,22 @@
 	});
 	</style>
 
-		<link rel="stylesheet" href="/style/gameHost.css" type="text/css">
-		<!--font awesome-->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <!-- Bootstrap Core CSS -->
+  <link rel="stylesheet" href="/style/bootstrap.min.css" type="text/css">
+
+  <!--Link to external StyleSheet-->
+  <link rel="stylesheet" href="/style/gameHost.css" type="text/css">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+
+  <!--Font Awesome Link-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 	</head>
 	<body class="container">
+
+
 
 		<div id="gameArea">
 
@@ -25,9 +41,10 @@
 
 		<script  id="initScreen" type="text/template">
 			<div class="container">
-			<img src="/images/logo.png" id="logo" width"110" height="90">
-				<h5>PLAZARAMA</h5>
-				<h2></h2>
+			<img class="img-responsive center-block" src="/images/logo.png" id="logoImage" width"70" height="70">
+				<h1>PLAZARAMA</h1>
+				<h3>This will be the main screen for your game.</h3>
+				<h4> Get your friends connected and enjoy Plazarama</h4>
 
 				<button id="btnHostGame" class="btn">BE THE HOST</button>
 			</div>
@@ -93,21 +110,24 @@
 
 			<img id="questionImg"></img>
 
+		<img id="questionImg"></img>
+
+			
 			<div id="quesImg"></div>
 
 
 				<ul style="list-style-type:none">
 	  				<li>
-	  					<button id="answer1"> <span class="fa fa-a"></span> Answ1</button>
+	  					<button id="answer1"> <span class="fa fa-a"></span> Answer 1</button>
 	  				</li>
 	  				<li>
-	  					<button id="answer2">Answ2</button>
+	  					<button id="answer2">Answer 2</button>
 	  				</li>
 	  				<li>
-	  					<button id="answer3">Answ3</button>
+	  					<button id="answer3">Answer 3</button>
 	  				</li>
 	  				<li>
-	  					<button id="answer4">Answ4</button>
+	  					<button id="answer4">Answer 4</button>
 	  				</li>
 
 				</ul>
@@ -117,14 +137,11 @@
 
 		<script id="gameFinished" type="text/template">
 			<div class="container" id="questionArea">
-				<h2>Game finished!</h2>
+				<h2>Game Finished!</h2>
+				<h3>Thank You For Playing Plazarama</h3>
 			</div>
 
 		</script>
-
-
-
-
 		<% include partials/scripts %>
 		<script src="/game/gameHost.js"></script>
 

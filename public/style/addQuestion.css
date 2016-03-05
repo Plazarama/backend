@@ -2,6 +2,8 @@ html,body{
 
     background-color: #fefefe;
 }
+
+/*container*/
 .container {
   border: 2px solid #249991;
   border-radius: 1px;
@@ -33,7 +35,7 @@ h1
 img {
 
   position: relative;
-  top: 110px;
+  top: 60px;
   left: 200px;
 
 }
@@ -51,39 +53,32 @@ p{
 }
 
 
-.btn {
-  -webkit-border-radius: 28;
-  -moz-border-radius: 28;
-  border-radius: 28px;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #ffffff;
-  font-size: 17px;
-  background: #588c7f;
-  margin-left: 5px;
-  margin-top: 10px;
-  
+#btnAdd  {
+  -webkit-border-radius: 6 !important;
+  -moz-border-radius: 6 !important;
+  border-radius: 6px !important;
+  font-family: Arial !important;
+  color: #ffffff !important;
+  font-size: 15px !important;
+  background: #249991!important;
+  padding: 10px 40px 10px 20px !important;
+  text-decoration: none !important;
+  display:inline-block !important;
+  text-align: center;
+  width: 100%;
+  margin-left: 150px;
 
 }
 
-.btn:hover 
+#btnAdd:hover
 {
-  background: #2ba89f !important;
-  font-family: Arial, Helvetica, sans-serif;
-  color:#FFF !important;
-  background-color: #2ba89f !important;
-}
-button:active{
-
-  background-color: #33c7bd;
-  color: #fff;
+  background: #27a59c !important;
+  text-decoration: none;
 }
 
-button:focus{
-  background-color: #33c7bd;
-  color: #fff;
-}
 
-#question
+
+/*#question
 {
     font-family: Arial, Helvetica, sans-serif;
     color: #000 !important;
@@ -134,6 +129,6 @@ button:focus{
     color: #e76b6b !important;
     text-transform: uppercase;
 }
-
+*/
 
 

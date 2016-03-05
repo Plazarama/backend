@@ -2,9 +2,7 @@
 /*body of the page*/
 body {
   font-family: Arial, Helvetica, sans-serif;
-  
-  
-
+  font-size: 14px;
 }
 
 
@@ -15,8 +13,8 @@ body {
 
 }
 
-/* play and logout buttons*/
-.btn {
+/* play and stats buttons*/
+#btnGo {
   -webkit-border-radius: 6;
   -moz-border-radius: 6;
   border-radius: 6px;
@@ -29,16 +27,18 @@ body {
   border-color: #249991;
 }
 
-.btn:hover 
+#btnGo:hover 
 {
   background: #2bada2;
   text-decoration: none;
   
 }
+#container{
+  width:50px;
+}
 
 
-
-
+/*panel at the top*/
 .panel-info>.panel-heading
  {
   
@@ -50,6 +50,7 @@ body {
 
  }
 
+/*table */
  .table>tbody>tr>td
  {
   padding: 8px;
@@ -58,8 +59,7 @@ body {
   border-top: 1px solid #c1c1c1;
   color: #000;
   font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  font-size: 20px;
+  font-size: 18px;
 
  }
 
@@ -73,14 +73,15 @@ body {
   position: relative;
 
 }
-#playerWaiting{
-  color: #249991 !important;
-  font-size: 40px;
-  font-weight: bold !important;
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
+
+h2
+{
+
+text-align: center;
 
 }
+
+
 #logoImage {
 
   position: relative;

@@ -1,66 +1,72 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
 
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap  -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-	<!-- Custom CSS  main-->
-    <link rel="stylesheet" href="/style/login.css" type="text/css">
+  <!-- Bootstrap Core CSS -->
+  <link rel="stylesheet" href="/style/bootstrap.min.css" type="text/css">
 
-    <!--Favicon-->
-    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+  <!--Link to external StyleSheet-->
+  <link rel="stylesheet" href="/style/login.css" type="text/css">
 
-    <!--Font Aswome-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <!--Favicon-->
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+
+  <!--Font Awesome Link-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  <title>Login</title>
 
 	<% include partials/head %>
+
 </head>
+
 <body>
-	<header>
-		<% include partials/header %>
 
-	</header>
-	<div class="container">
+	<header> <% include partials/header %> </header>
 
-	<img class="img-responsive center-block" src="/images/logo.png" width="70" height="70" alt="">
-	<h1>Plazarama</h1>
+      <!-- container -->
+    	<div class="container">
 
-	<br>
+      <!-- logo and h1 -->
+    	<img class="img-responsive center-block" src="/images/logo.png" width="70" height="70" alt="">
+    	<h1>Plazarama</h1>
+
+    	<br>
 
 
-	<div class="omb_login">
-      <h3>Login Now!</h3>
+    <h3>LOGIN NOW!</h3>
 
-      <p>with</p>
+    <p>with</p>
 
-      <!--Login with facebook-->
-        <div class="row omb_row-sm-offset-3 omb_socialButtons">
-      	<div class="col-xs-6 col-sm-6">
-		<a href="/auth/facebook"  class="btn btn-lg btn-block omb_btn-facebook" style="background:#42729b !important;"></span> Facebook</a>
-            </a>
+    <!--Login with facebook-->
+    <div class="row omb_row-sm-offset-3">
+    <div class="col-sm-6">
+		<a href="/auth/facebook"  class="btn btn-lg btn-block omb_btn-facebook" id="btnFB"></span> Facebook</a>
+          
           </div>
           </div>
+        
+        <br>
+        <p>OR</p>
 
-      <div class="row omb_row-sm-offset-3 omb_loginOr">
-      <div class="col-xs-12 col-sm-6">
-        <hr class="omb_hrOr">
-        <span class="omb_spanOr">or</span>
-      </div>
-    </div>
-
+    <!-- message if nothing -->
 		<% if (message.length > 0) { %>
 			<div class="alert alert-danger"><%= message %></div>
 		<% } %>
-
-
-
+    
+    <!-- set the width -->
      <div class="row omb_row-sm-offset-3">
-      <div class="col-xs-12 col-sm-6">
-		<form action="/login" method="post" class="omb_loginForm">
+     <div class="col-xs-12 col-sm-6">
+		 <form action="/login" method="post" class="omb_loginForm">
 
-
+    <!-- email address -->
 		<div class="input-group margin-bottom-sm">
   		<span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
  		 <input class="form-control" type="text" name="email" placeholder="Email address">
@@ -68,6 +74,7 @@
 
 		<br>
 
+    <!-- password box -->
 		<div class="input-group">
  		 <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
  		 <input class="form-control" type="password" name="password" placeholder="Password">
@@ -75,23 +82,21 @@
 
 		<br>
 
-
-		<button class="btn btn-lg btn-primary btn-block btn-signin" type="submit" id="btn"><i class="fa fa-sign-in"></i> Sign in</button>
+    <!-- button -->
+		<button class="btn btn-lg btn-primary btn-block btn-signin" type="submit" id="btnSN">Sign in</button>
 
     <br>
+    <br>
 
+    <!-- sign up -->
     <div class="row omb_row-sm-offset-3">
-      <div class="col-xs-6">
+      <div class="col-sm-6">
         <label class="signup">
-         <p>Not a member? <a href="signup" style="color:#000 !important;">Sign up</a>
+         <p>Not A Member? <a href="signup" style="color:#000 !important;"> Sign up</a></p>
         </label>
       </div>
-
-
-
-
 </div>
-</form>
+</form> 
 
 	<% include partials/footer %>
 

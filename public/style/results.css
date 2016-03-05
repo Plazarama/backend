@@ -15,11 +15,12 @@ h1{
 }
 
 
+
 #results{
   color:#e76b6b;
-  text-align: center;
+  
   font-family: Arial, Helvetica, sans-serif;
-    float: center;
+   
 }
 button:hover {
     background-color: #249991;
@@ -43,95 +44,67 @@ button:focus{
   border-radius: 1px;
   margin-top: 10px;
   margin-bottom: 15px;
-  box-shadow: 5px 5px 5px #249991;
-  height: 680px;
+  box-shadow: 5px 5px 5px #888888;
+  height: 600px;
   background-color: #fcfcfc;
   
 }
+
 #btnPlayAgain{
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
   font-size: 24px;
   background-color:#249991;
   color: #ffffff;
-  width:120px;
    display:inline-block;
-
-  
+   width:31%;
+   margin: 2px;
 }
-#img-responsive center-block{
-
-  position: relative;
-  top: 100px;
-  left: 300px;
-
-}
-#btnPlayAgain:hover{
-  
-    color: #ffffff;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 24px;
-    border-color:#249991;
-    background-color: #fff;
-  color: #000;
+#btnPlayAgain:hover
+{
+  background: #3abaad;
   text-decoration: none;
 }
+
 #btnFbk{
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
-  font-size: 24px;
-  background-color:#42729b;
-  margin-left: 10px;
-  color: #ffffff;
-  width:120px;
-   display:inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 24px;
+    background-color:#42729b;
+    color: #ffffff;
+    display:inline-block;
+    width:29%;
+   margin: 2px;
+
 }
 #btnFbk:hover{
   
-  border-color:#42729b;
-  background-color: #fff;
-  color: #000;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 24px;
-  text-decoration: none;
+   background: #5188b8;
+    text-decoration: none;
 }
 
 
 #btnExit{
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
-  font-size: 24px;
-  background-color:#e76b6b;
-  color: #ffffff;
-  margin-left: 10px;
-   width:120px;
-   display:inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 24px;
+    background-color:#e76b6b;
+    color: #ffffff;
+    display:inline-block;
+    width:31%;
+   margin: 2px;
+
 }
 #btnExit:hover{
   
-  border-color:#e76b6b;
-    background-color: #fff;
-  color: #000;
-    
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 24px;
-    
-  text-decoration: none;
+    background: #ff9292;
+    text-decoration: none;
 }
 @media (min-width: 1200px) {
     .container{
-        max-width: 550px;
+        max-width: 600px;
     }
-.container {
-  border: 2px solid #249991;
-  border-radius: 1px;
-  margin-top: 10px;
-  margin-bottom: 15px;
-  box-shadow: 5px 5px 5px #249991;
-  height: 700px;
-  background-color: #fcfcfc;
-  
-}
+
 
 #bronze{
   font-family: Arial, Helvetica, sans-serif;
@@ -165,4 +138,11 @@ button:focus{
   color:#e76b6b;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
+}
+#img-responsive center-block{
+
+  position: relative;
+  top: 100px;
+  left: 300px;
+
 }
