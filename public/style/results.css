@@ -59,6 +59,7 @@ button:focus{
    display:inline-block;
    width:31%;
    margin: 2px;
+   
 }
 #btnPlayAgain:hover
 {
@@ -73,7 +74,7 @@ button:focus{
     background-color:#42729b;
     color: #ffffff;
     display:inline-block;
-    width:29%;
+    width:31%;
    margin: 2px;
 
 }
