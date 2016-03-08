@@ -211,7 +211,7 @@ jQuery(function($) {
 				Game.Host.players.push(data);
 				Game.Host.numPlayers++;
 
-				if(Game.Host.numPlayers == 2){
+				if(Game.Host.numPlayers == 4){
 					//console.log(IO);
 					IO.socket.emit('hostGameFull', Game.gameId);
 				}
