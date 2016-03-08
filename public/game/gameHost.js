@@ -263,7 +263,7 @@ jQuery(function($) {
 				console.log(data);
 				$('#quesImg').html('');
 				if(data.type === "Image"){
-					$('<img src="'+ data.questionImg +'">').load(function() {
+					$('<img src="'+ data.questionImg +'" width="300px" height="300px">').load(function() {
 					  $(this).appendTo('#quesImg');
 					});
 				}
