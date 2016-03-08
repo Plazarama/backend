@@ -26,10 +26,7 @@ button{
 }
 
 
-#btnHostGame{
-	color:#ffffff;
-	font-size: 30px;
-}
+
 
 
 /* This only works with JavaScript, 
@@ -131,20 +128,18 @@ h5{
 
 /* Players Hub */
 
-#playersHub{
-  position: fixed;
-  width: 100%;
-  background: #249991;
-  top: 0;
-  color: white;
-  padding: 0 5%;
-}
 
 #player1Score{
   float: left;
 }
 
 #player2Score{
+  float: right;
+}
+#player3Score{
+  float: left;
+}
+#player4Score{
   float: right;
 }
 
