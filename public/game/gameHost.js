@@ -91,9 +91,10 @@ jQuery(function($) {
 			Game.Host.playerAnswered(data);
 		},
 
+
 		onTimeTicked: function(data){
- +			Game.Player.timeTicked(data);
- +		},
+ 			Game.Player.timeTicked(data);
+ 		},
 
 		/**
 		* Handle possible errors
@@ -101,7 +102,7 @@ jQuery(function($) {
 		*/
 		onError: function(data){
 			console.log(data);
-		}
+		},
 
 
 	};
@@ -331,8 +332,8 @@ jQuery(function($) {
 
 			timeTicked: function(data){
 				$('#timer').html(data);
- +				console.log(data);
- +			},
+ 				console.log(data);
+ 			},
 
 			/**
 			* One player answered a question.
