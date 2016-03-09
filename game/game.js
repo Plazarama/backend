@@ -1,6 +1,7 @@
 var io;
 var gameSocket;
 var questionNums;
+var quest;
 
 var Questions = require('../models/QuizQuestion');
 var Users = require('../models/User');
@@ -131,7 +132,14 @@ function playerJoinGame(data){
  */
 function playerAnswered(data){
 	console.log(data);
-	io.to(data.gameId).emit('responseAnswer', data);
+	Users.update({_id: data.dbId}, {$push:{answered: {question: quest._id, answer: data.answer}}}, function(err, user){
+		if(err)
+			console.error(err);
+		else {
+			console.log(quest, data);
+			io.to(data.gameId).emit('responseAnswer', data);
+		}
+	});
 }
 
 
@@ -158,7 +166,7 @@ function sendQuestion(gameId){
 
 			//Random questions.
 
-			var quest = questions[randQuest];
+			quest = questions[randQuest];
 			var questImg = quest.questionImage;
 
 			var answers = [quest.correctAnswer, quest.secondAnswer, quest.thirdAnswer, quest.fourthAnswer];
