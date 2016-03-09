@@ -100,7 +100,7 @@ h5{
 #logoImage {
 
   position: relative;
-  top: 70px;
+  top: 100px;
   left: 160px;
   height: 70px;
   width: 70px; 
@@ -133,27 +133,28 @@ h5{
     position:absolute;
     left: 0;
     right: 0;
-    padding:15px;
-    height:60px;
+  height:60px;
     background-size:100%;  
-    background-color: #249991;
-
-
+  
 
 }
 
 #player1Score{
   float: left;
+  color:#249991;
 }
 
 #player2Score{
   float: right;
+  color:#249991;
 }
 #player3Score{
   float: left;
+  color:#249991;
 }
 #player4Score{
   float: right;
+  color:#249991;
 }
 
 /* Game Area */
