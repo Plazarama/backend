@@ -31,6 +31,7 @@ jQuery(function($) {
 			// Player
 			IO.socket.on('playerJoined', IO.onPlayerJoined);
 			IO.socket.on('gameFinished', IO.onGameFinished);
+			IO.socket.on('timeTicked', IO.onTimeTicked);
 
 			//Error handler
 			IO.socket.on('error', IO.onError);
@@ -59,6 +60,10 @@ jQuery(function($) {
 		},
 		onGameFinished: function(data){
 			Game.Player.gameFinished(data);
+		},
+
+		onTimeTicked: function(data){
+			Game.Player.timeTicked(data);
 		},
 
 		onError: function(data){
@@ -143,6 +148,10 @@ jQuery(function($) {
 				Game.$gameArea.html(Game.$playerScreen);
 
 				$('#answer1').text("Preparing the game..");
+			},
+
+			timeTicked: function(data){
+				console.log(data);
 			},
 
 			newQuestion: function(data){
