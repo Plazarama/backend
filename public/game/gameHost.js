@@ -208,7 +208,6 @@ jQuery(function($) {
 				$('#playersWaiting').append('<p/>').text('Player '+data);
 
 				data.score = 0;
-				data.name = "";
 				data.correct = 0;
 				data.won = 0;
 				data.lose = 0;
@@ -230,6 +229,9 @@ jQuery(function($) {
 			gameCountDown: function(data){
 				Game.$gameArea.html(Game.$hostScreen);
 
+				for(var x=0; x<Game.Host.players.length; x++) {
+					$('#player'+(x+1)+'Score h3').text(Game.Host.players[x].name +' score: '+Game.Host.players[x].score);
+				}
 				var $secondsLeft = $('#question');
 				Game.countDown($secondsLeft, 5, function(){
 					IO.socket.emit('hostCountdownFinished', Game.gameId);
@@ -243,6 +245,7 @@ jQuery(function($) {
 			newQuestion: function(data){
 				for(var x=0; x<Game.Host.players.length; x++) {
 					Game.Host.players[x].played = false;
+					$('#player'+(x+1)+'Score h3').text(Game.Host.players[x].name +' score: '+Game.Host.players[x].score);
 				}
 
 				if(Game.Host.bonus == 0) {
@@ -355,7 +358,8 @@ jQuery(function($) {
 
 				//Update the players score label
 				for(var i=0; i<Game.Host.players.length; i++){
-					$('#player'+(i+1)+'Score h3').text('Player '+(i+1)+' score: '+Game.Host.players[i].score);
+					console.log(Game.Host.players);
+					$('#player'+(i+1)+'Score h3').text(Game.Host.players[i].name +' score: '+Game.Host.players[i].score);
 				}
 			}
 

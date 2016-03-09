@@ -12,6 +12,8 @@ var userSchema = new mongoose.Schema({
 		token: String
 	},
 
+	answered: Array,
+
 	played: Number,
 	won: Number,
 	lose: Number,
