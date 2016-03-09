@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		
+
 		<title>Results</title>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8">
@@ -16,10 +16,10 @@
   		<link href="/images/favicon.ico" rel="icon" type="image/x-icon" />
 
   		<!--Font Aswome-->
-  		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">	
+  		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
-  		<% include partials/results %>	
-  		
+  		<% include partials/results %>
+
 
 	</head>
 
@@ -28,27 +28,44 @@
 	</header>
 
 	<body>
+		<script>
+		window.fbAsyncInit = function() {
+			FB.init({
+				appId      : '778914578901856',
+				xfbml      : true,
+				version    : 'v2.5'
+			});
+		};
+
+		(function(d, s, id){
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) {return;}
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/en_US/sdk.js";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+		</script>
 	<div class="container">
-	<br>	
+	<br>
 	<img class="img-responsive center-block" src="/images/logo.png" id="logoImage" width="70" height="70" alt="">
 		<h1>Results</h1>
-		
-		
+
+
 		<img src="/images/gold.png" id="gold" width"110" height="90"
 		<div id="results"><%= first_name %> : <%= first_score %>
-		
+
 		<br>
-		<img src="/images/silver.png" id="silver" width"110" height="90" 
+		<img src="/images/silver.png" id="silver" width"110" height="90"
 		<div id="results"><%= second_name %> : <%= second_score %>
-		
+
 		<br>
 		<img src="/images/bronze.png" id="bronze" width"110" height="90"
 		<div id="results"><%= third_name %> : <%= third_score %>
-		
+
 		<br>
 		<img src="/images/sadFace.png" id="sadFace" width"110" height="90"
 		<div id="results"><%= loser_name %> : <%= loser_score %>
-		
+
 		<br>
 
 		<script type="text/javascript">
@@ -70,13 +87,13 @@
 				});
 			}
 		</script>
-		
+
 
 		<a href="player" type="button" id="btnPlayAgain" class="btn" title="Play Again!"class="fa fa-puzzle-piece"><i class="fa fa-puzzle-piece"></i></a></button>
 
-		<a href="index" type="button" id="btnExit" class="btn" title="Return to Home!"><i class="fa fa-home"></i></a></button>
+		<a href="/" type="button" id="btnExit" class="btn" title="Return to Home!"><i class="fa fa-home"></i></a></button>
 
-		<a href="" type="button" onclick="share()" id="btnFbk" class="btn" title="Share to Facebook!"><i class="fa fa-facebook-official"></i></a></button>
+		<a href="#" type="button" onclick="share()" id="btnFbk" class="btn" title="Share to Facebook!"><i class="fa fa-facebook-official"></i></a></button>
 
 		<% include partials/footer %>
 	</div>
