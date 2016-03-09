@@ -204,7 +204,6 @@ jQuery(function($) {
 			// 	}
 			// }
 
-			// TODO: With data
 			gameFinished: function(data){
 				Game.$gameArea.html(Game.$finishedGame);
 				var html = $.parseHTML('<form id="hiddenForm" action="results" method="POST"></form>');
