@@ -106,10 +106,18 @@ function playerJoinGame(data){
 	var room = io.sockets.adapter.rooms[data.gameId];
 	//If the room exists
 	if(room !== undefined){
-		data.mySocketId = sock.id;
+		Users.findOne({_id: data.dbId}, function(err, user){
+			if(err)
+				console.error(error);
+			else {
+				data.mySocketId = sock.id;
+				data.name = user.name;
+				console.log(user);
 
-		sock.join(data.gameId, function(){
-			io.to(data.gameId).emit('playerJoined', data);
+				sock.join(data.gameId, function(){
+					io.to(data.gameId).emit('playerJoined', data);
+				});
+			}
 		});
 
 	} else{
