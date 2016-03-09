@@ -283,7 +283,6 @@ jQuery(function($) {
 
 					if(startTime <= 0){
 						clearInterval(timer);
-						console.log(Game.Host.rounds);
 
 						if(Game.Host.rounds == 10){
 							console.log('game finished');
@@ -313,9 +312,11 @@ jQuery(function($) {
 						}
 						return;
 					}
+					else {
+						console.log(startTime);
+						IO.socket.emit('timeTicked', startTime);
+					}
 				}
-
-				console.log(startTime);
 
 			},
 

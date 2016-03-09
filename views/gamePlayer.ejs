@@ -65,39 +65,6 @@
     }
 </style>
 
-<script id="countDown" type="text/javascript">
-var count=10;
-
-var counter=setInterval(timer, 1000); //1000 will  run it every 1 second
-
-function timer()
-  {
-    count=count-1;
-    if (count <= 0)
-  {
-     clearInterval(counter);
-     //counter ended, do something here
-     return;
-  }
-
-
-}
-
-function timer()
-{
-  count=count-1;
-  if (count <= 0)
-  {
-     clearInterval(counter);
-     return;
-  }
-
- document.getElementById("timer").innerHTML=count + " seconds ";
-}
-</script>
-
-
-
 		<script id="playerScreen" type="text/template">
 			<div id="questionArea">
 				<ul id="answers" style="list-style-type:none">

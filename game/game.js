@@ -25,6 +25,7 @@ exports.initGame = function(sio, socket){
 	gameSocket.on('hostCountdownFinished', hostStartGame);
 	gameSocket.on('getNewQuestion', hostGetNewQuestion);
 	gameSocket.on('gameFinished', gameFinished);
+	gameSocket.on('timeTicked', timeTicked);
 
 	// Player binds
 	gameSocket.on('playerJoinGame', playerJoinGame);
@@ -88,7 +89,9 @@ function gameFinished(finishedData){
 	});
 }
 
-
+function timeTicked(time) {
+	io.emit('timeTicked', time);
+}
 
 /* *******************************
    *                             *
