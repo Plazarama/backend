@@ -211,8 +211,6 @@ jQuery(function($) {
 				Game.$gameArea.html(html);
 				var $hiddenForm = Game.$gameArea.children('#hiddenForm');
 
-				console.warn( "VVVVV This is the result VVVVV");
-
 				console.log(data.result);
 				$hiddenForm.append('<input type="hidden" name="first_name" value="' + data.result[0].player.name + '" />');
 				$hiddenForm.append('<input type="hidden" name="first_score" value="' + data.result[0].player.score + '" />');
