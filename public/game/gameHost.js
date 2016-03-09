@@ -36,6 +36,8 @@ jQuery(function($) {
 
 			//Error handler
 			IO.socket.on('error', IO.onError);
+
+			IO.socket.on('timeTicked', IO.onTimeTicked);
 		},
 
 		/*
@@ -88,6 +90,10 @@ jQuery(function($) {
 		onAnswered: function(data){
 			Game.Host.playerAnswered(data);
 		},
+
+		onTimeTicked: function(data){
+ +			Game.Player.timeTicked(data);
+ +		},
 
 		/**
 		* Handle possible errors
@@ -319,6 +325,11 @@ jQuery(function($) {
 				}
 
 			},
+
+			timeTicked: function(data){
+				$('#timer').html(data);
+ +				console.log(data);
+ +			},
 
 			/**
 			* One player answered a question.

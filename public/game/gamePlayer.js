@@ -152,6 +152,7 @@ jQuery(function($) {
 
 			timeTicked: function(data){
 				console.log(data);
+				$('#timer').html(data);
 			},
 
 			newQuestion: function(data){
