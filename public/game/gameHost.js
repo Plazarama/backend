@@ -93,11 +93,7 @@ jQuery(function($) {
 
 
 		onTimeTicked: function(data){
-<<<<<<< HEAD
- 			Game.Player.timeTicked(data);
-=======
  			Game.Host.timeTicked(data);
->>>>>>> 02da6a1471146bd13898730daddfcf5637870217
  		},
 
 		/**
