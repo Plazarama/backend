@@ -202,10 +202,18 @@ p{
 #player2Score{
   float: right;
 }
+#timer
 
+{
+  top: 10px;
+  text-align: center;
+  color:#000;
+  font-size: 30px;
+}
 /* Game Area */
 
 #gameArea{
+
 
 
 }
