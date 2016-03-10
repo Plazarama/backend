@@ -60,20 +60,16 @@ body {
 }
 
 /*facebook button*/
-#btnFbk
-{
+#btnFbk{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 24px;
+    background-color:#42729b;
+    color: #ffffff;
+    display:inline-block;
+    width:31%;
+   margin: 2px;
 
-  -webkit-border-radius: 6;
-  -moz-border-radius: 6;
-  border-radius: 6px;
-  font-family: Arial;
-  color: #ffffff;
-  font-size: 16px;
-  background: #42729b;
-  padding: 9px 10px 9px 10px;
-  text-decoration: none;
-  border-color: #42729b;
-  
 }
 
 #btnFbk:hover
@@ -87,30 +83,28 @@ body {
 }
 
 /*exit button*/
-#btnExit
-{
-
-  -webkit-border-radius: 6;
-  -moz-border-radius: 6;
-  border-radius: 6px;
-  font-family: Arial;
-  color: #ffffff;
-  font-size: 16px;
-  background: #e76b6b;
-  padding: 9px 10px 9px 10px;
-  text-decoration: none;
-  border-color: #e76b6b;
+#btnFbk:hover{
   
+   background: #5188b8;
+    text-decoration: none;
 }
 
-#btnExit:hover
-{
 
-  background-color: #ff8787;
-  color: #ffffff;
-  font-family: Arial, Helvetica, sans-serif;
-  text-decoration: none;
+#btnExit{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 24px;
+    background-color:#e76b6b;
+    color: #ffffff;
+    display:inline-block;
+    width:31%;
+   margin: 2px;
 
+}
+#btnExit:hover{
+  
+    background: #ff9292;
+    text-decoration: none;
 }
 
 button:hover 
