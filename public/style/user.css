@@ -118,12 +118,7 @@ text-align: center;
 }
 
 
-#logoImage {
 
-  position: relative;
-  top: 70px;
-  left: 160px;
-}
 
 /*buttons at the bottem*/
 #btn1 {
@@ -191,24 +186,11 @@ text-align: center;
   background: #ff9b9b;
   text-decoration: none;
 }
-#logoImage{
 
-  position: relative;
-  top: 100px;
-  left: 300px;
-
-}
 img-circle {
 
   position: relative;
     width:150px;
     height:80px;
     margin-bottom:20px;
-}
-#img-responsive center-block{
-
-  position: relative;
-  top: 100px;
-  left: 300px;
-
 }
