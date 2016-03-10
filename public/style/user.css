@@ -70,7 +70,7 @@ button:focus{
 
 
 #container{
-  width:50px;
+  width:80px;
 }
 
 
@@ -83,6 +83,7 @@ button:focus{
   background-color:#249991;
   border-color: #249991 !important;
   font-size: 18px;
+
 
  }
 
@@ -115,14 +116,6 @@ h2
 
 text-align: center;
 
-}
-
-
-#logoImage {
-
-  position: relative;
-  top: 70px;
-  left: 160px;
 }
 
 /*buttons at the bottem*/
@@ -191,24 +184,12 @@ text-align: center;
   background: #ff9b9b;
   text-decoration: none;
 }
-#logoImage{
 
-  position: relative;
-  top: 100px;
-  left: 300px;
-
-}
-img-circle {
-
-  position: relative;
-    width:150px;
-    height:80px;
-    margin-bottom:20px;
-}
 #img-responsive center-block{
 
-  position: relative;
+  position: static;
   top: 100px;
   left: 300px;
+  margin-top: 20px;
 
 }
