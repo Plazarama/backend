@@ -118,6 +118,12 @@ text-align: center;
 
 }
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> c9014432c2cc0dd25c23af2a4c6af0cd0b300f24
 /*buttons at the bottem*/
 #btn1 {
   -webkit-border-radius: 9;
@@ -185,6 +191,7 @@ text-align: center;
   text-decoration: none;
 }
 
+<<<<<<< HEAD
 #img-responsive center-block{
 
   position: static;
@@ -193,3 +200,12 @@ text-align: center;
   margin-top: 20px;
 
 }
+=======
+img-circle {
+
+  position: relative;
+    width:150px;
+    height:80px;
+    margin-bottom:20px;
+}
+>>>>>>> c9014432c2cc0dd25c23af2a4c6af0cd0b300f24
