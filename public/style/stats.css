@@ -51,13 +51,20 @@ body {
   position: relative;
 
 }
-
-#logoImage {
+#logoImage{
+   position: relative;
+  top: 50px;
+  left: -70px;
+}
+img {
 
   position: relative;
-  top: 70px;
-  left: 160px;
+    top: 10px;
+    width:80px;
+    height:80px;
+    margin-bottom:20px;
 }
+
 
 /*facebook button*/
 #btnFbk{
@@ -66,9 +73,10 @@ body {
     font-size: 24px;
     background-color:#42729b;
     color: #ffffff;
-    display:inline-block;
+   
     width:31%;
    margin: 2px;
+   margin-left:38px;
 
 }
 
@@ -79,6 +87,7 @@ body {
   color: #ffffff;
   font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
+
 
 }
 

@@ -152,6 +152,7 @@ jQuery(function($) {
 
 			timeTicked: function(data){
 				console.log(data);
+				$('#timer').html(data);
 			},
 
 			newQuestion: function(data){
@@ -204,13 +205,13 @@ jQuery(function($) {
 			// 	}
 			// }
 
-			// TODO: With data
 			gameFinished: function(data){
 				Game.$gameArea.html(Game.$finishedGame);
 				var html = $.parseHTML('<form id="hiddenForm" action="results" method="POST"></form>');
 				Game.$gameArea.html(html);
 				var $hiddenForm = Game.$gameArea.children('#hiddenForm');
 
+				console.log(data.result);
 				$hiddenForm.append('<input type="hidden" name="first_name" value="' + data.result[0].player.name + '" />');
 				$hiddenForm.append('<input type="hidden" name="first_score" value="' + data.result[0].player.score + '" />');
 				$hiddenForm.append('<input type="hidden" name="second_name" value="' + data.result[1].player.name + '" />');

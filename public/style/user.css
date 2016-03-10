@@ -15,24 +15,60 @@ body {
 
 /* play and stats buttons*/
 #btnGo {
-  -webkit-border-radius: 6;
-  -moz-border-radius: 6;
-  border-radius: 6px;
-  font-family: Arial;
-  color: #ffffff;
-  font-size: 20px;
-  background: #249991;
-  padding: 9px 10px 9px 10px;
-  text-decoration: none;
-  border-color: #249991;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-size: 24px;
+ background-color:#e76b6b;
+    color: #ffffff;
+   display:inline-block;
+   width:33%;
+   margin: 2px;
 }
 
 #btnGo:hover 
 {
-  background: #2bada2;
-  text-decoration: none;
+  background: #ff9292;
+    text-decoration: none;
   
 }
+button:hover {
+    background-color: #249991;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+
+button:active{
+  background-color: #249991;
+  color: #ffffff;
+  font-size: 30px;
+}
+button:focus{
+  background-color: #249991;
+  color: #ffffff;
+  font-size: 30px;
+}
+#btnPlayAgain{
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-size: 24px;
+ background-color:#42729b;
+    color: #ffffff;
+   display:inline-block;
+   width:32%;
+   margin: 2px;
+
+   
+}
+#btnPlayAgain:hover
+{
+ background-color: #4e86b5;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+}
+
+
 #container{
   width:50px;
 }
@@ -46,7 +82,7 @@ body {
   font-weight: bold;
   background-color:#249991;
   border-color: #249991 !important;
-  font-size: 20px;
+  font-size: 18px;
 
  }
 
@@ -59,7 +95,7 @@ body {
   border-top: 1px solid #c1c1c1;
   color: #000;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 18px;
+  font-size: 16px;
 
  }
 
@@ -123,7 +159,22 @@ text-align: center;
   background: #ff9b9b;
   text-decoration: none;
 }
+#btnExit{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 24px;
+    background-color:#e76b6b;
+    color: #ffffff;
+    display:inline-block;
+    width:31%;
+   margin: 2px;
 
+}
+#btnExit:hover{
+  
+    background: #ff9292;
+    text-decoration: none;
+}
 #btn3 {
   -webkit-border-radius: 9;
   -moz-border-radius: 9;
@@ -139,4 +190,25 @@ text-align: center;
 #btn3:hover {
   background: #ff9b9b;
   text-decoration: none;
+}
+#logoImage{
+
+  position: relative;
+  top: 100px;
+  left: 300px;
+
+}
+img-circle {
+
+  position: relative;
+    width:150px;
+    height:80px;
+    margin-bottom:20px;
+}
+#img-responsive center-block{
+
+  position: relative;
+  top: 100px;
+  left: 300px;
+
 }
