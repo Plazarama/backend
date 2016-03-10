@@ -118,12 +118,14 @@ text-align: center;
 
 }
 
-<<<<<<< HEAD
-=======
 
+#logoImage {
 
+  position: relative;
+  top: 70px;
+  left: 160px;
+}
 
->>>>>>> c9014432c2cc0dd25c23af2a4c6af0cd0b300f24
 /*buttons at the bottem*/
 #btn1 {
   -webkit-border-radius: 9;
@@ -143,6 +145,22 @@ text-align: center;
 }
 
 #btn2 {
+  -webkit-border-radius: 9;
+  -moz-border-radius: 9;
+  border-radius: 9px;
+  font-family: Arial;
+  color: #ffffff;
+  background: #e76b6b;
+  padding: 9px 10px 9px 10px;
+  text-decoration: none;
+  border-color: #e76b6b;
+}
+#btn3:hover {
+  background: #ff9b9b;
+  text-decoration: none;
+}
+
+#btn3 {
   -webkit-border-radius: 9;
   -moz-border-radius: 9;
   border-radius: 9px;
@@ -190,22 +208,24 @@ text-align: center;
   background: #ff9b9b;
   text-decoration: none;
 }
+#logoImage{
 
-<<<<<<< HEAD
-#img-responsive center-block{
-
-  position: static;
+  position: relative;
   top: 100px;
   left: 300px;
-  margin-top: 20px;
 
 }
-=======
 img-circle {
 
   position: relative;
-    width:150px;
+    width:50px;
     height:80px;
     margin-bottom:20px;
 }
->>>>>>> c9014432c2cc0dd25c23af2a4c6af0cd0b300f24
+#img-responsive center-block{
+
+  position: relative;
+  top: 50px;
+  left: 200px;
+
+}

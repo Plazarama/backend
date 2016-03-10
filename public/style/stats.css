@@ -51,28 +51,6 @@ body {
   position: relative;
 
 }
-<<<<<<< HEAD
-
-#img-responsive center-block{
-
-  position: static;
-  top: 100px;
-  left: 300px;
-  margin-top: 20px;
-
-}
-
-#img-responsive center-block{
-
-  position: relative;
-  top: 100px;
-  left: 300px;
-
-}
-=======
-
->>>>>>> c9014432c2cc0dd25c23af2a4c6af0cd0b300f24
-
 
 /*facebook button*/
 #btnFbk{
@@ -85,25 +63,13 @@ body {
     width:31%;
    margin: 2px;
    margin-left:38px;
-
 }
-
 #btnFbk:hover
 {
-
   background-color: #4e86b5;
   color: #ffffff;
-  font-family: Arial, Helvetica, sans-serif;
-  text-decoration: none;
-
-
-}
-
-/*exit button*/
-#btnFbk:hover{
   
-   background: #5188b8;
-    text-decoration: none;
+  text-decoration: none;
 }
 
 
@@ -124,6 +90,7 @@ body {
     text-decoration: none;
 }
 
+
 button:hover 
 {
 
@@ -136,17 +103,20 @@ button:hover
 
 button:active
 {
-
   background-color: #249991;
   color: #ffffff;
   font-size: 30px;
-
 }
 button:focus
 {
-
   background-color: #249991;
   color: #ffffff;
   font-size: 30px;
+}
+#img-responsive center-block{
+
+  position: static;
+  top: 50px;
+  left: 200px;
 
 }
