@@ -93,7 +93,7 @@ jQuery(function($) {
 
 
 		onTimeTicked: function(data){
- 			Game.Player.timeTicked(data);
+ 			Game.Host.timeTicked(data);
  		},
 
 		/**
@@ -289,8 +289,6 @@ jQuery(function($) {
 				var startTime = 10;
 
 				function countItDown(){
-					startTime -= 1;
-
 					if(startTime <= 0){
 						clearInterval(timer);
 
@@ -318,6 +316,7 @@ jQuery(function($) {
 						}
 						else{
 							console.log('new question');
+							IO.socket.emit('timeTicked', 'Ready');
 							IO.socket.emit('getNewQuestion', Game.gameId);
 						}
 						return;
@@ -326,6 +325,8 @@ jQuery(function($) {
 						console.log(startTime);
 						IO.socket.emit('timeTicked', startTime);
 					}
+
+					startTime -= 1;
 				}
 
 			},
